@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · Bigodon · Maio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="../chart.umd.min.js"></script>
+<style>
+  :root{
+    --navy:#0A1F44;--navy-2:#163366;--blue:#2E5C99;--blue-light:#5B8AC4;
+    --amber:#F59E0B;--amber-light:#FCD34D;--green:#10B981;--red:#EF4444;
+    --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;
+    --gray-400:#9CA3AF;--gray-500:#6B7280;--gray-700:#374151;--text:#1F2937;--text-muted:#6B7280;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',-apple-system,sans-serif;color:var(--text);background:var(--gray-100);-webkit-font-smoothing:antialiased;line-height:1.5;padding:0 0 50px;}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 22px;}
+
+  .topbar{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,var(--blue) 100%);color:#fff;padding:30px 0 30px;margin-bottom:26px;position:relative;overflow:hidden;}
+  .topbar::before{content:'';position:absolute;right:-160px;top:-160px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.16) 0%,transparent 70%);}
+  .topbar .wrap{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;}
+  .topbar .eyebrow{font-family:'Plus Jakarta Sans';font-weight:700;font-size:12px;letter-spacing:.2em;color:var(--amber-light);text-transform:uppercase;margin-bottom:8px;}
+  .topbar h1{font-family:'Plus Jakarta Sans';font-weight:800;font-size:30px;letter-spacing:-.02em;line-height:1.1;}
+  .topbar h1 span{color:var(--amber-light);}
+  .topbar .meta{font-size:13.5px;color:rgba(255,255,255,.7);margin-top:6px;}
+  .logo{font-family:'Plus Jakarta Sans';font-weight:800;font-size:18px;letter-spacing:.1em;text-align:right;}
+  .logo .sub{display:block;font-size:11px;letter-spacing:.22em;color:var(--amber-light);font-weight:600;margin-top:2px;}
+
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:22px;}
+  .kpi{background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:18px 18px 16px;box-shadow:0 1px 3px rgba(10,31,68,.04);position:relative;overflow:hidden;}
+  .kpi::after{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;}
+  .kpi.green::after{background:var(--green);} .kpi.red::after{background:var(--red);}
+  .kpi.amber::after{background:var(--amber);} .kpi.navy::after{background:var(--navy);} .kpi.blue::after{background:var(--blue);}
+  .kpi .k{font-size:11.5px;font-weight:700;letter-spacing:.04em;color:var(--text-muted);text-transform:uppercase;margin-bottom:7px;line-height:1.3;min-height:30px;}
+  .kpi .v{font-family:'Plus Jakarta Sans';font-weight:800;font-size:26px;color:var(--navy);line-height:1;}
+  .kpi.green .v{color:var(--green);} .kpi.red .v{color:var(--red);}
+  .kpi .d{font-size:12px;color:var(--text-muted);margin-top:6px;line-height:1.35;}
+
+  .grid{display:grid;gap:20px;}
+  .g-2{grid-template-columns:1fr 1fr;} .g-12{grid-template-columns:1fr 2fr;}
+  .panel{background:#fff;border:1px solid var(--gray-200);border-radius:16px;padding:22px 24px;box-shadow:0 1px 3px rgba(10,31,68,.04);margin-bottom:20px;}
+  .panel h3{font-family:'Plus Jakarta Sans';font-weight:800;font-size:17px;color:var(--navy);margin-bottom:3px;}
+  .panel .sub{font-size:13px;color:var(--text-muted);margin-bottom:16px;}
+  .chart-box{position:relative;height:260px;}
+  .chart-box.tall{height:300px;}
+
+  .alert{background:linear-gradient(135deg,#FEF2F2,#FFF7ED);border:1px solid #FCA5A5;border-radius:16px;padding:22px 26px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .alert .big{font-family:'Plus Jakarta Sans';font-weight:800;font-size:40px;color:var(--red);line-height:1;}
+  .alert .txt b{font-family:'Plus Jakarta Sans';color:var(--navy);font-size:16px;} .alert .txt p{font-size:14px;color:var(--gray-700);margin-top:4px;max-width:780px;line-height:1.5;}
+
+  .quote{background:var(--navy);color:#fff;border-radius:16px;padding:24px 28px;position:relative;margin-bottom:20px;}
+  .quote p{font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.92);} .quote .who{margin-top:10px;font-size:13px;color:var(--amber-light);font-weight:700;}
+  .quote .hl{color:var(--amber-light);font-weight:700;}
+
+  .foot{text-align:center;font-size:12.5px;color:var(--gray-400);margin-top:30px;}
+  @media(max-width:980px){.kpis{grid-template-columns:repeat(2,1fr);}.g-2,.g-12{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Auditoria Financeira · Painel</div>
+        <h1>Bigodon Barbearia · <span>Maio 2026</span></h1>
+        <div class="meta">Victor Hugo do Prado · cruzamento de 4 contas (InfinitePay · PagBank · Nubank · PicPay)</div>
+      </div>
+      <div class="logo">RAUL MOCKEL<span class="sub">BULL INVEST</span></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- KPIs -->
+    <div class="kpis">
+      <div class="kpi green"><div class="k">Faturamento real<br>(cliente)</div><div class="v">R$ 10.722</div><div class="d">dinheiro novo no mês</div></div>
+      <div class="kpi red"><div class="k">Mesmo dinheiro<br>girando</div><div class="v">R$ 20.480</div><div class="d">66% · 55 transferências</div></div>
+      <div class="kpi navy"><div class="k">Saídas reais<br>(despesas)</div><div class="v">R$ 17.090</div><div class="d">pagamentos a terceiros</div></div>
+      <div class="kpi red"><div class="k">Resultado<br>no banco</div><div class="v">– R$ 6.368</div><div class="d">saiu mais que entrou</div></div>
+      <div class="kpi amber"><div class="k">Conta que<br>faltou</div><div class="v">R$ 5.903</div><div class="d">extrato não enviado</div></div>
+    </div>
+
+    <!-- Linha 1: donut ilusão + origem faturamento -->
+    <div class="grid g-12">
+      <div class="panel">
+        <h3>Faturamento real × ilusão</h3>
+        <div class="sub">Do que "entra" nas contas, quanto é cliente novo e quanto é só você girando dinheiro</div>
+        <div class="chart-box"><canvas id="cIlusao"></canvas></div>
+      </div>
+      <div class="panel">
+        <h3>De onde vem o faturamento real</h3>
+        <div class="sub">A maquininha InfinitePay concentra 76% do que entra de cliente</div>
+        <div class="chart-box"><canvas id="cOrigem"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Linha 2: saídas por categoria -->
+    <div class="panel">
+      <h3>Pra onde o dinheiro vai · R$ 17.090 em despesas</h3>
+      <div class="sub">Atenção: família (R$ 2.380) e mercado (R$ 1.413) saem direto das contas da empresa — mistura PF × PJ</div>
+      <div class="chart-box tall"><canvas id="cSaidas"></canvas></div>
+    </div>
+
+    <!-- Linha 3: fluxo interno -->
+    <div class="grid g-2">
+      <div class="panel">
+        <h3>O giro entre as suas contas</h3>
+        <div class="sub">Entra na InfinitePay → vira pagamento no PagBank (a conta concentradora)</div>
+        <div class="chart-box"><canvas id="cFluxo"></canvas></div>
+      </div>
+      <div class="panel" style="display:flex;flex-direction:column;">
+        <h3>Por que as contas não fecham</h3>
+        <div class="sub">O buraco que aponta a conta faltante</div>
+        <div class="chart-box"><canvas id="cFecha"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Alerta conta faltante -->
+    <div class="alert" style="margin-bottom:20px;">
+      <div class="big">R$ 5.903</div>
+      <div class="txt"><b>Falta o extrato de uma conta</b><p>O PagBank recebeu R$ 13.192 de transferências suas, mas as 4 contas enviaram só R$ 7.288. Esse buraco entra de uma conta que não veio nos extratos (provável outra conta PJ, ou onde cai o crédito). <b>Enquanto não fecha isso, não dá pra cravar o faturamento real.</b></p></div>
+    </div>
+
+    <!-- Citação Victor -->
+    <div class="quote">
+      <p>"Quando preciso pagar, eu pego o valor da InfinitePay e jogo pra outra conta. <span class="hl">Já sei que tô fazendo errado, movimentando duas, três contas. Preciso saber separar isso — é nisso que você entra pra me ajudar.</span>"</p>
+      <div class="who">— Victor, no áudio enviado com os extratos</div>
+    </div>
+
+    <div class="foot">Bull Invest · Raul Mockel · Auditoria automática a partir dos extratos bancários · gerado em jun/2026</div>
+  </div>
+
+<script>
+const BRL = v => 'R$ ' + v.toLocaleString('pt-BR',{minimumFractionDigits:0});
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.font.size = 12.5;
+Chart.defaults.color = '#6B7280';
+const NAVY='#0A1F44',BLUE='#2E5C99',BLUEL='#5B8AC4',AMBER='#F59E0B',AMBERL='#FCD34D',GREEN='#10B981',RED='#EF4444',GRAY='#9CA3AF';
+
+// 1. Donut ilusão
+new Chart(cIlusao,{type:'doughnut',
+  data:{labels:['Faturamento real (cliente)','Mesmo dinheiro girando'],
+    datasets:[{data:[10722,20480],backgroundColor:[GREEN,RED],borderWidth:2,borderColor:'#fff'}]},
+  options:{cutout:'62%',plugins:{legend:{position:'bottom',labels:{padding:14,boxWidth:12,usePointStyle:true}},
+    tooltip:{callbacks:{label:c=>c.label+': '+BRL(c.raw)+' ('+Math.round(c.raw/31202*100)+'%)'}}}}});
+
+// 2. Origem faturamento (barras horizontais)
+new Chart(cOrigem,{type:'bar',
+  data:{labels:['InfinitePay maquininha','InfinitePay pix','PagBank','PicPay','Nubank'],
+    datasets:[{data:[4374,3741,1281,1106,220],backgroundColor:[AMBER,AMBERL,BLUE,BLUEL,GRAY],borderRadius:6}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>BRL(c.raw)}}},
+    scales:{x:{ticks:{callback:v=>'R$ '+v/1000+'k'},grid:{color:'#F3F4F6'}},y:{grid:{display:false}}}}});
+
+// 3. Saídas por categoria
+new Chart(cSaidas,{type:'bar',
+  data:{labels:['Equipe/barbeiros','Família/pessoais','Parcelas/consórcio','Consultoria (Bull)','Alimentação/mercado','Contas (luz/água)','Compras diversas','Combustível'],
+    datasets:[{data:[4422,2380,2187,1497,1413,1062,1043,487],
+      backgroundColor:[NAVY,RED,BLUE,AMBER,RED,BLUE,GRAY,GRAY],borderRadius:6}]},
+  options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>BRL(c.raw)}}},
+    scales:{y:{ticks:{callback:v=>'R$ '+v/1000+'k'},grid:{color:'#F3F4F6'}},x:{grid:{display:false},ticks:{font:{size:11}}}}}});
+
+// 4. Fluxo interno (recebido vs enviado por conta)
+new Chart(cFluxo,{type:'bar',
+  data:{labels:['InfinitePay','PagBank','Nubank','PicPay'],
+    datasets:[
+      {label:'Recebeu de si mesmo',data:[0,12535,657,0],backgroundColor:GREEN,borderRadius:5},
+      {label:'Enviou pra si mesmo',data:[6418,540,214,117],backgroundColor:AMBER,borderRadius:5}]},
+  options:{plugins:{legend:{position:'bottom',labels:{padding:12,boxWidth:12,usePointStyle:true}},
+    tooltip:{callbacks:{label:c=>c.dataset.label+': '+BRL(c.raw)}}},
+    scales:{y:{ticks:{callback:v=>'R$ '+v/1000+'k'},grid:{color:'#F3F4F6'}},x:{grid:{display:false}}}}});
+
+// 5. Por que não fecha
+new Chart(cFecha,{type:'bar',
+  data:{labels:['Entrou no PagBank','Saiu das 4 contas','Buraco (falta extrato)'],
+    datasets:[{data:[13192,7288,5903],backgroundColor:[BLUE,BLUEL,RED],borderRadius:6}]},
+  options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>BRL(c.raw)}}},
+    scales:{y:{ticks:{callback:v=>'R$ '+v/1000+'k'},grid:{color:'#F3F4F6'}},x:{grid:{display:false}}}}});
+</script>
+</body>
+</html>
