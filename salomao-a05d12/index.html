@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Salomão Rocha · Raio-X Financeiro · Maio 2026</title>
+<script src="../chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#2a3340;
+    --txt:#e8edf2; --mut:#8b97a6; --gold:#d4af37; --green:#3fb950;
+    --red:#f85149; --blue:#58a6ff; --purple:#bc8cff; --teal:#39c5cf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 70% -10%,#1a2230 0,var(--bg) 60%);
+    color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    padding:32px 20px 60px;line-height:1.5}
+  .wrap{max-width:1180px;margin:0 auto}
+  header{display:flex;justify-content:space-between;align-items:flex-end;
+    flex-wrap:wrap;gap:16px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:30px}
+  .brand{font-size:12px;letter-spacing:3px;color:var(--gold);font-weight:700;text-transform:uppercase}
+  h1{font-size:30px;font-weight:700;margin-top:6px}
+  h1 span{color:var(--mut);font-weight:400}
+  .period{text-align:right;color:var(--mut);font-size:13px}
+  .period b{display:block;color:var(--txt);font-size:18px;font-weight:600}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:14px}
+  .kpi{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+    border-radius:16px;padding:20px}
+  .kpi .lbl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1px}
+  .kpi .val{font-size:26px;font-weight:700;margin-top:8px}
+  .kpi .sub{font-size:12px;color:var(--mut);margin-top:4px}
+  .green{color:var(--green)} .red{color:var(--red)} .gold{color:var(--gold)}
+
+  .alert{background:linear-gradient(90deg,rgba(248,81,73,.12),rgba(248,81,73,.03));
+    border:1px solid rgba(248,81,73,.35);border-radius:14px;padding:16px 20px;margin:24px 0 30px;
+    display:flex;gap:14px;align-items:center}
+  .alert .big{font-size:30px}
+  .alert b{color:var(--red)}
+
+  .openbox{margin:24px 0 30px;border-color:rgba(248,81,73,.35);
+    background:linear-gradient(180deg,rgba(248,81,73,.08),var(--panel))}
+  .open-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+  .open-total{text-align:right}
+  .open-total span{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:1px}
+  .open-total b{font-size:28px;color:var(--red)}
+  .open-foot{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--mut)}
+  .open-foot b{color:var(--txt)}
+  #openTable .v{color:var(--red)}
+  #openTable .when{color:var(--mut);font-weight:400;font-size:12.5px;text-align:right}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .card h2{font-size:15px;font-weight:600;margin-bottom:4px}
+  .card .hint{font-size:12px;color:var(--mut);margin-bottom:16px}
+  .chartbox{position:relative;height:260px}
+
+  .full{margin-top:20px}
+  .chartbox.tall{height:300px}
+
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+  td{padding:9px 6px;border-bottom:1px solid var(--line)}
+  td.v{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:9px;vertical-align:middle}
+
+  .attn{margin-top:30px}
+  .attn h2{font-size:18px;margin-bottom:16px}
+  .acards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .ac{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);
+    border-radius:12px;padding:18px 20px}
+  .ac .n{font-size:13px;color:var(--gold);font-weight:700;letter-spacing:1px}
+  .ac h3{font-size:15px;margin:6px 0 8px}
+  .ac p{font-size:13.5px;color:var(--mut)}
+  .ac p b{color:var(--txt)}
+
+  footer{margin-top:40px;text-align:center;color:var(--mut);font-size:12px;
+    border-top:1px solid var(--line);padding-top:20px}
+  @media(max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2,.acards{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="brand">Bull Invest · Gestão Financeira</div>
+      <h1>Raio-X Financeiro <span>— Salomão Rocha</span></h1>
+    </div>
+    <div class="period">Período analisado<b>Maio / 2026</b>conta pessoal · 275 lançamentos</div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi"><div class="lbl">Entrou no mês</div><div class="val green">R$ 25.742</div><div class="sub">22 recebimentos</div></div>
+    <div class="kpi"><div class="lbl">Saiu no mês</div><div class="val red">R$ 27.409</div><div class="sub">253 pagamentos</div></div>
+    <div class="kpi"><div class="lbl">Resultado</div><div class="val red">− R$ 1.666</div><div class="sub">gastou mais do que entrou</div></div>
+    <div class="kpi"><div class="lbl">Saldo final</div><div class="val gold">R$ 220</div><div class="sub">começou com R$ 1.887</div></div>
+  </div>
+
+  <div class="alert">
+    <div class="big">⚠️</div>
+    <div>O mês fechou <b>no vermelho</b>: entrou R$ 25,7 mil, mas saiu R$ 27,4 mil.
+    O saldo caiu de <b>R$ 1.887 para R$ 220</b> — praticamente sem reserva de fôlego pra um imprevisto.</div>
+  </div>
+
+  <div class="card full openbox">
+    <div class="open-head">
+      <div>
+        <h2>📌 O que ficou em aberto — não foi pago em maio</h2>
+        <div class="hint">Compromissos do mês que não foram quitados</div>
+      </div>
+      <div class="open-total">
+        <span>Total em aberto</span>
+        <b>R$ 4.572</b>
+      </div>
+    </div>
+    <table id="openTable"></table>
+    <div class="open-foot">
+      Somando o que ficou em aberto <b>(R$ 4.572)</b> com o resultado negativo do mês <b>(R$ 1.666)</b>,
+      o rombo real entre o que ele assumiu e o que conseguiu honrar passa de <b class="red">R$ 6.200</b>.
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>💰 De onde veio o dinheiro</h2>
+      <div class="hint">Entradas por origem — Maio/2026</div>
+      <div class="chartbox"><canvas id="entChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>💸 Para onde foi o dinheiro</h2>
+      <div class="hint">Saídas por categoria — Maio/2026</div>
+      <div class="chartbox"><canvas id="saiChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card full">
+    <h2>📈 O mês dia a dia</h2>
+    <div class="hint">Entradas (verde) x Saídas (vermelho) — repare nos picos dos dias 13 e 15</div>
+    <div class="chartbox tall"><canvas id="flowChart"></canvas></div>
+  </div>
+
+  <div class="grid2 full">
+    <div class="card">
+      <h2>Maiores saídas do mês</h2>
+      <div class="hint">Top categorias de gasto</div>
+      <table id="saiTable"></table>
+    </div>
+    <div class="card">
+      <h2>Maiores entradas do mês</h2>
+      <div class="hint">Principais origens de receita</div>
+      <table id="entTable"></table>
+    </div>
+  </div>
+
+  <div class="attn">
+    <h2>🎯 Pontos para conversarmos</h2>
+    <div class="acards">
+      <div class="ac"><div class="n">01 · ORGANIZAÇÃO</div>
+        <h3>Pessoal e profissional na mesma conta</h3>
+        <p>A <b>Produção (SD)</b> movimenta R$ 9,1 mil de entrada e R$ 5,5 mil de saída na conta pessoal.
+        Teve dinheiro só de passagem: <b>entrou R$ 5.500 e saiu R$ 5.500</b> pro mesmo destino. Separar PF de PJ deixa a foto muito mais clara.</p></div>
+      <div class="ac"><div class="n">02 · RASTREABILIDADE</div>
+        <h3>R$ 5.695 em Pix para pessoas</h3>
+        <p>Sem categoria definida. Tem recorrência com <b>uma mesma pessoa (R$ 1.476 no mês)</b> e valores altos avulsos.
+        Vale identificar o que é cada um pra entender o padrão.</p></div>
+      <div class="ac"><div class="n">03 · FÔLEGO</div>
+        <h3>Mês fechou no negativo</h3>
+        <p>Queimou quase todo o saldo: de <b>R$ 1.887 para R$ 220</b>. Sem colchão de segurança,
+        qualquer imprevisto vira dívida ou aperto.</p></div>
+      <div class="ac"><div class="n">04 · HÁBITOS</div>
+        <h3>Muito gasto pequeno somando alto</h3>
+        <p><b>R$ 4.588</b> em comprinhas no cartão + <b>R$ 1.921</b> de delivery/comida fora.
+        São valores pequenos no dia a dia que, juntos, pesam no fim do mês.</p></div>
+    </div>
+  </div>
+
+  <footer>Bull Invest · Gestão Financeira & Pessoal · Análise sobre extrato oficial (totais conferidos 100%) · Maio/2026</footer>
+</div>
+
+<script>
+const BRL = v => 'R$ ' + v.toLocaleString('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:0});
+Chart.defaults.color = '#8b97a6';
+Chart.defaults.font.family = "-apple-system,'Segoe UI',Roboto,sans-serif";
+
+const entData = [
+  ['Produção SD (música)', 9099.93, '#39c5cf'],
+  ['Outras entradas (PF)', 7537.98, '#8b97a6'],
+  ['Cachê show / Igreja', 6200.00, '#bc8cff'],
+  ['Direitos autorais', 1831.24, '#58a6ff'],
+  ['Família (esposa)', 1073.00, '#3fb950'],
+];
+const saiData = [
+  ['Pix a pessoas (a confirmar)', 5695.16, '#f85149'],
+  ['Produção SD (repasse)', 5500.00, '#39c5cf'],
+  ['Gasto geral no cartão', 4588.07, '#d4af37'],
+  ['Alimentação / Delivery', 1920.65, '#ff9e64'],
+  ['Escola dos filhos', 1563.22, '#bc8cff'],
+  ['Lojas / Vestuário', 1054.33, '#58a6ff'],
+  ['Transporte (99/Uber)', 1040.24, '#56d364'],
+  ['Mercado', 1039.77, '#7ee787'],
+  ['Igreja / Dízimo', 1000.00, '#a371f7'],
+  ['Impostos / Prefeitura', 967.72, '#79c0ff'],
+  ['Outros (boleto, fatura, etc.)', 3038.46, '#6e7681'],
+];
+
+function doughnut(id, data){
+  new Chart(document.getElementById(id),{
+    type:'doughnut',
+    data:{labels:data.map(d=>d[0]),
+      datasets:[{data:data.map(d=>d[1]),backgroundColor:data.map(d=>d[2]),
+        borderColor:'#161b22',borderWidth:2}]},
+    options:{cutout:'58%',plugins:{legend:{position:'right',
+      labels:{boxWidth:12,padding:9,font:{size:11.5}}},
+      tooltip:{callbacks:{label:c=>' '+c.label+': '+BRL(c.raw)}}}}
+  });
+}
+doughnut('entChart', entData);
+doughnut('saiChart', saiData);
+
+// fluxo diário
+const ENT=[1200,0,0,357.07,0,1000,0,1300,5500,0,5000,537.24,0,0,7243.1,0,0,206.78,0,1176.97,0,0,0,0,1120.25,0,0,300,300,500.44,0.3];
+const SAI=[1180.4,792.86,393.84,265.79,432.2,1033.42,132.62,422.86,747.72,364.73,2355.66,1120.13,6413.16,350.28,7368.31,349.88,166.78,136.82,198.6,5.33,439.25,342.6,349.81,0,41.98,988.36,51.75,368.22,243.84,194.91,156.51];
+new Chart(document.getElementById('flowChart'),{
+  type:'bar',
+  data:{labels:Array.from({length:31},(_,i)=>i+1),
+    datasets:[
+      {label:'Entradas',data:ENT,backgroundColor:'#3fb950'},
+      {label:'Saídas',data:SAI.map(v=>-v),backgroundColor:'#f85149'}]},
+  options:{scales:{x:{stacked:true,grid:{display:false},title:{display:true,text:'dia de maio'}},
+    y:{stacked:true,grid:{color:'#2a3340'},ticks:{callback:v=>BRL(Math.abs(v))}}},
+    plugins:{legend:{position:'top'},
+      tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+BRL(Math.abs(c.raw))}}}}
+});
+
+function fillTable(id, data, total){
+  const t=document.getElementById(id);
+  t.innerHTML=data.map(d=>`<tr>
+    <td><span class="dot" style="background:${d[2]}"></span>${d[0]}</td>
+    <td class="v">${BRL(d[1])}</td>
+    <td class="v" style="color:#8b97a6;font-weight:400">${Math.round(d[1]/total*100)}%</td></tr>`).join('');
+}
+fillTable('saiTable', saiData.slice(0,8), 27408.62);
+fillTable('entTable', entData, 25742.15);
+
+// em aberto (nao pago em maio)
+const openData = [
+  ['Devolução ao próprio caixa (3/9)', 1646.11, '15/05'],
+  ['Bull Invest — mês 05', 1500.00, '30/05'],
+  ['Cartão de crédito Nubank', 838.69, 'venc. mar'],
+  ['Personal Designer (7 de 8)', 500.00, '30/05'],
+  ['Seguro de vida Nubank', 42.59, 'venc. mar'],
+  ['Netflix', 44.90, 'venc. mar'],
+];
+document.getElementById('openTable').innerHTML = openData.map(d=>`<tr>
+  <td>${d[0]}</td>
+  <td class="when">${d[2]}</td>
+  <td class="v">${BRL(d[1])}</td></tr>`).join('') +
+  `<tr><td style="font-weight:700">Total em aberto</td><td></td>
+   <td class="v" style="font-size:16px">${BRL(4572.29)}</td></tr>`;
+</script>
+</body>
+</html>
