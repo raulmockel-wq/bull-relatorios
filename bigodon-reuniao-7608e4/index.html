@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bigodon Barbearia · Reunião 15/06/2026</title>
+<style>
+  :root{
+    --preto:#0e0e10;
+    --grafite:#1a1a1f;
+    --ouro:#c8a046;
+    --ouro-claro:#e7c879;
+    --creme:#f5f1e8;
+    --cinza:#9a9aa3;
+    --linha:rgba(200,160,70,.22);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--preto);
+    color:var(--creme);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+
+  /* CAPA */
+  .capa{
+    min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(200,160,70,.18), transparent 60%),
+      linear-gradient(180deg,#0e0e10 0%,#161318 100%);
+    text-align:center;padding:80px 24px;position:relative;overflow:hidden;
+  }
+  /* LOCKUP CO-BRANDING */
+  .lockup{display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:32px}
+  .lockup img.logo-bigodon{width:82px;height:82px;border-radius:50%;
+    box-shadow:0 6px 26px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .lockup .lock-div{width:1px;height:54px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.22),transparent)}
+  /* Bull empilhado: icone em cima, BULL INVEST embaixo */
+  .bull-stack{display:flex;flex-direction:column;align-items:center;gap:9px;opacity:.82}
+  .bull-stack img.bi{height:34px;width:auto}
+  .bull-stack img.bw{height:13px;width:auto}
+  @media(max-width:520px){.lockup{gap:16px}.lockup img.logo-bigodon{width:62px;height:62px}.lockup .lock-div{height:42px}.bull-stack img.bi{height:27px}.bull-stack img.bw{height:11px}}
+  .selo{
+    display:inline-block;border:1px solid var(--ouro);color:var(--ouro-claro);
+    font-size:12px;letter-spacing:3px;text-transform:uppercase;
+    padding:8px 18px;border-radius:30px;margin-bottom:28px;
+  }
+  .capa h1{
+    font-size:clamp(38px,7vw,68px);font-weight:800;letter-spacing:-1px;line-height:1.05;
+    background:linear-gradient(180deg,#fff,#d9cba6);-webkit-background-clip:text;
+    background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .capa .sub{color:var(--ouro-claro);font-size:clamp(16px,2.5vw,22px);margin-top:18px;font-weight:600;letter-spacing:1px}
+  .capa .data{color:var(--cinza);margin-top:30px;font-size:15px}
+  .capa .frase{
+    margin:42px auto 0;max-width:640px;font-size:clamp(17px,2.6vw,21px);
+    color:var(--creme);font-style:italic;border-left:3px solid var(--ouro);
+    padding:14px 24px;text-align:left;background:rgba(255,255,255,.02);border-radius:0 10px 10px 0;
+  }
+
+  /* SEÇÕES */
+  section{padding:60px 0}
+  .kicker{color:var(--ouro);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  h2{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+  h2 .num{color:var(--ouro);margin-right:10px}
+  .lead{color:var(--cinza);font-size:17px;max-width:680px;margin-bottom:28px}
+
+  p{margin-bottom:14px}
+  strong{color:#fff}
+  em{color:var(--ouro-claro);font-style:normal;font-weight:600}
+
+  /* CARD */
+  .card{
+    background:linear-gradient(180deg,var(--grafite),#15151a);
+    border:1px solid var(--linha);border-radius:16px;padding:26px 28px;margin-bottom:18px;
+  }
+  .card h3{font-size:20px;margin-bottom:10px;display:flex;align-items:center;gap:12px}
+  .pill{
+    display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;
+    border-radius:10px;background:rgba(200,160,70,.14);color:var(--ouro-claro);
+    font-weight:800;font-size:16px;border:1px solid var(--linha);flex-shrink:0;
+  }
+  .tag{
+    display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;
+    padding:4px 12px;border-radius:20px;font-weight:700;margin-left:auto;
+  }
+  .tag.now{background:rgba(220,70,70,.16);color:#ff9a9a;border:1px solid rgba(220,70,70,.3)}
+  .tag.flow{background:rgba(70,150,220,.14);color:#9ec9ff;border:1px solid rgba(70,150,220,.3)}
+  .tag.next{background:rgba(200,160,70,.14);color:var(--ouro-claro);border:1px solid var(--linha)}
+
+  ul.clean{list-style:none;margin-top:8px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--creme)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:50%;background:var(--ouro)}
+
+  /* DESTAQUE */
+  .destaque{
+    background:radial-gradient(600px 200px at 0% 0%,rgba(200,160,70,.12),transparent 70%),var(--grafite);
+    border:1px solid var(--ouro);border-radius:16px;padding:30px;margin:8px 0;
+  }
+  .destaque .q{font-size:clamp(19px,3vw,26px);font-weight:700;line-height:1.35}
+  .destaque .q .ouro{color:var(--ouro-claro)}
+
+  /* FLUXO */
+  .fluxo{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin-top:10px}
+  .step{
+    flex:1;min-width:150px;background:var(--grafite);border:1px solid var(--linha);
+    border-radius:14px;padding:18px;text-align:center;position:relative;
+  }
+  .step .n{color:var(--ouro);font-weight:800;font-size:13px;letter-spacing:1px}
+  .step .t{font-weight:700;margin-top:6px;font-size:16px}
+  .step .d{color:var(--cinza);font-size:13px;margin-top:4px}
+  .seta{display:flex;align-items:center;color:var(--ouro);font-size:22px}
+  @media(max-width:640px){.seta{transform:rotate(90deg);justify-content:center;width:100%}}
+
+  /* PRÓXIMOS PASSOS */
+  .quem{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px}
+  .quem .col{background:var(--grafite);border:1px solid var(--linha);border-radius:16px;padding:24px}
+  .quem .col h4{font-size:18px;margin-bottom:14px;color:var(--ouro-claro);display:flex;align-items:center;gap:10px}
+  .quem .col .ic{font-size:22px}
+
+  /* RODAPÉ */
+  footer{padding:64px 24px 80px;text-align:center}
+  footer .lockup-foot{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:18px}
+  footer .lockup-foot img.b{width:48px;height:48px;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,.5)}
+  footer .lockup-foot .fdiv{width:1px;height:40px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.2),transparent)}
+  footer .bull-stack{opacity:.7}
+  footer .bull-stack img.bi{height:28px}
+  footer .bull-stack img.bw{height:11px}
+  footer p{color:var(--cinza);font-size:14px;margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<header class="capa">
+  <div class="wrap">
+    <div class="lockup">
+      <img class="logo-bigodon" src="assets/bigodon-logo.png" alt="Bigodon Barbearia">
+      <span class="lock-div"></span>
+      <div class="bull-stack">
+        <img class="bi" src="assets/bull-icone-branco.png" alt="">
+        <img class="bw" src="assets/bull-wordmark-branco.png" alt="Bull Invest">
+      </div>
+    </div>
+    <span class="selo">Bull Invest · Consultoria & Gestão</span>
+    <h1>Bigodon Barbearia</h1>
+    <div class="sub">O que conversamos · Para onde vamos</div>
+    <div class="data">Reunião de 15 de junho de 2026 — Raul &amp; Victor</div>
+    <div class="frase">"Não é fazer ou não fazer. É <em>como</em> a gente vai fazer." — esse é o ponto que a gente precisa chegar.</div>
+  </div>
+</header>
+
+<!-- COMO VAMOS TRABALHAR -->
+<section>
+  <div class="wrap">
+    <div class="kicker">O recado da reunião</div>
+    <h2>Como vamos trabalhar juntos agora</h2>
+    <p class="lead">A consultoria não é só olhar número no fim do mês. É decidir <strong>junto</strong>, na hora, como cada coisa vai ser feita — de uma reforma a uma compra de geladeira.</p>
+
+    <div class="destaque">
+      <div class="q">Eu preciso ser uma <span class="ouro">extensão de você</span> pra gente gerar resultado.<br>Você <span class="ouro">não vai me incomodar</span> — me chama quando o insight vier.</div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <h3>Por que isso importa</h3>
+      <p>Toda ideia que aparece na sua cabeça enquanto você corta cabelo precisa <strong>sair de dentro de você e ir pra mesa</strong>. Esperar a próxima semana mata o insight. O que a gente alinha é simples:</p>
+      <ul class="clean">
+        <li><strong>Urgente?</strong> Me liga ou manda áudio na hora.</li>
+        <li><strong>Demanda do dia a dia?</strong> Joga no WhatsApp que a gente organiza.</li>
+        <li>Eu entro nas <strong>decisões financeiras</strong> — não nas suas escolhas, mas em <em>como</em> você vai executá-las.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>A virada do Victor 👏</h3>
+      <p>Você colocou na mesa, com sinceridade, que <strong>tinha receio de me perguntar</strong> — achava que ia atrapalhar ou parecer "aventureiro demais". Isso a gente quebrou nessa reunião. Suas ideias não são problema; o que faltava era um lugar pra elas serem pensadas com critério. <em>Agora tem.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIORIDADES -->
+<section>
+  <div class="wrap">
+    <div class="kicker">O plano · em ordem</div>
+    <h2>Nossas 4 frentes</h2>
+    <p class="lead">A ordem importa: primeiro a gente enxerga o dinheiro de verdade, depois investe e cresce. Arrumar a casa antes de atrair gente.</p>
+
+    <div class="card">
+      <h3><span class="pill">1</span> Separar Pessoa Jurídica × Pessoa Física <span class="tag now">Começa agora</span></h3>
+      <p>Esse é o ponto crucial e <strong>não espera virar o mês — começa amanhã.</strong> Sem isso, nenhuma decisão (reforma, tráfego, contratação) tem base.</p>
+      <ul class="clean">
+        <li>Cliente paga <strong>sempre no CNPJ</strong>.</li>
+        <li>Tudo sai do CNPJ: Matheus, seu pai, água, telefone, navalha, café.</li>
+        <li>Pra usar dinheiro pessoal: <strong>PIX do CNPJ → PF</strong>, e só então gasta.</li>
+        <li>Infinity Pay e PagBank já estão no CNPJ ✅ — falta parar de usar pro pessoal.</li>
+        <li>Truque: deixe na carteira digital do iPhone os <strong>dois cartões separados</strong> (empresa × pessoal).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><span class="pill">2</span> Fechar o balanço com o extrato da Emily <span class="tag flow">Este mês</span></h3>
+      <ul class="clean">
+        <li>Emily manda no grupo do WhatsApp o extrato de <strong>15/mar a 15/jun</strong> (onde recebe e onde paga).</li>
+        <li>Eu fecho o balanço e te entrego a visão dessa parte.</li>
+        <li>Este mês ainda é na planilha; depois migramos pro software.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><span class="pill">3</span> O software financeiro + agente no WhatsApp <span class="tag next">Pra onde vamos</span></h3>
+      <p>Saímos do dashboard e viramos um <strong>software de verdade</strong> — no computador e no celular. A regra de ouro: <em>sistema é pra POUPAR seu trabalho, não dar mais.</em> Só funciona se for alimentado e usado direito.</p>
+      <ul class="clean">
+        <li>Painel com entradas, saídas, saldo, o que vence hoje / amanhã / 7 dias, separação PJ × PF e visão do ano.</li>
+        <li>Lançamento por WhatsApp: manda áudio ou foto do comprovante → cai automático no sistema.</li>
+        <li>No fim do dia, você só <strong>confere</strong> — não digita tudo na mão.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><span class="pill">4</span> Crescer a barbearia — na ordem certa <span class="tag flow">Em construção</span></h3>
+      <p>Você jogou todas as ideias na mesa. A gente ordenou: <strong>estrutura + finanças primeiro, atração depois</strong> (pra não atrair gente e não ter como atender).</p>
+      <ul class="clean">
+        <li><strong>Estrutura — as 3 coisas que te incomodam:</strong> piso da frente, chão da barbearia e o sofá.</li>
+        <li><strong>Vitrine:</strong> TV menor virando propaganda na frente (clube, valores, trabalho) — gera receita antes de gerar dívida.</li>
+        <li><strong>Pós-venda / avaliações:</strong> campanha <em>"Sua avaliação vale ouro"</em> — Ouro Branco pra quem avaliar <strong>escrevendo</strong> (não só estrela). Matheus induz em todo atendimento.</li>
+        <li><strong>Clientes que sumiram:</strong> você liga como dono, entende por que saiu e traz de volta com plano/clube diferenciado.</li>
+        <li><strong>Novos clientes:</strong> tráfego pago / Instagram — só depois de dar conta da demanda atual.</li>
+        <li><strong>Agenda:</strong> reorganizar na segunda (inclusive o horário de almoço).</li>
+        <li><strong>Equipe:</strong> barbeiro com 8 anos de experiência quer entrevista — segurar ~1 mês. Ideia: barbeiro com fixo + comissão (previsibilidade), quando houver previsibilidade de faturamento.</li>
+        <li><strong>Mais serviços, mesmos clientes:</strong> botox e camuflagem de barba/cabelo — ganho rápido.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FIO QUE AMARRA -->
+<section>
+  <div class="wrap">
+    <div class="kicker">A lógica de tudo</div>
+    <h2>O fio que amarra</h2>
+    <p class="lead">Toda decisão depende de enxergar primeiro as "torneiras" reais do financeiro. Sem clareza de quanto entra e sai, não dá pra decidir onde cortar e onde investir.</p>
+    <div class="fluxo">
+      <div class="step"><div class="n">PASSO 1</div><div class="t">Separar contas</div><div class="d">PJ nunca mistura com PF</div></div>
+      <div class="seta">→</div>
+      <div class="step"><div class="n">PASSO 2</div><div class="t">Alimentar o sistema</div><div class="d">Lançar pelo WhatsApp</div></div>
+      <div class="seta">→</div>
+      <div class="step"><div class="n">PASSO 3</div><div class="t">Enxergar</div><div class="d">Onde o dinheiro vai</div></div>
+      <div class="seta">→</div>
+      <div class="step"><div class="n">PASSO 4</div><div class="t">Investir e crescer</div><div class="d">Reforma · tráfego · equipe</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASSOS -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Mãos à obra</div>
+    <h2>Próximos passos</h2>
+    <div class="quem">
+      <div class="col">
+        <h4><span class="ic">✂️</span> Victor</h4>
+        <ul class="clean">
+          <li>Começar a separar PJ × PF <strong>já</strong> (Infinity Pay/PagBank só no CNPJ).</li>
+          <li>Tirar a conta de uso pessoal pra PF.</li>
+          <li>Subir campanha <em>"Sua avaliação vale ouro"</em> e orientar o Matheus.</li>
+          <li>Listar a prioridade da estrutura (piso, chão, sofá) e a TV de vitrine.</li>
+          <li>Reorganizar a agenda na segunda.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4><span class="ic">📊</span> Raul / Bull</h4>
+        <ul class="clean">
+          <li>Fechar o balanço dos 3 meses assim que a Emily mandar.</li>
+          <li>Finalizar o software + agente e personalizar pra Bigodon.</li>
+          <li>Acompanhar de perto cada decisão (o "como").</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4><span class="ic">📁</span> Emily</h4>
+        <ul class="clean">
+          <li>Mandar no grupo do WhatsApp o extrato de <strong>15/mar a 15/jun</strong> — de onde recebe e onde paga.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="lockup-foot">
+    <img class="b" src="assets/bigodon-logo.png" alt="Bigodon">
+    <span class="fdiv"></span>
+    <div class="bull-stack">
+      <img class="bi" src="assets/bull-icone-branco.png" alt="">
+      <img class="bw" src="assets/bull-wordmark-branco.png" alt="Bull Invest">
+    </div>
+  </div>
+  <p>Consultoria &amp; Gestão Financeira · Raul Mockel</p>
+  <p>Bigodon Barbearia — Victor Prado · 15 de junho de 2026</p>
+</footer>
+
+</body>
+</html>

@@ -9,6 +9,7 @@ Os links são **não listados** (noindex + robots Disallow) — só quem recebe 
 | Cliente | Pasta (código secreto) | Link pra mandar |
 |---|---|---|
 | Victor Prado (Bigodon) · Maio/2026 | `victor-a6d5c4` | https://raulmockel-wq.github.io/bull-relatorios/victor-a6d5c4/ |
+| Victor Prado (Bigodon) · Reunião 15/06/2026 | `bigodon-reuniao-7608e4` | https://raulmockel-wq.github.io/bull-relatorios/bigodon-reuniao-7608e4/ |
 
 > Dashboard avulso do Victor: https://raulmockel-wq.github.io/bull-relatorios/victor-a6d5c4/dashboard.html
 
