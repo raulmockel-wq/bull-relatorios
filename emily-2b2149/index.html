@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'>
+<meta name='robots' content='noindex,nofollow'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Auditoria Financeira · Emily · Bull Invest</title><style>
+:root{--preto:#0e0e10;--grafite:#1a1a1f;--grafite2:#15151a;--ouro:#c8a046;--ouro-claro:#e7c879;--creme:#f5f1e8;--cinza:#9a9aa3;--linha:rgba(200,160,70,.22)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--preto);color:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px}
+/* CAPA */
+.capa{background:radial-gradient(1200px 600px at 50% -10%,rgba(200,160,70,.18),transparent 60%),linear-gradient(180deg,#0e0e10 0%,#161318 100%);text-align:center;padding:64px 24px 54px;position:relative;overflow:hidden}
+.lockup{display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:30px}
+.lockup img.logo-bigodon{width:78px;height:78px;border-radius:50%;box-shadow:0 6px 26px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+.lockup .lock-div{width:1px;height:52px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.22),transparent)}
+.bull-stack{display:flex;flex-direction:column;align-items:center;gap:9px;opacity:.82}
+.bull-stack img.bi{height:32px;width:auto}.bull-stack img.bw{height:12px;width:auto}
+@media(max-width:520px){.lockup{gap:16px}.lockup img.logo-bigodon{width:60px;height:60px}.lockup .lock-div{height:42px}.bull-stack img.bi{height:26px}}
+.selo{display:inline-block;border:1px solid var(--ouro);color:var(--ouro-claro);font-size:12px;letter-spacing:3px;text-transform:uppercase;padding:8px 18px;border-radius:30px;margin-bottom:22px}
+.capa h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-1px;line-height:1.05;background:linear-gradient(180deg,#fff,#d9cba6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.capa .sub{color:var(--ouro-claro);font-size:clamp(15px,2.5vw,20px);margin-top:14px;font-weight:600;letter-spacing:.5px}
+.capa .data{color:var(--cinza);margin-top:18px;font-size:14px}
+/* HERO RENDA */
+.herobox{background:radial-gradient(600px 220px at 0% 0%,rgba(200,160,70,.14),transparent 70%),var(--grafite);border:1px solid var(--ouro);border-radius:18px;padding:30px;margin:40px auto 0;max-width:860px;display:flex;gap:34px;flex-wrap:wrap;align-items:center;justify-content:space-between;text-align:left}
+.herolab{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);font-weight:700}
+.heronum{font-size:clamp(42px,8vw,64px);font-weight:800;letter-spacing:-1px;line-height:1;color:#fff;margin:6px 0}
+.heronum span{color:var(--ouro-claro)}
+.herosub{color:var(--cinza);font-size:14px;max-width:360px}
+.chart{display:flex;align-items:flex-end;gap:13px;height:180px}
+.cbar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px}
+.cbcol{width:42px;background:linear-gradient(180deg,var(--ouro-claro),var(--ouro));border-radius:5px 5px 0 0}
+.cbval{font-size:10.5px;color:var(--ouro-claro);font-weight:700}.cblab{font-size:11px;color:var(--cinza);text-transform:uppercase;letter-spacing:.08em}
+/* SEÇÕES */
+section{padding:48px 0 4px}
+.kicker{color:var(--ouro);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.5px;margin-bottom:10px}
+.lead{color:var(--cinza);font-size:16px;max-width:680px;margin-bottom:24px}
+strong{color:#fff}em{color:var(--ouro-claro);font-style:normal;font-weight:600}
+.card{background:linear-gradient(180deg,var(--grafite),var(--grafite2));border:1px solid var(--linha);border-radius:16px;padding:24px 26px;margin-bottom:16px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:760px){.kpis{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:linear-gradient(180deg,var(--grafite),var(--grafite2));border:1px solid var(--linha);border-radius:14px;padding:20px}
+.kpi .v{font-size:26px;font-weight:800;color:var(--creme);letter-spacing:-.5px}
+.kpi .l{font-size:12.5px;color:var(--cinza);margin-top:5px}
+.kpi.ouro{border-color:var(--ouro)}.kpi.ouro .v{color:var(--ouro-claro)}
+.rk{margin:14px 0}
+.rkhead{display:flex;justify-content:space-between;align-items:baseline;font-size:14.5px;margin-bottom:6px}
+.rkname{font-weight:600;color:var(--creme)}.rkval{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ouro-claro)}.rkval em{color:var(--cinza);font-weight:500;font-size:12px}
+.rktrack{background:rgba(255,255,255,.06);border-radius:8px;height:11px;overflow:hidden}
+.rkfill{height:100%;background:linear-gradient(90deg,var(--ouro),var(--ouro-claro));border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:9px 4px;border-bottom:1px solid var(--linha);text-align:left}
+th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--cinza)}
+.v{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;color:var(--creme)}.n{text-align:center;color:var(--cinza);width:54px}
+.destaque{background:radial-gradient(600px 200px at 0% 0%,rgba(200,160,70,.12),transparent 70%),var(--grafite);border:1px solid var(--ouro);border-radius:16px;padding:26px 28px;margin:8px 0}
+.destaque h3{color:var(--ouro-claro);font-size:19px;margin-bottom:8px}
+.two{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+ul.clean{list-style:none;margin-top:6px}ul.clean li{position:relative;padding-left:24px;margin-bottom:11px;color:var(--creme)}
+ul.clean li::before{content:"";position:absolute;left:3px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--ouro)}
+.tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;font-weight:700;background:rgba(200,160,70,.16);color:var(--ouro-claro);border:1px solid var(--linha)}
+footer{padding:60px 24px 70px;text-align:center}
+footer .lockup-foot{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:16px}
+footer .lockup-foot img.b{width:46px;height:46px;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,.5)}
+footer .lockup-foot .fdiv{width:1px;height:38px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.2),transparent)}
+footer .bull-stack{opacity:.7}footer .bull-stack img.bi{height:26px}
+footer p{color:var(--cinza);font-size:13px;margin-top:6px}
+.intnote{color:#8a7a4a;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:12px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.nav .inner{max-width:940px;margin:0 auto;display:flex;gap:4px;flex-wrap:wrap;padding:10px 18px;align-items:center}
+.nav a{color:var(--cinza);text-decoration:none;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:9px;letter-spacing:.02em;white-space:nowrap}
+.nav a:hover{color:var(--ouro-claro);background:rgba(200,160,70,.12)}
+.nav .navhome{display:inline-flex;align-items:center;padding:6px 8px;border-radius:9px;margin-right:4px}
+.nav .navhome:hover{background:rgba(200,160,70,.12)}
+.nav .navbrand{height:18px;width:auto;opacity:.9}
+section{scroll-margin-top:64px}
+@media(max-width:640px){.nav .inner{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start}}
+</style></head><body>
+
+<nav class="nav"><div class="inner">
+<a href="#topo" class="navhome" title="Voltar ao topo"><img class="navbrand" src="assets/bull-icone-branco.png" alt="Voltar ao topo"></a>
+<a href="#renda">Renda</a>
+<a href="#resumo">Resumo</a>
+<a href="#saiu">Pra onde foi</a>
+<a href="#entrou">De onde entrou</a>
+<a href="#pj">PJ x PF</a>
+<a href="#mp">Mercado Pago</a>
+<a href="#achados">Achados</a>
+</div></nav>
+
+<header class="capa" id="topo">
+  <div class="wrap">
+    <div class="lockup">
+      <img class="logo-bigodon" src="assets/bigodon-logo.png" alt="Bigodon">
+      <span class="lock-div"></span>
+      <div class="bull-stack"><img class="bi" src="assets/bull-icone-branco.png" alt=""><img class="bw" src="assets/bull-wordmark-branco.png" alt="Bull Invest"></div>
+    </div>
+    <span class="selo">Bull Invest · Auditoria Financeira</span>
+    <h1>Auditoria · Emily</h1>
+    <div class="sub">Emilyn Couto Bibian do Prado · família Bigodon</div>
+    <div class="data">Período 15/03 a 15/06/2026 · 301 lançamentos conferidos no centavo (diferença zero)</div>
+
+    <div class="herobox" id="renda">
+      <div>
+        <div class="herolab">Renda · monetização do YouTube</div>
+        <div class="heronum"><span>R$ 10.057</span> /mês</div>
+        <div class="herosub">Projeção de <strong>R$ 120.684/ano</strong>. 100% da renda dela vem do canal · entra como "Câmbio" no Inter porque o AdSense paga em dólar.</div>
+      </div>
+      <div class="chart"><div class='cbar'><div class='cbval'>R$ 15.906</div><div class='cbcol' style='height:158px'></div><div class='cblab'>Fev</div></div><div class='cbar'><div class='cbval'>R$ 6.751</div><div class='cbcol' style='height:71px'></div><div class='cblab'>Mar</div></div><div class='cbar'><div class='cbval'>R$ 3.887</div><div class='cbcol' style='height:44px'></div><div class='cblab'>Abr</div></div><div class='cbar'><div class='cbval'>R$ 13.683</div><div class='cbcol' style='height:137px'></div><div class='cblab'>Mai</div></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="resumo"><div class="kicker">Visão geral · trimestre 15/03 a 15/06</div><h2>Os números, no centavo</h2>
+<div class="kpis">
+<div class="kpi ouro"><div class="v">R$ 10.057</div><div class="l">renda média/mês (YouTube)</div></div>
+<div class="kpi"><div class="v">R$ 34.431,55</div><div class="l">entrou no trimestre (bruto)</div></div>
+<div class="kpi"><div class="v">R$ 18.120,93</div><div class="l">gasto real de casa</div></div>
+<div class="kpi"><div class="v">R$ 7,24</div><div class="l">saldo final (2 contas)</div></div>
+</div>
+<div class="card" style="margin-top:16px">O bruto que circula é alto, mas <strong>a maior parte é o mesmo dinheiro girando</strong> (aplicações, resgates e o câmbio do YouTube). O que importa: a renda real é a monetização do canal (~R$ 10.057/mês) e o consumo real da casa foi <em>R$ 18.120,93</em> no trimestre (~R$ 6.040/mês). A conta fecha o mês perto de zero · <strong>não sobra, não investe</strong>.</div>
+</section>
+
+<section id="saiu"><div class="kicker">Rastreamento</div><h2>Pra onde o dinheiro foi</h2>
+<div class="card"><div class='rk'><div class='rkhead'><span class='rkname'>Transferências p/ pessoas</span><span class='rkval'>R$ 7.292,83 <em>· 61x</em></span></div><div class='rktrack'><div class='rkfill' style='width:100%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Compras online (Shopee/ML)</span><span class='rkval'>R$ 4.012,13 <em>· 22x</em></span></div><div class='rktrack'><div class='rkfill' style='width:55%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Casa / vestuário / presentes</span><span class='rkval'>R$ 1.420,87 <em>· 18x</em></span></div><div class='rktrack'><div class='rkfill' style='width:19%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Mercado / alimentação</span><span class='rkval'>R$ 1.397,78 <em>· 28x</em></span></div><div class='rktrack'><div class='rkfill' style='width:19%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Delivery (iFood)</span><span class='rkval'>R$ 1.316,73 <em>· 13x</em></span></div><div class='rktrack'><div class='rkfill' style='width:18%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Viagem / hotel</span><span class='rkval'>R$ 727,68 <em>· 1x</em></span></div><div class='rktrack'><div class='rkfill' style='width:9%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Farmácia / saúde</span><span class='rkval'>R$ 442,56 <em>· 7x</em></span></div><div class='rktrack'><div class='rkfill' style='width:6%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Outros</span><span class='rkval'>R$ 417,49 <em>· 6x</em></span></div><div class='rktrack'><div class='rkfill' style='width:5%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Assinaturas / apps</span><span class='rkval'>R$ 413,07 <em>· 10x</em></span></div><div class='rktrack'><div class='rkfill' style='width:5%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Escola / educação</span><span class='rkval'>R$ 245,00 <em>· 4x</em></span></div><div class='rktrack'><div class='rkfill' style='width:3%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Transporte</span><span class='rkval'>R$ 212,29 <em>· 21x</em></span></div><div class='rktrack'><div class='rkfill' style='width:2%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Telecom</span><span class='rkval'>R$ 152,50 <em>· 2x</em></span></div><div class='rktrack'><div class='rkfill' style='width:2%'></div></div></div><div class='rk'><div class='rkhead'><span class='rkname'>Igreja / doação</span><span class='rkval'>R$ 70,00 <em>· 2x</em></span></div><div class='rktrack'><div class='rkfill' style='width:0%'></div></div></div></div>
+<div class="two">
+<div class="card"><div class="kicker">Top destinos individuais</div><table><tr><th>Quem recebeu</th><th class="n">qtd</th><th class="v">Total</th></tr><tr><td>SHPP (Shopee Pay)</td><td class='n'>14x</td><td class='v'>R$ 3.510,13</td></tr><tr><td>SANDRO RAFAEL DINAMARQUEZ</td><td class='n'>2x</td><td class='v'>R$ 2.400,00</td></tr><tr><td>IFOOD</td><td class='n'>13x</td><td class='v'>R$ 1.316,73</td></tr><tr><td>JOSELIA FRANCO</td><td class='n'>3x</td><td class='v'>R$ 984,05</td></tr><tr><td>BOOKINGCOM BRASIL SERVICOS DE RESERVA DE HOTEIS LTDA</td><td class='n'>1x</td><td class='v'>R$ 727,68</td></tr><tr><td>MARIA IVANILDA CHAVES</td><td class='n'>2x</td><td class='v'>R$ 560,00</td></tr><tr><td>GABRIELA RODRIGUES MACHADO FERREIRA</td><td class='n'>1x</td><td class='v'>R$ 500,00</td></tr><tr><td>AGNALDO GUIMARAES PACHECO</td><td class='n'>3x</td><td class='v'>R$ 450,00</td></tr><tr><td>PIX MARKETPLACE (Mercado Pago/ML)</td><td class='n'>7x</td><td class='v'>R$ 417,98</td></tr><tr><td>APPLE.COM (assinaturas)</td><td class='n'>9x</td><td class='v'>R$ 403,10</td></tr><tr><td>RAQUEL DOS SANTOS DA CRUZ DO PRADO</td><td class='n'>2x</td><td class='v'>R$ 354,10</td></tr><tr><td>CLEUZA DOS SANTOS CARDOSO</td><td class='n'>4x</td><td class='v'>R$ 328,00</td></tr></table></div>
+<div>
+<div class="destaque"><h3>⚠ Transferências p/ pessoas: R$ 7.292,83</h3>
+<p>É o maior bloco de saída. São Pix avulsos pra dezenas de pessoas físicas. <strong>Precisa confirmar com a Emily o que são</strong> · serviços? ajuda à família? pagamentos informais? Sem isso, não dá pra dizer se é gasto ou repasse.</p></div>
+<div class="card"><div class="kicker">Leitura</div><p style="margin-top:8px;color:var(--cinza)">Consumo pulverizado: muitas comprinhas pequenas e frequentes (mercado, farmácia, iFood, apps) + compras online (Shopee/ML). Ticket médio de gasto: <em>R$ 92,93</em> por compra.</p></div>
+</div>
+</div>
+</section>
+
+<section id="entrou"><div class="kicker">Rastreamento</div><h2>De onde o dinheiro entrou</h2>
+<div class="card"><table>
+<tr><th>Fonte</th><th class="v">No trimestre</th></tr>
+<tr><td><strong>📺 YouTube (Câmbio)</strong> · a renda de verdade</td><td class="v">R$ 24.321,85*</td></tr>
+<tr><td>Resgates de fundo/aplicação (dinheiro dela voltando)</td><td class="v">R$ 3.030,81</td></tr>
+<tr><td>Do PJ do Victor (barbearia)</td><td class="v">R$ 2.540,75</td></tr>
+<tr><td>Entre as contas dela mesma</td><td class="v">R$ 3.634,31</td></tr>
+<tr><td>Outros (devoluções, terceiros)</td><td class="v">R$ 903,83</td></tr>
+</table>
+<p style="font-size:12px;color:var(--cinza);margin-top:8px">*Câmbio do trimestre 15/03 a 15/06. Mês fechado: fev R$ 15.906 · mar R$ 6.751 · abr R$ 3.887 · mai R$ 13.683.</p></div>
+</section>
+
+<section id="pj"><div class="kicker">O nó</div><h2>PJ × PF · a conta dela e a barbearia estão grudadas</h2>
+<div class="two">
+<div class="kpi"><div class="v">R$ 2.540,75</div><div class="l">ela RECEBEU do PJ do Victor</div></div>
+<div class="kpi ouro"><div class="v">R$ 6.550,00</div><div class="l">ela MANDOU pro PJ do Victor</div></div>
+</div>
+<div class="card" style="margin-top:14px">No trimestre, a conta pessoal da Emily <strong>abasteceu a barbearia em R$ 4.009,25 líquidos</strong>. Dinheiro pessoal (do YouTube) entrando no caixa da empresa e vice-versa. <strong>É o problema central:</strong> não dá pra enxergar a saúde real nem da casa nem da barbearia enquanto estiverem misturadas. Resolver isso é a frente nº 1 do plano do Victor.</div>
+</section>
+
+<section id="mp"><div class="kicker">Contas menores</div><h2>Mercado Pago · praticamente inativa</h2>
+<div class="card">As contas no Mercado Pago vivem perto de zero. Em 6 meses (jan a jun) passou pouco mais de R$ 1 mil, em pequenos pagamentos e <strong>descontos de empréstimo do próprio Mercado Pago</strong> (tem dívida ativa lá). <strong>Não entra renda por aqui.</strong>
+<table style="margin-top:12px"><tr><th>Mês</th><th class="v">Entrou</th><th class="v">Saiu</th></tr>
+<tr><td>Fevereiro</td><td class="v">R$ 728,00</td><td class="v">R$ 423,98</td></tr>
+<tr><td>Março</td><td class="v">R$ 340,40</td><td class="v">R$ 644,42</td></tr>
+<tr><td>Maio</td><td class="v">R$ 50,04</td><td class="v">R$ 49,90</td></tr>
+<tr><td>Jan / Abr / Jun</td><td class="v">~R$ 0</td><td class="v">dívida MP</td></tr></table></div>
+</section>
+
+<section id="achados"><div class="kicker">Conclusão</div><h2>Achados e próximos passos</h2>
+<div class="card">
+<ul class="clean">
+<li><strong>Renda 100% YouTube (~R$ 10.057/mês), porém irregular</strong> · variou de R$ 3.887 (abr) a R$ 15.906 (fev). Renda de criador oscila; precisa de reserva pros meses fracos.</li>
+<li><strong>Não sobra nada</strong> · entra a monetização, sai tudo em consumo + repasses + barbearia. Saldo final R$ 7,24. Zero reserva, zero investimento.</li>
+<li><strong>PJ × PF grudados</strong> · a conta da Emily financiou a barbearia em ~R$ 4.009 no trimestre. Separar é urgente.</li>
+<li><strong>Transferências p/ pessoas é o maior gasto</strong> · confirmar com a Emily a natureza desses Pix.</li>
+<li><strong>Dívida no Mercado Pago</strong> · tem empréstimo sendo descontado; vale levantar o saldo devedor.</li>
+</ul>
+<p style="margin-top:14px"><span class="tag">Recomendação</span></p>
+<p style="margin-top:10px">Tratar a Emily como uma <strong>criadora de conteúdo separada da pessoa física</strong>: <strong>separar as contas agora</strong> (usar a conta menos movimentada como "cofre" da monetização), tirar um <em>pró-labore</em> fixo pra vida pessoal (~R$ 3 mil/mês), montar reserva pros meses fracos e <strong>descolar de vez da barbearia</strong>. <strong>CNPJ não é pra agora</strong> · só seria um custo sem retorno hoje; abrir só quando houver projeção que justifique.</p>
+</div>
+</section>
+
+</div>
+
+<footer>
+  <div class="lockup-foot">
+    <img class="b" src="assets/bigodon-logo.png" alt="">
+    <span class="fdiv"></span>
+    <div class="bull-stack"><img class="bi" src="assets/bull-icone-branco.png" alt=""><img class="bw" src="assets/bull-wordmark-branco.png" alt="Bull Invest"></div>
+  </div>
+  <p>Auditoria financeira · Raul Mockel · Bull Invest · conferido no centavo (diferença zero vs. saldo do extrato)</p>
+  <p class="intnote">Uso interno · contém dados pessoais</p>
+</footer>
+</body></html>
