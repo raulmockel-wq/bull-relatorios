@@ -11,6 +11,7 @@ Os links são **não listados** (noindex + robots Disallow) — só quem recebe 
 | Victor Prado (Bigodon) · Maio/2026 | `victor-a6d5c4` | https://raulmockel-wq.github.io/bull-relatorios/victor-a6d5c4/ |
 | Anderson "Gu" · Roteiro 1º encontro | `anderson-001ad6` | https://raulmockel-wq.github.io/bull-relatorios/anderson-001ad6/ |
 | Anderson "Gu" · Auditoria Financeira (jan–mai/2026) | `anderson-auditoria-ae6dd1` | https://raulmockel-wq.github.io/bull-relatorios/anderson-auditoria-ae6dd1/ |
+| Service One · Diagnóstico Trimestral (abr–jun/2026) | `serviceone-diagnostico-3a1e6f` | https://raulmockel-wq.github.io/bull-relatorios/serviceone-diagnostico-3a1e6f/ |
 | Victor Prado (Bigodon) · Reunião 15/06/2026 | `bigodon-reuniao-7608e4` | https://raulmockel-wq.github.io/bull-relatorios/bigodon-reuniao-7608e4/ |
 | Emilyn Couto (Bigodon) · Auditoria Financeira (15/03–15/06) | `emily-2b2149` | https://raulmockel-wq.github.io/bull-relatorios/emily-2b2149/ |
 
