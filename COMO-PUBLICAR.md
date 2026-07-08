@@ -15,6 +15,7 @@ Os links são **não listados** (noindex + robots Disallow) — só quem recebe 
 | Victor Prado (Bigodon) · Reunião 15/06/2026 | `bigodon-reuniao-7608e4` | https://raulmockel-wq.github.io/bull-relatorios/bigodon-reuniao-7608e4/ |
 | Emilyn Couto (Bigodon) · Auditoria Financeira (15/03–15/06) | `emily-2b2149` | https://raulmockel-wq.github.io/bull-relatorios/emily-2b2149/ |
 | Bigodon (Victor) · Proposta Clube Pai & Filho | `bigodon-clube-pai-filho-d09f3c` | https://raulmockel-wq.github.io/bull-relatorios/bigodon-clube-pai-filho-d09f3c/ |
+| Treinamento · O Ciclo do Dinheiro | `ciclo-do-dinheiro-ea8539` | https://raulmockel-wq.github.io/bull-relatorios/ciclo-do-dinheiro-ea8539/ |
 
 > Dashboard avulso do Victor: https://raulmockel-wq.github.io/bull-relatorios/victor-a6d5c4/dashboard.html
 
