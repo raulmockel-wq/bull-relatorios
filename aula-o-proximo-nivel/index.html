@@ -1,0 +1,191 @@
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Bull Invest · O Próximo Nível é Você</title>
+<style>
+  :root{
+    --gold:#e7b84f; --gold2:#f6d78a; --ink:#0c0d10; --ink2:#15171c;
+    --line:#2a2d35; --txt:#f4f1ea; --mut:#a7abb5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:radial-gradient(1200px 700px at 70% -10%, #1c1e26 0%, var(--ink) 60%);
+    color:var(--txt); font-family:"Segoe UI",system-ui,-apple-system,sans-serif; overflow:hidden;
+  }
+  .stage{height:100vh;width:100vw;position:relative;display:flex;align-items:center;justify-content:center}
+  .slide{display:none;width:min(1060px,92vw);padding:clamp(28px,5vw,64px);animation:fade .45s ease}
+  .slide.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .brand{position:fixed;top:24px;left:34px;z-index:5;display:flex;flex-direction:column;align-items:flex-start;gap:9px;opacity:.82}
+  .brand img.bi{height:34px;width:auto;display:block}
+  .brand img.bw{height:12px;width:auto;display:block}
+  .kick{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:14px;text-transform:uppercase;margin-bottom:18px}
+  h1{font-size:clamp(30px,5.2vw,60px);line-height:1.05;font-weight:800;letter-spacing:-.5px}
+  h1 em{color:var(--gold2);font-style:normal}
+  h2{font-size:clamp(24px,3.6vw,40px);font-weight:800;margin-bottom:22px;letter-spacing:-.3px}
+  p.lead{font-size:clamp(17px,2vw,22px);color:var(--mut);margin-top:20px;line-height:1.5;max-width:44ch}
+  .row{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px}
+  .card{background:linear-gradient(180deg,var(--ink2),#101217);border:1px solid var(--line);border-radius:16px;padding:24px 26px;flex:1;min-width:210px}
+  .card .n{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:1px}
+  .card h3{font-size:20px;margin:8px 0 6px}
+  .card p{color:var(--mut);font-size:15px;line-height:1.45}
+  ul.clean{list-style:none;margin-top:24px}
+  ul.clean li{font-size:clamp(16px,2vw,22px);padding:13px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+  ul.clean li:before{content:"›";color:var(--gold);font-weight:800}
+  .tag{display:inline-block;background:rgba(231,184,79,.12);border:1px solid rgba(231,184,79,.35);color:var(--gold2);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:24px}
+  .flow{display:flex;flex-direction:column;gap:13px;margin-top:24px}
+  .step{display:flex;align-items:center;gap:18px;background:var(--ink2);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:15px 22px}
+  .step .num{width:34px;height:34px;border-radius:50%;background:var(--gold);color:#1a1206;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .step b{font-size:18px}
+  .step small{color:var(--mut);font-size:14px;display:block;margin-top:2px}
+  .quote{font-size:clamp(24px,3.6vw,42px);font-weight:700;line-height:1.22;max-width:26ch}
+  .quote span{color:var(--gold2)}
+  .foot{position:fixed;bottom:22px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:5}
+  .dot{width:9px;height:9px;border-radius:50%;background:#33363f;transition:.2s}
+  .dot.on{background:var(--gold);width:26px;border-radius:5px}
+  .nav{position:fixed;bottom:20px;right:30px;color:var(--mut);font-size:13px;z-index:5}
+  .cnt{position:fixed;top:30px;right:34px;color:var(--mut);font-size:13px;z-index:5}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+  @media(max-width:720px){.split{grid-template-columns:1fr}}
+  .miss{border-color:#4a2b2b;border-left-color:#d76b6b}
+  .hit{border-color:#2c4a33;border-left-color:#5fd07f}
+  .big{font-size:clamp(46px,10vw,130px);font-weight:800;color:var(--gold2);line-height:.95;letter-spacing:-3px}
+  .under{color:var(--txt);border-bottom:2px solid var(--gold);padding-bottom:2px}
+  .challenge{background:linear-gradient(180deg,rgba(231,184,79,.1),rgba(231,184,79,.03));border:1px solid rgba(231,184,79,.4);border-radius:18px;padding:26px 30px;margin-top:26px}
+  .challenge b{color:var(--gold2)}
+</style>
+
+<div class="brand"><img class="bi" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATcAAAC+CAYAAABQ6kiWAAASJElEQVR4nO3dCZTdZXnH8e9MFjAETFisIjFAICJhE0hYpHAAEQu0gAu2soVNi7XaVnFH5egBtXoooiJIhYK1WIyokKqIFBSXyKKVRTTBSAQDQkIIEAJk5vY8x+eeM+TMZO5/ufd93v/9fc6ZE22ZmbzM3P/vvuvzgoiIiIiIiIiIiIiIiIiIiIiIiEhcA+N9QqvVmgmsAJ7sTZNERMY1c2Bg4P4NfcLg+N+DXYDpHXyeiEiv7DbeJ3QSbvOAF9fTHhGRWlguVQ63/awLWE97RERqYblUOdz2AA6opz0iIpXNBnavI9w2Bw4HplZvk4hIZfM7WQfoJNwGPSn3qd4mEZHK3ghMqCPcWv557wAmVm+XiEhppwPbeS5V3ue2zlPyOeAo4Pry7RIRKc06V/cCs4DhgYGBCVV7bm2TgAuBaeXbJiJS2heB7Tv95CLhhs+9XVbi60REqngbcGIno822MiF1NPAFzb+JSI+8AfgUMLnIF5UJN0vOM4DPA1NKfL2ISKfeDPw7sAkFlR1eDnrAfd2HqiIiddoMOMeDzf53YUVWS8fyAPAJb8TaMo0QERnhNcCHgf03kFHjrpbWEW5mCLgDuMR7c6vG+74iIus5zEeER3QwDO1ZuLXZ51qNpVuAHwN3A0u9HtyzHX4PaTabFB7214r0r2nA1sAcr/BxELBzgbm1nofbSLbpdw3wuBe6fMZ3FXe8lCuN0vLX0SQPtyH/U/pHy/+c6CH2QmBTf8MrmgtJw01EpFuGBgYGJlZdLdW7q4hEM24udRJumisTkWhs2qtyuNm8mYhIJGvqCLcVnZQXERHpIculyuH2R827iUgwD9YRbndqT5KIBPOrOsLtdmB1Pe0REals2HOpcrgtAu6r3h4RkVrYoYDb6gi3ZR5wWlQQkQiWesGOWva5XaP9biISxE11bQUZ9kPw4yaliEiXWSdrYV0nFPDV0u9qaCoiiS0BflF3Jd4LgKfLt0lEpLKrgEfrDrfFPjwVEUnhEWBBt+5Q+GgnB1ZFRLrga34pc1fC7SfAjcXbJCJSycPAl4ocBS1z+9XZqhQiIj1kC5mXd3Lkqmq43QpcUeLrRETKWOwLmoV0UmZ8tL/e3M92bVv0HxQRKbiv7Xi/Ve95BgYGunIp80rgXVpcEJEuu3q0YOtE2XAz3wAu1cZeEemS3wD/UvaLyw5L26b6yYVXlW2AiMgoHgMO9zn+UXVrWDqy9MibgN9V/D4iIm12x/GZGwq2TlQNt3a53+N897CISBV2WfeHfMMuqcMNXzl9HfCnmr6fiPSfdcA5wKfr+GZ1hZu5BTjWL5QRESm65eMjwMeoSdUFhdHs5Idbdy7dKhHpJ0/41jI7XtWx8RYUuhFuZjPgq8Bf1dw7FJFmWQacBNxc9Au7vVo6Frst6yjgXJ1DFZFR2AH4G4C9ygRbJ7rdq7JD9kf4gVdd7CwieLHJ9wKHdVp4soxuDUtH83HgNOAvOvl3RaRxngKuB/6xkxvjo865jWUG8AHgGIWcSN940qt4/yvwg7q+abRwa9sOeAvweq8sMqkb/4iIJNPyIeeNvgpaW6hFD7eRq6pH+wbgPb03t1E3/0ER6erpgsf8hqpr/Nx5oQKTTQq3kWYBuwIHAbsD2wPTgBcAE72tGsaKpNXyj2E/A7ra58/uAX7kp5V+04tdEjmF20hTvBe3JfAi//PFI8JuciZBZ93yfYBD+2i/37M+x/K4X+S90h+Ap/2dfdB/f1O9526/262A6cAmffRzsjD4lv93R9fyo1HtMLNz5A/56/tP/qf9nnsq13BrikF/N9ufZmp5aC3zCg6LgLv8CN6TvvP8WX8whtf7uQx6j3yKv2FtAezg0xP285rjfzeBZloBzAWWpm5IrhRuab3fz8o17QG10LoDuBb4nvfQnvQQq4MF3qbAPD+vfIivtDetV7fQN7tLCQq3dGxF+IfANjSDDSl/D1zp5WiW1BhmGzLoYXcw8A/AX/r/b4LnPLwt5KQghVsag35bz9vJnwXYnf7f8x+pGwPMBj7oq+wvJH/2s93bh++SwdnSfvdK4ATyNuzzZyf5PFiEYDO/BU72IevXfNd7zqx6zhmpG9FE6rnVz94wvuwPYK4e8YKBnyK+A7ytczN+s74P2E1FJopRz633dvPjZbkOQa/3fYY5BFu7SOq+vnCzinznZ+3ctdRI4Vb/z/PUTOeCLBje5zcOLSc/HwWO7OaO+C6/bs5o0EJJCAq3es3w28By82ufoP8MefuJr6b+p6/u5mQnP2stNVG41etNfqIiJzd5XS3bttIEq30x55zMViCteMTpqRvRJAq3+qwMnEJevuk9tsq1tQKyObh3AGvJx55+tlpqoHCrz6G+BysXto3ieO/pNNXFwPyMViGnZr7KHorCrT5/n9HP8+rMHvqqIf5WPwObA5si2DF1I5ogl4cxupcCB5KHG3xFN6fhWlVf8Zr9vTguVtXWwGtSN6IJFG71OMEPeudQZme+H3LvNxcCn/NKJtGfyWN9DlcqULjV45gM6sut8B5bExcPOnUW8H3yOL5nW0OkAoVbPbvL7VRC9OoTZ3m9tX62zs/KWv25yKZ7FRSpQOFW3XFebDGyBcBlqRsRxMPAOz3woxrwOm86sVCBwq26vw4+JF3mD7M8f3+f1aWLbA/gJakbkTOFWzXTgs+NDHntM6tzL8/3Aa8gHPm1ZXXepCSFW/U9SZEPyS/ybRAy+vD039a72yHas3mk3zMhJSjcqp9KiHo/wlo/fiRju8gr4Ua1l59akBIUbtXMDTzfdrPfISljsxMaXwy8uXeGb+qVEhRu5Vn1j5cRk1XDOC91IzJxObCYmDbxw/RSgsKtvP0Dn0q43e9Llc6G7/8VdO5t0Muo6zktQT+08uZ5Da5oWj6XFPFhjepSvzU9Iiv5rkWFEhRu5b0i6M/vIa/6IZ1b7kU7I7J7b3XOtISID2dOlUAi+p/MKtBGcUXQn5ttNdo2dSNypHArZ/Ogu8eHfOe9hqTFLfRebzR2tG+H1I3IkcKtnJf5DvJo/gDcnboRGfsx8dh82/apG5EjhVs52wddTLir4WXDe7E3MOKtWS9P3YAcKdzK2THgClbLr7aLOG+UU7hFLL0+K3UDcqRwK7+CFe1nZ6F2W+pGZO63QYsMbJW6ATmK9oDmYnrAY1c2HL0/dSMyZwsxS4lns4AjhfAUbuVXS6OxHseq1I1ogMUB71mwY1iTUzciNwq3cqYFLeETcb4oNxHDbePgpbVCUriVfyeNxi5+UbhVd3/AFdOJgc8xh6VwKydibfuV2rxb2y1h0X6OE4K+oYamcCv3Lhpx/qMf7yLt1sLMUMDnNPolROEo3MqJtlJqc0QaktbjqaDFK7VaWpDCrdyLLGK4afNuPYYCDksJ+JoLT+EmIo2kcCsu6rt6xHnAHE0K+lxE254SXsRfYnTrAs7JWLjplqR6vCBoUQRNOxSkcCvXc4v4QtM+qPo2aA8GfM09k7oRuYn2S8zF08SzhVbUarvVbELARQ5bxZUCFG7lPEE8VhlYtfbrqdUXLdxspKBzwwUp3MqJ+EKzy3u1i726HQJuu7DrB7VJuyCFWzmPEc+WXopJqplNPE95wEkBCrfy5YVaARcUVLG1+vMwg3geD7oFKTSFWznLAp4/tO0L+6VuROb2Clr1NuKtXOEp3MpZEnCvGx5uWlQo7+CgPz+rMScFKdzK+V3QfUdzVNSwkgODPhP3pW5AjiL+InPwQNBFBdujtW/qRmRco29v4nlOPbdyFG7l2LL8cuKxLQzHp25Epl7nG6GjWeO3cklBCrfyfk9Mr/bbkqSYk4Oe8FgV9I00PIVbtdvdh4OejbQHVTq3S9AhaftOB+1xK0HhVt6ioIsKNjQ9Q7/bQt4SeCHm9qAr8+HpASjvVt9cGdErgL9J3YhM2JncowMeucJHBj9N3YhcKdyqXSRi+90isrmj96RuRCZOA7YhJnvz/GXqRuRK4VbNzwIew2rb21cAZWwvBU4N/Bws9cu2pYSov9RcXO/7kCKy41gfU/nxDXo3sC1x/Vy3mpWncKvmf4FHiGsnf4Bl9HOk84POteFnl7+rxYTyFG7VrAs+J2K/33cB26VuSMA5yU/4tpmoHg3+2gpP4VbdVUH3u7VtDlwRdINqKv8EHEJstkqq+bYKFG7VfTNoZd6RXgV8KHUjAg1Hzw7+2rdFqmu1ebeayL/gnM6Z2qppZDavdBbwWvrbZt6LjX48zXpst6RuRO4Ubv0xNG1Xvfhy0DLavfIVYGfyOP1iZbWkAoVbPa4Jvmo6cjf+Ap+H6zcXAkcR35C/nrRKWpHCrb6h6XXkc0h8YQZDszqdC5wZeNvH+ht3v5O6EU2gcKvPRUFvoh/Nvr6HKvJWiLqc50fRot1FOpbr/AIiqUjhVp+7/TB9LvbzExZ2JWBTX9vn+0JKLsG2yudvpQYKt/rYsv2XMlhYGGmur8rZULWJq6LvzCjYzI98MUFqoHCr17UZloR+uR8jO6EhrwcL6hu83HoOc2xtT/ubo9SkCS/mSFYClwauFDKWLX2byOcyH6ae4kFtPdLc3OFvjlIThVv9bM7kD+Rnkq8ofg84lLzs6HvYLsk0nG0h6oLUjWgahVv9HvReUG69t7Y9gW8BF2ew4dc2Jv8z8AMfhuZ6fvZXwNWpG9E0485JtFq5PqPJ7w/9WQOqcTwEXAl8OuD2hJM92HbJbNFgfc95SXjbmiMFDAxsOL4Ubt2tPPGZBvSOWz7MXuBDJ7uNKaW3emnw3RtSiPOHwEGpG5EjhVs6U31pfw+aoeULJjf7NgsbuvbKHr6aewwwM+Ph5/rW+H5DG5ZKQQq3tP4OuLwhPYz1J8Af9D1yC3zOy46g1Wkf4A2+uDHb59dy2trRCRvyn5S6EblSuKU10Xs4R9BMLT/o/QSw2Hsg9nGP3wz28Dg1yQb9EP8sD7BX+hzaHGALf1NoWqC12RzmrgHnMrOhcEvPHtab/GHtBy2fJLdNqU/5xxr/u3UeaBv5h/XGNvE/N2rA/GSnhn1O1iqVSEkKtxg+Any4jx5e2bBbfBEhp6N64SjcYr2grdy39Dc7HD/Ph/HSxXBTT6J3TgceS90ISarlvXgFWw8o3HrnXuD9PgEv/ek6P78rPaBhae9d7VscpL884MPR5akb0hQalsZzWoZlkaSaZ4C3K9h6S+HWe6uBN/veMGk+WxH9ZI9PdIjCLZnbvUqsbjhqvm8D56RuRD9SuKVzmW/i1KRmc/3CpyG0ny0BLSikP57138CxqRsiXVlAOCBAFZXG0oJCbDYsPdXL3khzPOoVTBRsCSncYuxYP86HMJK/J7wqsM2rSkIKtxge9qGpVdOQfK3xnrjdByuJKdziuN9LI9nlzpIfq34yH/h66obINrLZdVCPKAA=" alt="Bull Invest"><img class="bw" src="data:image/png;base64,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" alt="Bull Invest"></div>
+<div class="cnt" id="cnt"></div>
+
+<div class="stage">
+
+  <!-- 1 capa -->
+  <section class="slide active">
+    <div class="kick">Desenvolvimento Pessoal</div>
+    <h1>Você já provou<br>que sabe ganhar.<br><em>Agora o jogo é outro.</em></h1>
+    <p class="lead">Hoje a gente não fala de número. Fala de quem você precisa virar pra transformar o dinheiro que você gera em uma vida que ninguém te tira.</p>
+  </section>
+
+  <!-- 2 reconhecimento -->
+  <section class="slide">
+    <div class="tag">Antes de qualquer coisa</div>
+    <h2>Olha o tamanho do que você já faz</h2>
+    <div class="row">
+      <div class="card"><div class="n">CORAGEM</div><h3>Você atravessa fronteira</h3><p>Assume o risco na própria pele que a maioria não tem estômago pra encarar.</p></div>
+      <div class="card"><div class="n">CAPACIDADE</div><h3>Gera mais de R$100 mil por mês</h3><p>Faz girar um negócio inteiro sozinho, na raça, sem ninguém mandando.</p></div>
+      <div class="card"><div class="n">VISÃO</div><h3>Enxerga oportunidade onde os outros não veem</h3><p>Isso não se ensina. Ou você tem, ou não tem. E você tem.</p></div>
+    </div>
+    <p class="lead" style="margin-top:22px">Poucos no mundo sabem gerar dinheiro do zero como você. <em>Guarda isso.</em></p>
+  </section>
+
+  <!-- 3 a virada -->
+  <section class="slide">
+    <div class="kick">A virada de chave</div>
+    <h1>Gerar dinheiro<br>é uma coisa.<br><em>Manter é outra.</em></h1>
+    <p class="lead">Ganhar bem e continuar apertado não é falta de venda. É o dinheiro chegando numa cabeça que ainda não aprendeu a segurá-lo. E isso, diferente de talento, dá pra construir.</p>
+  </section>
+
+  <!-- 4 sobrevivência x construção -->
+  <section class="slide">
+    <h2>Dois modos de viver com dinheiro</h2>
+    <div class="split">
+      <div class="step miss"><div class="num" style="background:#d76b6b">✕</div><div><b>Modo caçador</b><small>Todo mês começa do zero. Caça, vende, gasta, caça de novo. Nunca para, nunca sobra, nunca descansa.</small></div></div>
+      <div class="step hit"><div class="num" style="background:#5fd07f">✓</div><div><b>Modo construtor</b><small>Cada mês deixa um tijolo em pé. O trabalho de hoje sustenta o amanhã. O dinheiro passa a trabalhar por você.</small></div></div>
+    </div>
+    <p class="lead" style="margin-top:26px">Você é um caçador excelente. O convite de hoje é aprender a <em>construir</em> sem parar de caçar.</p>
+  </section>
+
+  <!-- 5 o porquê -->
+  <section class="slide">
+    <div class="tag">A pergunta que muda tudo</div>
+    <h2>Pra quê todo esse esforço?</h2>
+    <ul class="clean">
+      <li>Tirar o seu pai da estrada. Dar a ele o descanso que ele merece.</li>
+      <li>Uma vida em que a sua família não depende de você nunca poder parar.</li>
+      <li>Liberdade de verdade: acordar e escolher, não ser obrigado.</li>
+    </ul>
+    <p class="lead" style="margin-top:20px">Dinheiro sem propósito vira só adrenalina. <em>Com propósito, vira missão.</em> Esse é o combustível que aguenta os dias difíceis.</p>
+  </section>
+
+  <!-- 6 identidade -->
+  <section class="slide">
+    <div class="kick">A verdade mais importante da aula</div>
+    <h1>Você não tem um problema<br>de dinheiro.<br><em>Tem uma identidade em transição.</em></h1>
+    <p class="lead">Suas ações sempre seguem quem você acredita que é. Enquanto se enxergar como "o cara que gira mercadoria", vai girar. No dia que se enxergar como <span class="under">dono de patrimônio</span>, vai construir patrimônio. A mudança começa por dentro.</p>
+  </section>
+
+  <!-- 7 inimigos internos -->
+  <section class="slide">
+    <div class="tag">Com toda a honestidade</div>
+    <h2>O que te trava não é o mercado</h2>
+    <ul class="clean">
+      <li>Não é a concorrência, não é o dólar, não é a sorte.</li>
+      <li>São os hábitos que só você conhece de verdade. Aqueles que sabotam quando ninguém está olhando.</li>
+      <li>Coragem de verdade não é atravessar fronteira. É <b>encarar de frente o que precisa mudar em você.</b></li>
+    </ul>
+    <p class="lead" style="margin-top:20px">Aqui é lugar seguro, sem julgamento. Mas sem verdade não tem transformação.</p>
+  </section>
+
+  <!-- 8 disciplina > motivação -->
+  <section class="slide">
+    <div class="kick">O segredo que ninguém posta</div>
+    <h1>Motivação começa.<br><em>Disciplina termina.</em></h1>
+    <p class="lead">Ninguém vira dono de patrimônio num dia de fôlego. Vira nos pequenos hábitos repetidos quando a empolgação já passou: se pagar todo mês, guardar antes de gastar, lançar toda venda. Chato? É. É o que separa quem sonha de quem chega.</p>
+  </section>
+
+  <!-- 9 efeito composto -->
+  <section class="slide">
+    <div class="tag">O que o tempo faz por você</div>
+    <h2>Pequeno, repetido, vira gigante</h2>
+    <div class="row">
+      <div class="card"><div class="n">HOJE</div><h3>Um hábito parece pouco</h3><p>Guardar um pouco, lançar uma venda, dizer não a um gasto. Some no meio do mês.</p></div>
+      <div class="card"><div class="n">EM 1 ANO</div><h3>Vira uma reserva de verdade</h3><p>E uma pessoa nova: com controle, com calma, com poder de escolha.</p></div>
+      <div class="card"><div class="n">EM 5 ANOS</div><h3>Vira liberdade</h3><p>O pai fora da estrada. A família tranquila. Você no comando da própria vida.</p></div>
+    </div>
+    <p class="lead" style="margin-top:20px">O tempo é inimigo de quem improvisa e <em>aliado de quem tem método.</em></p>
+  </section>
+
+  <!-- 10 desafio -->
+  <section class="slide">
+    <div class="tag">O seu desafio desta semana</div>
+    <h2>Não é sobre dinheiro. É sobre você.</h2>
+    <div class="challenge">
+      <p style="font-size:clamp(17px,2vw,22px);line-height:1.5">Escreve num papel, com a sua letra, o <b>seu porquê</b>: pra quem e pra quê você faz tudo isso. Cola num lugar que você vê todo dia.</p>
+      <p style="font-size:clamp(17px,2vw,22px);line-height:1.5;margin-top:16px">E escolhe <b>um único hábito</b> pra dominar esta semana. Pequeno, todo dia, sem falhar. Prova pra você mesmo que a sua palavra vale.</p>
+    </div>
+  </section>
+
+  <!-- 11 fecho -->
+  <section class="slide">
+    <div class="kick">Fecho</div>
+    <h1 class="quote">"Você já é foda em ganhar. Agora vamos te fazer <span>foda em construir e em viver.</span>"</h1>
+    <p class="lead">O dinheiro você já sabe fazer. Nos próximos meses, a gente faz de você a pessoa que sabe o que fazer com ele. Bora.</p>
+  </section>
+
+</div>
+
+<div class="foot" id="dots"></div>
+<div class="nav">← →  ·  espaço avança</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const dots=document.getElementById('dots');
+  const cnt=document.getElementById('cnt');
+  let i=0;
+  slides.forEach(()=>{const d=document.createElement('div');d.className='dot';dots.appendChild(d)});
+  const dEls=[...document.querySelectorAll('.dot')];
+  function show(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    dEls.forEach((d,k)=>d.classList.toggle('on',k===i));
+    cnt.textContent=(i+1)+' / '+slides.length;
+  }
+  document.addEventListener('keydown',e=>{
+    if(['ArrowRight',' ','PageDown','ArrowDown'].includes(e.key)){e.preventDefault();show(i+1)}
+    if(['ArrowLeft','PageUp','ArrowUp'].includes(e.key)){e.preventDefault();show(i-1)}
+    if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);
+  });
+  document.addEventListener('click',e=>{if(e.clientX>window.innerWidth*0.35)show(i+1);else show(i-1)});
+  show(0);
+</script>
