@@ -1,371 +1,237 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aula · Organização Financeira do Casal, Bigodon · Bull Invest</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'>
+<meta name='robots' content='noindex,nofollow'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Organização Financeira do Casal · Bigodon · Bull Invest</title><style>
+:root{--preto:#0e0e10;--grafite:#1a1a1f;--grafite2:#15151a;--ouro:#c8a046;--ouro-claro:#e7c879;--creme:#f5f1e8;--cinza:#9a9aa3;--linha:rgba(200,160,70,.22);--verde:#3f9d6a;--vermelho:#b5544e}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--preto);color:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+/* CAPA */
+.capa{background:radial-gradient(1200px 600px at 50% -10%,rgba(200,160,70,.18),transparent 60%),linear-gradient(180deg,#0e0e10 0%,#161318 100%);text-align:center;padding:64px 24px 54px;position:relative;overflow:hidden}
+.lockup{display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:30px}
+.lockup img.logo-bigodon{width:82px;height:82px;border-radius:50%;box-shadow:0 6px 26px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+.lockup .lock-div{width:1px;height:54px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.22),transparent)}
+.bull-stack{display:flex;flex-direction:column;align-items:center;gap:9px;opacity:.82}
+.bull-stack img.bi{height:34px;width:auto}.bull-stack img.bw{height:12px;width:auto}
+@media(max-width:520px){.lockup{gap:16px}.lockup img.logo-bigodon{width:62px;height:62px}.lockup .lock-div{height:44px}.bull-stack img.bi{height:26px}}
+.selo{display:inline-block;border:1px solid var(--ouro);color:var(--ouro-claro);font-size:12px;letter-spacing:3px;text-transform:uppercase;padding:8px 18px;border-radius:30px;margin-bottom:22px}
+.capa h1{font-size:clamp(36px,7vw,64px);font-weight:800;letter-spacing:-1px;line-height:1.03;background:linear-gradient(180deg,#fff,#d9cba6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.capa .sub{color:var(--ouro-claro);font-size:clamp(15px,2.5vw,20px);margin-top:14px;font-weight:600;letter-spacing:.5px}
+.capa .data{color:var(--cinza);margin-top:16px;font-size:13.5px}
+.capa .frase{max-width:640px;margin:26px auto 0;color:var(--creme);font-size:clamp(15px,2.2vw,18px);opacity:.9}
+/* HERO */
+.herobox{background:radial-gradient(600px 220px at 0% 0%,rgba(200,160,70,.14),transparent 70%),var(--grafite);border:1px solid var(--ouro);border-radius:18px;padding:30px;margin:40px auto 0;max-width:820px;text-align:left}
+.herolab{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);font-weight:700}
+.heronum{font-size:clamp(38px,7vw,56px);font-weight:800;letter-spacing:-1px;line-height:1;color:#fff;margin:6px 0}
+.heronum span{color:var(--ouro-claro)}
+.herosub{color:var(--cinza);font-size:14px;max-width:560px}
+/* SEÇÕES */
+section{padding:48px 0 4px;scroll-margin-top:64px}
+.kicker{color:var(--ouro);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.5px;margin-bottom:12px;color:#fff}
+.lead{color:var(--cinza);font-size:16px;max-width:720px;margin-bottom:24px}
+strong{color:#fff}em{color:var(--ouro-claro);font-style:normal;font-weight:600}
+.card{background:linear-gradient(180deg,var(--grafite),var(--grafite2));border:1px solid var(--linha);border-radius:16px;padding:24px 26px;margin-bottom:16px}
+.card h3{color:var(--ouro-claro);font-size:18px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.card p{color:var(--creme);font-size:14.5px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}@media(min-width:760px){.kpis{grid-template-columns:repeat(3,1fr)}}
+.kpi{background:linear-gradient(180deg,var(--grafite),var(--grafite2));border:1px solid var(--linha);border-radius:14px;padding:20px}
+.kpi .v{font-size:25px;font-weight:800;color:var(--creme);letter-spacing:-.5px}
+.kpi .l{font-size:12.5px;color:var(--cinza);margin-top:5px}
+.kpi.ouro{border-color:var(--ouro)}.kpi.ouro .v{color:var(--ouro-claro)}
+.kpi.verde .v{color:#7fd3a5}.kpi.vermelho .v{color:#e0938e}
+/* DUO (duas colunas) */
+.duo{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:760px){.duo{grid-template-columns:1fr 1fr}}
+.duo .card{margin-bottom:0;height:100%}
+.card.empresa{border-color:var(--ouro)}
+ul.inside{list-style:none;margin-top:6px}
+ul.inside li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--creme);font-size:14px}
+ul.inside li::before{content:"→";position:absolute;left:0;top:0;color:var(--ouro);font-weight:800}
+/* DESTAQUE */
+.destaque-box{background:radial-gradient(600px 200px at 0% 0%,rgba(200,160,70,.12),transparent 70%),var(--grafite);border:1px solid var(--ouro);border-radius:16px;padding:24px 26px;margin:8px 0 16px}
+.destaque-box h3{color:var(--ouro-claro);font-size:18px;margin-bottom:8px}
+.destaque-box p{color:var(--creme);font-size:15px}
+/* OBS / PILL */
+.obs{display:flex;gap:13px;background:rgba(200,160,70,.07);border:1px solid var(--linha);border-left:3px solid var(--ouro);border-radius:12px;padding:15px 18px;margin:16px 0}
+.obs .oic{flex:none;font-size:19px}
+.obs p{color:var(--creme);font-size:14px}
+/* LISTAS */
+ul.clean{list-style:none}ul.clean li{position:relative;padding-left:28px;margin-bottom:13px;color:var(--creme);font-size:15.5px}
+ul.clean li::before{content:"";position:absolute;left:3px;top:10px;width:8px;height:8px;border-radius:50%;background:var(--ouro)}
+ul.clean li b{color:#fff}
+/* PASSOS */
+.step{display:flex;gap:16px;margin-bottom:16px;align-items:flex-start}
+.step .num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--ouro);color:#241a05;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+.step .txt{padding-top:3px}.step .txt b{color:#fff}
+/* BRIDGE */
+.bridge{background:radial-gradient(700px 240px at 50% 0%,rgba(200,160,70,.16),transparent 70%),linear-gradient(180deg,var(--grafite),var(--grafite2));border:1px solid var(--ouro);border-radius:18px;padding:34px 30px;text-align:center;margin:22px 0 6px}
+.bridge .bk{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ouro);font-weight:700}
+.bridge h3{color:#fff;font-size:clamp(21px,3.4vw,27px);font-weight:800;margin:10px 0 12px;letter-spacing:-.3px}
+.bridge p{color:var(--creme);max-width:660px;margin:0 auto;font-size:15.5px}
+.bridge .assina{color:var(--ouro-claro);font-weight:600;margin-top:16px;font-size:14px}
+/* NAV / FOOTER */
+.nav{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.nav .inner{max-width:960px;margin:0 auto;display:flex;gap:4px;flex-wrap:wrap;padding:10px 18px;align-items:center}
+.nav a{color:var(--cinza);text-decoration:none;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:9px;white-space:nowrap}
+.nav a:hover{color:var(--ouro-claro);background:rgba(200,160,70,.12)}
+.nav .navhome{display:inline-flex;align-items:center;padding:6px 8px;border-radius:9px;margin-right:4px}
+.nav .navhome:hover{background:rgba(200,160,70,.12)}.nav .navbrand{height:18px;width:auto;opacity:.9}
+@media(max-width:640px){.nav .inner{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start}}
+@media(max-width:520px){
+  .wrap{padding:0 16px}
+  .capa{padding:52px 18px 44px}
+  .herobox{padding:22px}
+  .card{padding:20px 17px}.destaque-box{padding:20px 17px}.bridge{padding:26px 18px}
+  .kpi{padding:16px}.kpi .v{font-size:22px}
+  section{padding:40px 0 4px}
+}
+footer{padding:56px 24px 70px;text-align:center}
+footer .lockup-foot{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:16px}
+footer .lockup-foot img.b{width:46px;height:46px;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,.5)}
+footer .lockup-foot .fdiv{width:1px;height:38px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.2),transparent)}
+footer .bull-stack{opacity:.7}footer .bull-stack img.bi{height:26px}
+footer p{color:var(--cinza);font-size:13px;margin-top:6px}
+.intnote{color:#8a7a4a;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:12px}
+</style></head><body>
 
-  :root{
-    --navy:#0A1F44;
-    --navy2:#0d2a5c;
-    --blue:#2E5C99;
-    --amber:#F59E0B;
-    --amber-soft:#FCD34D;
-    --ink:#0A1F44;
-    --paper:#F7F8FB;
-    --card:#ffffff;
-    --muted:#5b6b85;
-    --line:rgba(10,31,68,.10);
-    --green:#16a34a;
-    --red:#dc2626;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html,body{height:100%;}
-  body{
-    font-family:'Plus Jakarta Sans',system-ui,sans-serif;
-    background:#05122b;
-    color:var(--ink);
-    display:flex;align-items:center;justify-content:center;
-    overflow:hidden;
-  }
+<nav class="nav"><div class="inner">
+<a href="#topo" class="navhome" title="Voltar ao topo"><img class="navbrand" src="assets/bull-icone-branco.png" alt="Topo"></a>
+<a href="#plano">O plano</a>
+<a href="#foto">A foto de hoje</a>
+<a href="#porque">Por que separar</a>
+<a href="#regra">A regra de ouro</a>
+<a href="#prolabore">Pró-labore</a>
+<a href="#papeis">Papel de cada um</a>
+<a href="#caminho">O caminho</a>
+<a href="#combinados">Combinados</a>
+</div></nav>
 
-  .stage{
-    width:100vw;height:100vh;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .slide{
-    position:absolute;
-    width:100vw;height:100vh;
-    padding:6vh 7vw;
-    display:none;
-    flex-direction:column;
-    background:var(--paper);
-    animation:fade .45s ease;
-  }
-  .slide.active{display:flex;}
-  @keyframes fade{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
-
-  /* dark slides */
-  .slide.dark{background:radial-gradient(120% 120% at 15% 0%, #123163 0%, var(--navy) 55%, #06122b 100%);color:#fff;}
-  .slide.dark .eyebrow{color:var(--amber-soft);}
-  .slide.dark .muted{color:#c3d0e6;}
-
-  .eyebrow{
-    font-size:1.05vw;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--blue);margin-bottom:1.6vh;display:flex;align-items:center;gap:.7vw;
-  }
-  .eyebrow .dot{width:.7vw;height:.7vw;border-radius:50%;background:var(--amber);}
-
-  h1{font-size:4.6vw;font-weight:800;line-height:1.03;letter-spacing:-.02em;}
-  h2{font-size:3.1vw;font-weight:800;line-height:1.06;letter-spacing:-.01em;margin-bottom:2.4vh;}
-  .lead{font-size:1.7vw;font-weight:500;color:var(--muted);line-height:1.4;max-width:46ch;}
-  .dark .lead{color:#cdd9ee;}
-
-  .muted{color:var(--muted);}
-  .amber{color:var(--amber);}
-
-  /* footer bar */
-  .foot{
-    position:absolute;bottom:3.4vh;left:7vw;right:7vw;
-    display:flex;justify-content:space-between;align-items:center;
-    font-size:.95vw;color:var(--muted);font-weight:600;letter-spacing:.03em;
-  }
-  .dark .foot{color:#93a6c8;}
-  .brand{display:flex;align-items:center;gap:.6vw;font-weight:800;color:var(--navy);letter-spacing:.02em;}
-  .dark .brand{color:#fff;}
-  .brand .b{
-    width:1.7vw;height:1.7vw;border-radius:.4vw;background:var(--amber);
-    display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:800;font-size:1.05vw;
-  }
-
-  /* cards */
-  .grid{display:grid;gap:1.6vw;margin-top:1vh;}
-  .g2{grid-template-columns:1fr 1fr;}
-  .g3{grid-template-columns:1fr 1fr 1fr;}
-  .card{
-    background:var(--card);border:1px solid var(--line);border-radius:1.1vw;
-    padding:2.4vh 1.8vw;box-shadow:0 12px 30px rgba(10,31,68,.06);
-  }
-  .dark .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);box-shadow:none;}
-  .card h3{font-size:1.55vw;font-weight:700;margin-bottom:.9vh;display:flex;align-items:center;gap:.6vw;}
-  .card p{font-size:1.18vw;color:var(--muted);line-height:1.45;}
-  .dark .card p{color:#cdd9ee;}
-  .ic{font-size:1.9vw;line-height:1;}
-
-  .stat{font-size:3.4vw;font-weight:800;line-height:1;letter-spacing:-.02em;}
-  .stat.red{color:var(--red);}
-  .stat.green{color:var(--green);}
-  .stat.amber{color:var(--amber);}
-  .stat-label{font-size:1.05vw;color:var(--muted);font-weight:600;margin-top:.7vh;line-height:1.3;}
-  .dark .stat-label{color:#b9c8e2;}
-
-  ul.clean{list-style:none;display:flex;flex-direction:column;gap:1.5vh;margin-top:1vh;}
-  ul.clean li{font-size:1.5vw;font-weight:500;display:flex;gap:1vw;align-items:flex-start;line-height:1.35;}
-  ul.clean li .n{
-    flex:none;width:2.4vw;height:2.4vw;border-radius:50%;
-    background:var(--navy);color:#fff;font-weight:800;font-size:1.2vw;
-    display:flex;align-items:center;justify-content:center;margin-top:.1vh;
-  }
-  .dark ul.clean li .n{background:var(--amber);color:var(--navy);}
-
-  .pill{display:inline-flex;align-items:center;gap:.5vw;background:rgba(245,158,11,.14);color:#b45309;
-    padding:.7vh 1.1vw;border-radius:999px;font-weight:700;font-size:1vw;}
-  .dark .pill{background:rgba(245,158,11,.2);color:var(--amber-soft);}
-
-  .flow{display:flex;align-items:stretch;gap:.8vw;margin-top:3vh;}
-  .flow .step{
-    flex:1;background:var(--card);border:1px solid var(--line);border-radius:1vw;padding:2.2vh 1.2vw;text-align:center;
-    box-shadow:0 10px 26px rgba(10,31,68,.06);
-  }
-  .dark .flow .step{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);box-shadow:none;}
-  .flow .step .num{font-size:1vw;font-weight:800;color:var(--amber);letter-spacing:.1em;}
-  .flow .step h4{font-size:1.4vw;font-weight:700;margin:.8vh 0 .4vh;}
-  .flow .step p{font-size:1vw;color:var(--muted);line-height:1.35;}
-  .dark .flow .step p{color:#c3d0e6;}
-  .flow .arrow{align-self:center;color:var(--amber);font-size:1.8vw;font-weight:800;}
-
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:1.6vw;margin-top:1vh;}
-  .box{border-radius:1.1vw;padding:2.6vh 2vw;}
-  .box.pf{background:linear-gradient(160deg,#eef4ff,#dfe9fb);border:1px solid #cfe;}
-  .box.pj{background:linear-gradient(160deg,#0d2a5c,#0a1f44);color:#fff;}
-  .box h3{font-size:1.9vw;font-weight:800;margin-bottom:1.2vh;display:flex;align-items:center;gap:.7vw;}
-  .box.pf h3{color:var(--navy);}
-  .box ul{list-style:none;display:flex;flex-direction:column;gap:1.1vh;}
-  .box li{font-size:1.25vw;font-weight:500;display:flex;gap:.7vw;align-items:flex-start;line-height:1.35;}
-  .box.pf li{color:#213a63;}
-  .box.pj li{color:#dbe6fb;}
-  .box li::before{content:"→";font-weight:800;color:var(--amber);}
-
-  .titlewrap{margin:auto 0;}
-  .big-quote{font-size:2.3vw;font-weight:700;line-height:1.25;max-width:34ch;margin-top:2vh;}
-  .kicker-top{font-size:1.3vw;font-weight:700;color:var(--amber-soft);letter-spacing:.05em;margin-bottom:2vh;}
-
-  /* progress dots */
-  .dots{position:absolute;bottom:3.4vh;left:50%;transform:translateX(-50%);display:flex;gap:.6vw;z-index:10;}
-  .dots i{width:.6vw;height:.6vw;border-radius:50%;background:var(--line);transition:.3s;}
-  .dots i.on{background:var(--amber);width:1.8vw;border-radius:999px;}
-  .slide.dark ~ .dots i{background:rgba(255,255,255,.25);}
-
-  .nav{position:absolute;bottom:2.6vh;right:2vw;display:flex;gap:.5vw;z-index:20;}
-  .nav button{
-    border:none;background:rgba(10,31,68,.08);color:var(--navy);width:3vw;height:3vw;border-radius:.7vw;
-    font-size:1.4vw;cursor:pointer;font-weight:800;transition:.2s;
-  }
-  .nav button:hover{background:var(--amber);color:#fff;}
-
-  .hint{position:absolute;top:3vh;right:3vw;font-size:.85vw;color:var(--muted);opacity:.6;z-index:20;}
-  .dark ~ .hint{color:#fff;}
-</style>
-</head>
-<body>
-<div class="stage">
-
-  <!-- 1 CAPA -->
-  <section class="slide dark active">
-    <div class="titlewrap">
-      <div class="kicker-top">BULL INVEST · CONSULTORIA</div>
-      <div class="eyebrow"><span class="dot"></span>Aula para Victor &amp; Emilyn · Bigodon</div>
-      <h1>Separar a vida<br>da empresa.</h1>
-      <p class="big-quote muted">Como organizar o dinheiro do casal e enxergar, de verdade, quanto a barbearia dá de lucro.</p>
+<header class="capa" id="topo">
+  <div class="wrap">
+    <div class="lockup">
+      <img class="logo-bigodon" src="assets/bigodon-logo.png" alt="Bigodon">
+      <span class="lock-div"></span>
+      <div class="bull-stack"><img class="bi" src="assets/bull-icone-branco.png" alt=""><img class="bw" src="assets/bull-wordmark-branco.png" alt="Bull Invest"></div>
     </div>
-    <div class="foot">
-      <span>Raul Mockel · Bull Invest</span>
-      <span class="brand"><span class="b">B</span> BULL INVEST</span>
-    </div>
-  </section>
+    <span class="selo">Bull Invest · Consultoria Bigodon</span>
+    <h1>Separar a vida<br>da empresa</h1>
+    <div class="sub">Organização Financeira do Casal · Victor &amp; Emilyn</div>
+    <div class="data">Aula da consultoria · Bigodon Barbearia</div>
+    <p class="frase">Como organizar o dinheiro do casal e enxergar, de verdade, quanto a barbearia dá de lucro. O objetivo não é controlar por controlar, é <strong>sobrar e crescer</strong>.</p>
 
-  <!-- 2 O QUE VAMOS FAZER HOJE -->
-  <section class="slide">
-    <div class="eyebrow"><span class="dot"></span>O que a gente vê hoje · 30 min</div>
-    <h2>O plano da nossa conversa</h2>
-    <ul class="clean">
-      <li><span class="n">1</span> A foto de hoje, o que a auditoria mostrou do dinheiro de vocês</li>
-      <li><span class="n">2</span> Por que misturar casa e empresa esconde o lucro</li>
-      <li><span class="n">3</span> A regra de ouro: uma conta da empresa, uma conta da casa</li>
-      <li><span class="n">4</span> O pró-labore, o "salário" do casal</li>
-      <li><span class="n">5</span> O papel de cada um daqui pra frente</li>
-      <li><span class="n">6</span> Os combinados desta semana</li>
+    <div class="herobox">
+      <div class="herolab">O ponto de partida</div>
+      <div class="heronum"><span>66%</span> era ilusão</div>
+      <div class="herosub">Dois terços do que "parecia entrada" na auditoria era o mesmo dinheiro girando de uma conta pra outra. Não é falta de dinheiro, é falta de enxergar o dinheiro.</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="plano"><div class="kicker">Abertura · cerca de 30 minutos</div><h2>O plano da nossa conversa</h2>
+<p class="lead">Seis passos, do diagnóstico até os combinados desta semana.</p>
+<ul class="clean">
+<li><b>A foto de hoje</b>, o que a auditoria mostrou do dinheiro de vocês</li>
+<li><b>Por que misturar</b> casa e empresa esconde o lucro</li>
+<li><b>A regra de ouro:</b> uma conta da empresa, uma conta da casa</li>
+<li><b>O pró-labore</b>, o "salário" do casal</li>
+<li><b>O papel de cada um</b> daqui pra frente</li>
+<li><b>Os combinados</b> desta semana</li>
+</ul>
+</section>
+
+<section id="foto"><div class="kicker">O diagnóstico</div><h2>A foto de hoje, o que a auditoria revelou</h2>
+<p class="lead">Antes de mudar qualquer coisa, é preciso enxergar de onde a gente parte. Os números da auditoria mostram o retrato real.</p>
+<div class="kpis">
+<div class="kpi vermelho"><div class="v">66%</div><div class="l">do que "parecia entrada" era o mesmo dinheiro girando de conta pra conta</div></div>
+<div class="kpi ouro"><div class="v">perto de R$ 4 mil</div><div class="l">a conta da Emilyn abasteceu a barbearia no trimestre</div></div>
+<div class="kpi"><div class="v">4 contas</div><div class="l">no mesmo nome, casa e empresa misturadas no mesmo bolso</div></div>
+</div>
+<div class="destaque-box" style="margin-top:18px"><h3>A conclusão que muda o jogo</h3>
+<p>Não é falta de dinheiro. É falta de <strong>enxergar</strong> o dinheiro. Quando casa e empresa dividem o mesmo bolso, ninguém consegue dizer se a barbearia deu lucro ou prejuízo no mês.</p></div>
+</section>
+
+<section id="porque"><div class="kicker">Por que isso importa</div><h2>Casa e empresa no mesmo bolso, ninguém sabe o lucro real</h2>
+<p class="lead">O mesmo dinheiro entrando e saindo dos dois lados apaga a fronteira entre o que é da empresa e o que é de vocês.</p>
+<div class="duo">
+  <div class="card"><h3>🔀 Como está hoje</h3><p>Dinheiro da barbearia paga conta de casa. Renda da Emilyn tampa buraco da empresa. No fim do mês, ninguém sabe se a barbearia deu lucro ou prejuízo.</p></div>
+  <div class="card empresa"><h3>🎯 Como precisa ficar</h3><p>A empresa tem o dinheiro dela. A casa tem o dinheiro dela. A barbearia paga um salário pro casal, e o que sobra é lucro de verdade, que dá pra investir.</p></div>
+</div>
+<div class="obs"><div class="oic">💡</div><div><p>Empresa organizada é a que consegue dizer, em 1 minuto, <strong>quanto lucrou no mês</strong>.</p></div></div>
+</section>
+
+<section id="regra"><div class="kicker">A regra de ouro</div><h2>Duas contas. Dois mundos.</h2>
+<p class="lead">A base de tudo é simples: uma conta só pra empresa, uma conta só pra casa. Nunca mais o mesmo bolso.</p>
+<div class="duo">
+  <div class="card empresa"><h3>🏢 Conta da EMPRESA</h3>
+    <ul class="inside">
+      <li>Toda venda da barbearia entra aqui (InfinitePay, PagBank)</li>
+      <li>Paga fornecedor, produto, aluguel, barbeiro</li>
+      <li>Nunca gasta nada pessoal direto daqui</li>
+      <li>O que sobra é o lucro da Bigodon</li>
     </ul>
-    <div class="foot"><span>1 · Abertura</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
-
-  <!-- 3 A FOTO DE HOJE -->
-  <section class="slide dark">
-    <div class="eyebrow"><span class="dot"></span>A foto de hoje</div>
-    <h2>O que a auditoria revelou</h2>
-    <div class="grid g3">
-      <div class="card">
-        <div class="stat red">66%</div>
-        <div class="stat-label">do que "parecia entrada" era o mesmo dinheiro girando de conta pra conta</div>
-      </div>
-      <div class="card">
-        <div class="stat amber">~R$ 4 mil</div>
-        <div class="stat-label">a conta da Emilyn abasteceu a barbearia no trimestre</div>
-      </div>
-      <div class="card">
-        <div class="stat">4 contas</div>
-        <div class="stat-label">no mesmo nome, casa e empresa misturadas no mesmo bolso</div>
-      </div>
-    </div>
-    <p class="lead" style="margin-top:3.5vh">Não é falta de dinheiro. É falta de <strong style="color:#fff">enxergar</strong> o dinheiro.</p>
-    <div class="foot"><span>2 · Diagnóstico</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
-
-  <!-- 4 POR QUE SEPARAR -->
-  <section class="slide">
-    <div class="eyebrow"><span class="dot"></span>Por que isso importa</div>
-    <h2>Casa e empresa no mesmo bolso =<br>ninguém sabe o lucro real</h2>
-    <div class="grid g2" style="margin-top:2vh">
-      <div class="card">
-        <h3><span class="ic">🔀</span> Como está hoje</h3>
-        <p>Dinheiro da barbearia paga conta de casa. Renda da Emilyn tampa buraco da empresa. No fim do mês, ninguém sabe se a barbearia deu lucro ou prejuízo.</p>
-      </div>
-      <div class="card">
-        <h3><span class="ic">🎯</span> Como precisa ficar</h3>
-        <p>A empresa tem o dinheiro dela. A casa tem o dinheiro dela. A barbearia paga um salário pro casal, e o que sobra é lucro de verdade, que dá pra investir.</p>
-      </div>
-    </div>
-    <div class="pill" style="margin-top:3vh">💡 Empresa organizada é a que consegue dizer, em 1 minuto, quanto lucrou no mês</div>
-    <div class="foot"><span>3 · O porquê</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
-
-  <!-- 5 REGRA DE OURO -->
-  <section class="slide">
-    <div class="eyebrow"><span class="dot"></span>A regra de ouro</div>
-    <h2>Duas contas. Dois mundos.</h2>
-    <div class="split">
-      <div class="box pj">
-        <h3>🏢 Conta da EMPRESA</h3>
-        <ul>
-          <li>Toda venda da barbearia entra aqui (InfinitePay, PagBank)</li>
-          <li>Paga fornecedor, produto, aluguel, barbeiro</li>
-          <li>Nunca gasta nada pessoal direto daqui</li>
-          <li>O que sobra é o lucro da Bigodon</li>
-        </ul>
-      </div>
-      <div class="box pf">
-        <h3>🏠 Conta da CASA</h3>
-        <ul>
-          <li>Recebe o salário do casal (o pró-labore)</li>
-          <li>Recebe a renda do YouTube da Emilyn</li>
-          <li>Paga mercado, escola, contas de casa</li>
-          <li>A empresa não "empresta" mais pra cá</li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot"><span>4 · A solução</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
-
-  <!-- 6 PRÓ-LABORE -->
-  <section class="slide dark">
-    <div class="eyebrow"><span class="dot"></span>A ponte entre os dois mundos</div>
-    <h2>Pró-labore: o salário do casal</h2>
-    <p class="lead">É um valor <strong style="color:#fff">fixo</strong> que a empresa paga pro casal todo mês, como se vocês fossem funcionários da própria barbearia.</p>
-    <div class="grid g3" style="margin-top:4vh">
-      <div class="card"><h3>💰 Valor fixo</h3><p>Um número definido, todo mês igual. Sem "pegar um pouco aqui, um pouco ali".</p></div>
-      <div class="card"><h3>📅 Data certa</h3><p>Sai da conta da empresa pra conta da casa num dia combinado, igual salário.</p></div>
-      <div class="card"><h3>🔒 Disciplina</h3><p>Se precisar mais, a empresa não é caixa eletrônico. Ajusta o pró-labore com planejamento.</p></div>
-    </div>
-    <div class="foot"><span>4 · A solução</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
-
-  <!-- 7 PAPEL DE CADA UM -->
-  <section class="slide">
-    <div class="eyebrow"><span class="dot"></span>O papel de cada um</div>
-    <h2>Combinados do casal</h2>
-    <div class="grid g2" style="margin-top:2vh">
-      <div class="card">
-        <h3><span class="ic">✂️</span> Victor</h3>
-        <p style="font-size:1.25vw">Para de usar a conta da empresa pro pessoal. Toda venda entra no PJ. Retira só o pró-labore combinado, o resto fica pra empresa crescer.</p>
-      </div>
-      <div class="card">
-        <h3><span class="ic">🎥</span> Emilyn</h3>
-        <p style="font-size:1.25vw">Para de "abastecer" a barbearia com a conta dela. A renda do YouTube é da casa. Ajuda a organizar e enxergar o financeiro, sem tapar buraco da empresa.</p>
-      </div>
-    </div>
-    <div class="pill" style="margin-top:3vh">🤝 Vocês dois no mesmo time, cada um com o dinheiro no lugar certo</div>
-    <div class="foot"><span>5 · Papéis</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
-
-  <!-- 8 O CAMINHO -->
-  <section class="slide dark">
-    <div class="eyebrow"><span class="dot"></span>O caminho daqui pra frente</div>
-    <h2>Quatro passos até crescer</h2>
-    <div class="flow">
-      <div class="step"><div class="num">PASSO 1</div><h4>Separar</h4><p>Uma conta da empresa, uma da casa. Definir o pró-labore.</p></div>
-      <div class="arrow">→</div>
-      <div class="step"><div class="num">PASSO 2</div><h4>Registrar</h4><p>Lançar tudo, no começo pelo WhatsApp, simples.</p></div>
-      <div class="arrow">→</div>
-      <div class="step"><div class="num">PASSO 3</div><h4>Enxergar</h4><p>Ver onde o dinheiro entra e sai. Saber o lucro real.</p></div>
-      <div class="arrow">→</div>
-      <div class="step"><div class="num">PASSO 4</div><h4>Crescer</h4><p>Investir com segurança: reforma, tráfego, equipe.</p></div>
-    </div>
-    <p class="lead" style="margin-top:4vh">Organizar não é pra controlar por controlar. É pra <strong style="color:#fff">sobrar e crescer</strong>.</p>
-    <div class="foot"><span>5 · O caminho</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
-
-  <!-- 9 COMBINADOS DA SEMANA -->
-  <section class="slide">
-    <div class="eyebrow"><span class="dot"></span>Mãos à obra</div>
-    <h2>O que fica combinado esta semana</h2>
-    <ul class="clean">
-      <li><span class="n">1</span> Definir qual conta é da <strong>empresa</strong> e qual é da <strong>casa</strong></li>
-      <li><span class="n">2</span> Escolher o valor do <strong>pró-labore</strong> do casal e a data que ele "cai"</li>
-      <li><span class="n">3</span> Emilyn envia o extrato dos 3 meses pra gente fechar o balanço</li>
-      <li><span class="n">4</span> Começar a lançar as movimentações do dia a dia</li>
+  </div>
+  <div class="card"><h3>🏠 Conta da CASA</h3>
+    <ul class="inside">
+      <li>Recebe o salário do casal (o pró-labore)</li>
+      <li>Recebe a renda do YouTube da Emilyn</li>
+      <li>Paga mercado, escola, contas de casa</li>
+      <li>A empresa não "empresta" mais pra cá</li>
     </ul>
-    <div class="pill" style="margin-top:3vh">📌 Semana que vem a gente revisa juntos e ajusta o que precisar</div>
-    <div class="foot"><span>6 · Combinados</span><span class="brand"><span class="b">B</span> BULL INVEST</span></div>
-  </section>
+  </div>
+</div>
+</section>
 
-  <!-- 10 FECHAMENTO -->
-  <section class="slide dark">
-    <div class="titlewrap">
-      <div class="eyebrow"><span class="dot"></span>Fechamento</div>
-      <h1>Dinheiro organizado<br>é liberdade.</h1>
-      <p class="big-quote muted">Quando o casal enxerga o dinheiro, a barbearia deixa de ser um peso e vira um trampolim pros sonhos de vocês.</p>
-    </div>
-    <div class="foot">
-      <span>Raul Mockel · Bull Invest · Consultoria Bigodon</span>
-      <span class="brand"><span class="b">B</span> BULL INVEST</span>
-    </div>
-  </section>
+<section id="prolabore"><div class="kicker">A ponte entre os dois mundos</div><h2>Pró-labore, o salário do casal</h2>
+<p class="lead">É um valor <strong>fixo</strong> que a empresa paga pro casal todo mês, como se vocês fossem funcionários da própria barbearia. Essa é a única ponte entre a conta da empresa e a conta da casa.</p>
+<div class="kpis">
+<div class="kpi ouro"><div class="v">Valor fixo</div><div class="l">um número definido, todo mês igual, sem "pegar um pouco aqui, um pouco ali"</div></div>
+<div class="kpi"><div class="v">Data certa</div><div class="l">sai da conta da empresa pra conta da casa num dia combinado, igual salário</div></div>
+<div class="kpi"><div class="v">Disciplina</div><div class="l">a empresa não é caixa eletrônico. Se precisar mais, ajusta o pró-labore com planejamento</div></div>
+</div>
+</section>
+
+<section id="papeis"><div class="kicker">O papel de cada um</div><h2>Combinados do casal</h2>
+<p class="lead">Vocês dois no mesmo time, cada um com o dinheiro no lugar certo.</p>
+<div class="duo">
+  <div class="card"><h3>✂️ Victor</h3><p>Para de usar a conta da empresa pro pessoal. Toda venda entra no PJ. Retira só o pró-labore combinado, o resto fica pra empresa crescer.</p></div>
+  <div class="card"><h3>🎥 Emilyn</h3><p>Para de "abastecer" a barbearia com a conta dela. A renda do YouTube é da casa. Ajuda a organizar e enxergar o financeiro, sem tapar buraco da empresa.</p></div>
+</div>
+<div class="obs"><div class="oic">🤝</div><div><p>Cada um cuidando do seu lado faz o casal enxergar o negócio com clareza, sem um cobrir o buraco do outro.</p></div></div>
+</section>
+
+<section id="caminho"><div class="kicker">O caminho daqui pra frente</div><h2>Quatro passos até crescer</h2>
+<p class="lead">Um passo puxa o outro. Organizar não é pra controlar por controlar, é pra sobrar e crescer.</p>
+<div class="step"><div class="num">1</div><div class="txt"><b>Separar.</b> Uma conta da empresa, uma da casa. Definir o valor do pró-labore.</div></div>
+<div class="step"><div class="num">2</div><div class="txt"><b>Registrar.</b> Lançar tudo, no começo pelo WhatsApp, do jeito mais simples.</div></div>
+<div class="step"><div class="num">3</div><div class="txt"><b>Enxergar.</b> Ver onde o dinheiro entra e sai, e saber o lucro real do mês.</div></div>
+<div class="step"><div class="num">4</div><div class="txt"><b>Crescer.</b> Investir com segurança: reforma, tráfego, equipe, os sonhos de vocês.</div></div>
+</section>
+
+<section id="combinados"><div class="kicker">Mãos à obra</div><h2>O que fica combinado esta semana</h2>
+<div class="step"><div class="num">1</div><div class="txt"><b>Definir</b> qual conta é da empresa e qual é da casa.</div></div>
+<div class="step"><div class="num">2</div><div class="txt"><b>Escolher</b> o valor do pró-labore do casal e a data que ele "cai".</div></div>
+<div class="step"><div class="num">3</div><div class="txt"><b>Emilyn envia</b> o extrato dos 3 meses pra gente fechar o balanço completo.</div></div>
+<div class="step"><div class="num">4</div><div class="txt"><b>Começar</b> a lançar as movimentações do dia a dia.</div></div>
+<div class="obs"><div class="oic">📌</div><div><p>Semana que vem a gente revisa juntos e ajusta o que precisar.</p></div></div>
+
+<div class="bridge">
+<div class="bk">Fechamento</div>
+<h3>Dinheiro organizado é liberdade.</h3>
+<p>Quando o casal enxerga o dinheiro, a barbearia deixa de ser um peso e vira um trampolim pros sonhos de vocês.</p>
+<div class="assina">Raul Mockel · Bull Invest · ao lado da Bigodon nessa virada</div>
+</div>
+</section>
 
 </div>
 
-<div class="dots" id="dots"></div>
-<div class="nav">
-  <button onclick="go(-1)">‹</button>
-  <button onclick="go(1)">›</button>
-</div>
-<div class="hint">← → para navegar</div>
-
-<script>
-  const slides=[...document.querySelectorAll('.slide')];
-  const dotsWrap=document.getElementById('dots');
-  let i=0;
-  slides.forEach((_,k)=>{const d=document.createElement('i');if(k===0)d.className='on';dotsWrap.appendChild(d);});
-  const dots=[...dotsWrap.children];
-  function render(){
-    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
-    dots.forEach((d,k)=>d.classList.toggle('on',k===i));
-  }
-  function go(dir){i=Math.max(0,Math.min(slides.length-1,i+dir));render();}
-  document.addEventListener('keydown',e=>{
-    if(e.key==='ArrowRight'||e.key===' ')go(1);
-    if(e.key==='ArrowLeft')go(-1);
-    if(e.key==='Home'){i=0;render();}
-    if(e.key==='End'){i=slides.length-1;render();}
-  });
-  // touch swipe pro iPad
-  let x0=null;
-  document.addEventListener('touchstart',e=>x0=e.touches[0].clientX);
-  document.addEventListener('touchend',e=>{
-    if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;
-    if(Math.abs(dx)>40)go(dx<0?1:-1);x0=null;
-  });
-</script>
-</body>
-</html>
+<footer>
+  <div class="lockup-foot">
+    <img class="b" src="assets/bigodon-logo.png" alt="">
+    <span class="fdiv"></span>
+    <div class="bull-stack"><img class="bi" src="assets/bull-icone-branco.png" alt=""><img class="bw" src="assets/bull-wordmark-branco.png" alt="Bull Invest"></div>
+  </div>
+  <p>Organização Financeira do Casal · Raul Mockel · Bull Invest · para a Bigodon Barbearia</p>
+  <p class="intnote">Sítio Cercado · Curitiba · 2026</p>
+</footer>
+</body></html>
