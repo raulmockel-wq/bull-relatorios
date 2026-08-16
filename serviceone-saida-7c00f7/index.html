@@ -100,6 +100,27 @@
     .destaque,.nota,.autos,tr.marca td,tr.total td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .quebra{break-before:page}
   }
+/* ajuste mobile */
+  @media (max-width:860px){
+    body{font-size:15.5px}
+    .capa{padding:32px 16px 24px}
+    .capa h1{font-size:26px}
+    .capa .sub{font-size:16px}
+    .capa .meta{gap:18px}
+    section{padding:30px 16px 0}
+    footer{padding:24px 16px 0}
+    .folha{padding-bottom:48px}
+    .cards{grid-template-columns:1fr}
+    .rolagem{margin-left:-16px;margin-right:-16px;padding:0 16px}
+    .rolagem table{font-size:12.5px}
+    .rolagem th,.rolagem td{padding:6px 8px}
+    section > table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .bloco{padding:18px 16px}
+    .frase{font-size:17px;padding:20px 18px}
+    .destaque{font-size:15.5px;padding:16px 16px}
+    .nota,.autos{padding:15px 16px}
+    h3{font-size:17px}
+  }
 </style>
 </head>
 <body>
