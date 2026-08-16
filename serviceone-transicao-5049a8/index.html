@@ -311,4 +311,23 @@ Levantamento do período anterior conforme anotações de controle da própria e
 2024 em diante conforme a planilha Controle Financeiro, conferida contra os extratos da Cora e do
 Mercado Pago e o relatório do sistema.</div>
 
-</div></body></html>
+</div><!-- dica rolagem -->
+<style>
+.dica-rolar{display:none}
+@media (max-width:860px){
+ .dica-rolar{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.55;margin:14px 0 -8px;font-weight:600}
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll(".rolagem, table").forEach(function(el){
+    if(el.scrollWidth <= el.clientWidth + 4) return;
+    if(el.previousElementSibling && el.previousElementSibling.className === "dica-rolar") return;
+    var d=document.createElement("div");
+    d.className="dica-rolar";
+    d.textContent="arraste a tabela para o lado ▸";
+    el.parentNode.insertBefore(d, el);
+  });
+});
+</script>
+</body></html>
