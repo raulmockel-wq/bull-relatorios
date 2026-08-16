@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta de saída da sociedade - Raul Mockel - Service One</title>
+<style>
+  :root{
+    --tinta:#16191d; --tinta2:#3d454f; --tinta3:#6b7480;
+    --linha:#dfe3e8; --fundo:#ffffff; --papel:#f5f6f8;
+    --aco:#1f4e6b; --aco-claro:#eaf1f6;
+    --alerta:#8a5a12; --alerta-claro:#fbf3e3;
+    --grave:#8f2f2f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI', system-ui, -apple-system, sans-serif;background:var(--papel);color:var(--tinta);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  .folha{max-width:1040px;margin:0 auto;background:var(--fundo);padding:0 0 80px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.05)}
+
+  .capa{padding:64px 64px 48px;border-bottom:3px solid var(--tinta)}
+  .capa .selo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta3);font-weight:600;margin-bottom:20px}
+  .capa h1{font-size:40px;line-height:1.15;font-weight:700;letter-spacing:-.02em;margin-bottom:16px}
+  .capa .sub{font-size:19px;color:var(--tinta2);max-width:680px}
+  .capa .meta{margin-top:32px;padding-top:24px;border-top:1px solid var(--linha);display:flex;flex-wrap:wrap;gap:40px;font-size:14px}
+  .capa .meta div span{display:block;color:var(--tinta3);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+  .capa .meta div strong{font-weight:600;font-size:15px}
+
+  section{padding:48px 64px 0}
+  h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--aco);font-weight:700;padding-bottom:10px;border-bottom:2px solid var(--aco);margin-bottom:24px;display:flex;align-items:baseline;gap:12px}
+  h2 .n{font-size:12px;color:var(--tinta3);font-weight:600;letter-spacing:0}
+  h3{font-size:18px;font-weight:650;margin:32px 0 12px;letter-spacing:-.01em}
+  h3:first-of-type{margin-top:0}
+  p{margin-bottom:14px;color:var(--tinta2)}
+  p strong,li strong,td strong{color:var(--tinta);font-weight:650}
+  ul,ol{margin:0 0 16px 22px}
+  li{margin-bottom:8px;color:var(--tinta2)}
+
+  .destaque{background:var(--aco-claro);border-left:4px solid var(--aco);padding:20px 24px;margin:20px 0;font-size:17px;line-height:1.55}
+  .destaque strong{color:var(--aco)}
+  .frase{background:var(--tinta);color:#fff;padding:28px 32px;margin:24px 0;font-size:20px;line-height:1.5;font-weight:500}
+  .frase strong{color:#fff;font-weight:700}
+  .nota{background:var(--alerta-claro);border-left:4px solid var(--alerta);padding:18px 22px;margin:20px 0;font-size:15px}
+  .nota .t{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--alerta);margin-bottom:6px}
+  .autos{background:var(--papel);border:1px solid var(--linha);border-left:4px solid var(--tinta3);padding:20px 24px;margin:20px 0;font-size:15px;color:var(--tinta2)}
+  .autos .t{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--tinta);margin-bottom:8px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--linha);border:1px solid var(--linha);margin:24px 0}
+  .card{background:var(--fundo);padding:20px 22px}
+  .card .rot{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta3);font-weight:600;margin-bottom:8px}
+  .card .val{font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  .card .obs{font-size:13px;color:var(--tinta3);margin-top:6px}
+  .card.forte{background:var(--tinta)}
+  .card.forte .rot{color:rgba(255,255,255,.6)}
+  .card.forte .val{color:#fff}
+  .card.forte .obs{color:rgba(255,255,255,.7)}
+
+  table{width:100%;border-collapse:collapse;font-size:14.5px;margin:20px 0}
+  th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta3);font-weight:700;padding:10px 12px;border-bottom:2px solid var(--tinta);white-space:nowrap}
+  td{padding:9px 12px;border-bottom:1px solid var(--linha);color:var(--tinta2)}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr.total td{font-weight:700;color:var(--tinta);border-top:2px solid var(--tinta);border-bottom:none;background:var(--papel)}
+  tr.marca td{background:var(--aco-claro)}
+  td.voce{font-weight:700;color:var(--aco);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  td.eles{font-weight:650;color:var(--tinta);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  .rolagem{overflow-x:auto;margin:20px 0}
+  .rolagem table{margin:0}
+  caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--tinta3);padding-top:10px}
+  .mini{font-size:13.5px}
+  .mini td,.mini th{padding:7px 10px}
+
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:20px 0}
+  .bloco{border:1px solid var(--linha);padding:22px 24px}
+  .bloco h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta3);font-weight:700;margin-bottom:12px}
+  .bloco.a{border-top:3px solid var(--aco)}
+  .bloco.b{border-top:3px solid var(--tinta3)}
+
+  .protecao{list-style:none;margin-left:0}
+  .protecao li{padding-left:26px;position:relative;margin-bottom:12px}
+  .protecao li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--aco)}
+  .protecao li.critico::before{background:var(--grave)}
+
+  footer{margin-top:56px;padding:32px 64px 0;border-top:1px solid var(--linha);font-size:13px;color:var(--tinta3)}
+
+  @media (max-width:860px){
+    .capa{padding:40px 24px 32px}
+    .capa h1{font-size:30px}
+    section{padding:36px 24px 0}
+    footer{padding:28px 24px 0}
+    .duas{grid-template-columns:1fr;gap:20px}
+  }
+  @media print{
+    body{background:#fff;font-size:10.5pt}
+    .folha{box-shadow:none;max-width:none}
+    .capa{padding:0 0 24px}
+    section{padding:22px 0 0;break-inside:avoid}
+    footer{padding:18px 0 0}
+    h2{break-after:avoid}
+    table{break-inside:avoid;font-size:9.5pt}
+    .frase,.card.forte{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .destaque,.nota,.autos,tr.marca td,tr.total td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .quebra{break-before:page}
+  }
+</style>
+</head>
+<body>
+<div class="folha">
+
+<header class="capa">
+  <div class="selo">Service One &nbsp;&middot;&nbsp; Documento interno de sócios</div>
+  <h1>Proposta de saída da sociedade</h1>
+  <p class="sub">Apuração completa, valor da participação, cronograma mês a mês, teste de resistência do caixa e projeção do que Maicon e Douglas passam a receber. Todos os números vêm da planilha da empresa, do sistema Nex e dos extratos bancários, conferidos no fechamento de julho de 2026.</p>
+  <div class="meta">
+    <div><span>Sócio que sai</span><strong>Raul Mockel, 30%</strong></div>
+    <div><span>Data</span><strong>03 de agosto de 2026</strong></div>
+    <div><span>Transição</span><strong>Agosto de 2026</strong></div>
+    <div><span>Prazo proposto</span><strong>21 meses</strong></div>
+  </div>
+</header>
+
+<section>
+  <h2><span class="n">01</span> De onde a empresa saiu</h2>
+
+  <div class="duas">
+    <div class="bloco b">
+      <h4>O patamar anterior</h4>
+      <table class="mini">
+        <tr><td>Faturamento médio</td><td class="n">R$ 16.227,90</td></tr>
+        <tr><td>Despesas médias</td><td class="n">R$ 7.063,22</td></tr>
+        <tr class="total"><td>Sobrava no fim do mês</td><td class="n">R$ 37,60</td></tr>
+      </table>
+      <p style="font-size:14px;margin-top:10px">Em oito dos dez meses apurados não sobrou nada. Fonte: as próprias planilhas de controle mensal da empresa.</p>
+    </div>
+    <div class="bloco a">
+      <h4>Hoje</h4>
+      <table class="mini">
+        <tr><td>Faturamento médio</td><td class="n">R$ 43.114,50</td></tr>
+        <tr><td>Lucro médio</td><td class="n">R$ 14.906,77</td></tr>
+        <tr class="total"><td>Lucro acumulado em 2026</td><td class="n">R$ 104.347,38</td></tr>
+      </table>
+      <p style="font-size:14px;margin-top:10px">Sete meses fechados, todos com lucro entre R$ 13.781,83 e R$ 16.307,70. Nenhum mês no vermelho.</p>
+    </div>
+  </div>
+
+  <h3>O que mudou não foi só o faturamento</h3>
+  <p>Antes não havia clareza sobre quanto a empresa gerava nem sobre quanto cada um podia retirar com segurança. Não existia fechamento mensal, controle de margem, conferência contra o sistema nem previsão de caixa. As decisões eram tomadas pelo que parecia estar no banco.</p>
+  <p><strong>Hoje existe.</strong> Todo mês tem fechamento fechado, conferido linha a linha contra o Nex e contra os extratos, com o resultado na mesa e a parte de cada um calculada. Passou a existir lucro para dividir e previsibilidade para receber. É isso que dá para uma empresa valor de venda, e não o faturamento sozinho.</p>
+
+  <div class="frase">
+    A empresa faturava R$ 16 mil e não sobrava nada. Hoje fatura R$ 43 mil e dá quase R$ 15 mil de lucro por mês, com controle.
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">02</span> Quanto vale a minha parte</h2>
+
+  <p>O valor de uma assistência é múltiplo sobre o que ela gera de caixa. E o número correto para essa conta não é o lucro de hoje: é o de março de 2027 em diante, quando as dívidas de cartão terminam. Esse dinheiro <strong>já está contratado</strong>, entra sozinho, sem ninguém vender nada a mais.</p>
+
+  <table>
+    <tr><td>Lucro médio apurado em 2026</td><td class="n">R$ 14.906,77</td></tr>
+    <tr><td>Mais a folga das dívidas que terminam até março/27</td><td class="n">R$ 3.985,83</td></tr>
+    <tr><td>Mais a reserva mensal, que é poupança e não custo</td><td class="n">R$ 1.280,00</td></tr>
+    <tr class="total"><td>Geração real de caixa da empresa</td><td class="n">R$ 20.172,60</td></tr>
+  </table>
+
+  <div class="rolagem">
+  <table>
+    <thead><tr><th>Múltiplo</th><th class="n">A empresa vale</th><th class="n">Meus 30%</th><th>Leitura</th></tr></thead>
+    <tbody>
+      <tr><td>12 vezes</td><td class="n">R$ 242.071,20</td><td class="n">R$ 72.621,36</td><td>Piso conservador</td></tr>
+      <tr class="marca"><td><strong>18 vezes</strong></td><td class="n">R$ 363.106,80</td><td class="voce">R$ 108.932,04</td><td><strong>Justo de mercado</strong></td></tr>
+      <tr><td>24 vezes</td><td class="n">R$ 484.142,40</td><td class="n">R$ 145.242,72</td><td>Otimista</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>O que eu estou pedindo, e o desconto que já vem dentro</h3>
+
+  <table>
+    <tr><td>Valor justo da minha parte, 18 vezes</td><td class="n">R$ 108.932,04</td></tr>
+    <tr><td>Participação que estou pedindo</td><td class="n">R$ 80.000,00</td></tr>
+    <tr><td>Saldo que a empresa me deve desde julho e não foi pago</td><td class="n">R$ 506,62</td></tr>
+    <tr class="total"><td>Total da minha participação</td><td class="n">R$ 80.506,62</td></tr>
+  </table>
+
+  <p>Além disso, as 21 parcelas são <strong>sem um centavo de juros</strong>.</p>
+
+  <div class="frase">
+    Vale R$ 108.932. Estou pedindo R$ 80.506.
+  </div>
+
+  <div class="nota">
+    <span class="t">O que eu não estou cobrando</span>
+    O carro é aporte de março de 2026, o mesmo mês do empréstimo da mãe do Maicon. Corrigido pelo mesmo critério que apliquei ao dela, seria <strong>R$ 23.126,18</strong>. Estou pedindo <strong>R$ 22.000,00</strong> e abrindo mão de R$ 1.126,18. Fora prejuízos e despesas que absorvi ao longo da sociedade e que não entraram em nenhuma linha desta proposta.
+  </div>
+</section>
+
+<section class="quebra">
+  <h2><span class="n">03</span> De onde sai o dinheiro</h2>
+
+  <p>Esta é a parte que interessa a vocês dois. Não sai de aumento de faturamento, não sai de corte na retirada de ninguém e não sai da reserva da operação.</p>
+
+  <h3>Primeira fonte: o que eu deixo de retirar</h3>
+
+  <table>
+    <tr><td>Lucro médio da empresa</td><td class="n">R$ 14.906,77</td></tr>
+    <tr><td>Menos a retirada do Douglas, mantida exatamente como está hoje</td><td class="n">R$ 4.688,74</td></tr>
+    <tr><td>Menos a retirada do Maicon, mantida nos R$ 6.000</td><td class="n">R$ 6.000,00</td></tr>
+    <tr class="total"><td>Sobra por mês, sem mexer em nada</td><td class="n">R$ 4.218,03</td></tr>
+  </table>
+
+  <div class="nota">
+    <span class="t">Este número corrige um engano comum</span>
+    Não são os R$ 4.399,66 que eu retiro hoje. É menos. Somando as três retiradas dá <strong>R$ 15.088,40 por mês contra um lucro de R$ 14.906,77</strong>, ou seja, R$ 181,63 a mais do que a empresa gera. É por isso que a conta corrente fecha zerada todo mês. O espaço real e honesto é R$ 4.218,03.
+  </div>
+
+  <h3>Segunda fonte: as dívidas de cartão que estão acabando</h3>
+  <p>Conferido parcela por parcela contra a planilha de despesas fixas de julho de 2026.</p>
+
+  <div class="rolagem">
+  <table class="mini">
+    <thead><tr><th>Dívida</th><th class="n">Por mês</th><th>Última parcela</th><th>Fica livre em</th></tr></thead>
+    <tbody>
+      <tr><td>Ferramentas Forward Fonte, 3 de 3</td><td class="n">R$ 176,64</td><td>julho/26, já venceu</td><td>ago/26</td></tr>
+      <tr><td>Cartão MP TechFelipe, 8 de 10</td><td class="n">R$ 328,78</td><td>setembro/26</td><td>out/26</td></tr>
+      <tr><td>Ferramentas Forward, 3 de 6</td><td class="n">R$ 1.316,56</td><td>outubro/26</td><td>nov/26</td></tr>
+      <tr><td>Cartão MP Meu Celular, 2 de 5</td><td class="n">R$ 220,75</td><td>outubro/26</td><td>nov/26</td></tr>
+      <tr><td>Cell Master, 9 de 12</td><td class="n">R$ 74,25</td><td>outubro/26</td><td>nov/26</td></tr>
+      <tr><td>Cartão MP CellMaster, 8 de 12</td><td class="n">R$ 107,15</td><td>novembro/26</td><td>dez/26</td></tr>
+      <tr><td>Cartão MP Porta, 4 de 10</td><td class="n">R$ 800,00</td><td>janeiro/27</td><td>fev/27</td></tr>
+      <tr><td>Cartão MP Porta, 4 de 10</td><td class="n">R$ 441,45</td><td>janeiro/27</td><td>fev/27</td></tr>
+      <tr><td>Cartão MP Porta, 5 de 12</td><td class="n">R$ 20,25</td><td>fevereiro/27</td><td>mar/27</td></tr>
+      <tr><td>Cartão MP Marcenaria, 3 de 10</td><td class="n">R$ 500,00</td><td>fevereiro/27</td><td>mar/27</td></tr>
+      <tr class="total"><td>Folga total quando tudo terminar</td><td class="n">R$ 3.985,83</td><td></td><td>mar/27</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>As duas fontes somadas: o caixa disponível mês a mês</h3>
+
+  <div class="rolagem">
+  <table>
+    <thead><tr><th>A partir de</th><th class="n">Sobra base</th><th class="n">Folga acumulada</th><th class="n">Caixa livre</th><th>O que vence no mês</th></tr></thead>
+    <tbody>
+      <tr><td>Setembro/26</td><td class="n">4.218,03</td><td class="n">176,64</td><td class="voce">4.394,67</td><td>nada vence</td></tr>
+      <tr><td>Outubro/26</td><td class="n">4.218,03</td><td class="n">505,42</td><td class="voce">4.723,45</td><td>TechFelipe</td></tr>
+      <tr class="marca"><td>Novembro/26</td><td class="n">4.218,03</td><td class="n">2.116,98</td><td class="voce">6.335,01</td><td>Forward, Meu Celular, Cell Master</td></tr>
+      <tr><td>Dezembro/26</td><td class="n">4.218,03</td><td class="n">2.224,13</td><td class="voce">6.442,16</td><td>CellMaster</td></tr>
+      <tr><td>Janeiro/27</td><td class="n">4.218,03</td><td class="n">2.224,13</td><td class="voce">6.442,16</td><td>nada vence</td></tr>
+      <tr class="marca"><td>Fevereiro/27</td><td class="n">4.218,03</td><td class="n">3.465,58</td><td class="voce">7.683,61</td><td>as duas Portas</td></tr>
+      <tr class="marca"><td>Março/27 em diante</td><td class="n">4.218,03</td><td class="n">3.985,83</td><td class="voce">8.203,86</td><td>Porta e Marcenaria</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="quebra">
+  <h2><span class="n">04</span> O cronograma, mês a mês</h2>
+
+  <p>Vinte e um meses, linha por linha, sem arredondamento escondido. A coluna da direita é o que sobra e vai para vocês dois, por cima da retirada que já recebem.</p>
+
+  <div class="rolagem">
+  <table class="mini">
+    <thead>
+      <tr>
+        <th>Mês</th><th class="n">Particip.</th><th class="n">Carro</th><th class="n">Gestão</th>
+        <th class="n">Raul recebe</th><th class="n">Mãe do Maicon</th><th class="n">Sai da empresa</th>
+        <th class="n">Caixa livre</th><th class="n">Sobra p/ vocês</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="marca"><td><strong>Ago/26</strong></td><td class="n">-</td><td class="n">12.000,00</td><td class="n">-</td><td class="voce">12.000,00</td><td class="n">3.000,00</td><td class="n">do cofrinho</td><td class="n">-</td><td class="eles">-</td></tr>
+      <tr><td>Set/26</td><td class="n">2.733,33</td><td class="n">666,67</td><td class="n">500,00</td><td class="voce">3.900,00</td><td class="n">400,00</td><td class="n">4.300,00</td><td class="n">4.394,67</td><td class="eles">94,67</td></tr>
+      <tr><td>Out/26</td><td class="n">3.033,33</td><td class="n">666,67</td><td class="n">500,00</td><td class="voce">4.200,00</td><td class="n">400,00</td><td class="n">4.600,00</td><td class="n">4.723,45</td><td class="eles">123,45</td></tr>
+      <tr><td>Nov/26</td><td class="n">3.033,33</td><td class="n">666,67</td><td class="n">500,00</td><td class="voce">4.200,00</td><td class="n">700,00</td><td class="n">4.900,00</td><td class="n">6.335,01</td><td class="eles">1.435,01</td></tr>
+      <tr><td>Dez/26</td><td class="n">3.033,33</td><td class="n">666,67</td><td class="n">500,00</td><td class="voce">4.200,00</td><td class="n">700,00</td><td class="n">4.900,00</td><td class="n">6.442,16</td><td class="eles">1.542,16</td></tr>
+      <tr><td>Jan/27</td><td class="n">3.033,33</td><td class="n">666,67</td><td class="n">500,00</td><td class="voce">4.200,00</td><td class="n">700,00</td><td class="n">4.900,00</td><td class="n">6.442,16</td><td class="eles">1.542,16</td></tr>
+      <tr class="marca"><td>Fev/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">7.683,61</td><td class="eles">1.286,61</td></tr>
+      <tr><td>Mar/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr><td>Abr/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr><td>Mai/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr><td>Jun/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr><td>Jul/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr><td>Ago/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr><td>Set/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr><td>Out/27</td><td class="n">3.833,33</td><td class="n">666,67</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr class="marca"><td>Nov/27</td><td class="n">3.833,38</td><td class="n">666,62</td><td class="n">1.000,00</td><td class="voce">5.500,00</td><td class="n">897,00</td><td class="n">6.397,00</td><td class="n">8.203,86</td><td class="eles">1.806,86</td></tr>
+      <tr class="marca"><td>Dez/27</td><td class="n">4.550,00</td><td class="n">quitado</td><td class="n">1.000,00</td><td class="voce">5.550,00</td><td class="n">897,85</td><td class="n">6.447,85</td><td class="n">8.203,86</td><td class="eles">1.756,01</td></tr>
+      <tr><td>Jan/28</td><td class="n">4.550,00</td><td class="n">-</td><td class="n">1.000,00</td><td class="voce">5.550,00</td><td class="n">quitada</td><td class="n">5.550,00</td><td class="n">8.203,86</td><td class="eles">2.653,86</td></tr>
+      <tr><td>Fev/28</td><td class="n">4.550,00</td><td class="n">-</td><td class="n">1.000,00</td><td class="voce">5.550,00</td><td class="n">-</td><td class="n">5.550,00</td><td class="n">8.203,86</td><td class="eles">2.653,86</td></tr>
+      <tr><td>Mar/28</td><td class="n">4.550,00</td><td class="n">-</td><td class="n">1.000,00</td><td class="voce">5.550,00</td><td class="n">-</td><td class="n">5.550,00</td><td class="n">8.203,86</td><td class="eles">2.653,86</td></tr>
+      <tr><td>Abr/28</td><td class="n">4.550,00</td><td class="n">-</td><td class="n">1.000,00</td><td class="voce">5.550,00</td><td class="n">-</td><td class="n">5.550,00</td><td class="n">8.203,86</td><td class="eles">2.653,86</td></tr>
+      <tr class="marca"><td>Mai/28</td><td class="n">4.556,62</td><td class="n">-</td><td class="n">1.000,00</td><td class="voce">5.556,62</td><td class="n">-</td><td class="n">5.556,62</td><td class="n">8.203,86</td><td class="eles">2.647,24</td></tr>
+      <tr class="total"><td><strong>Jun/28 diante</strong></td><td class="n">quitada</td><td class="n">-</td><td class="n">1.500,00</td><td class="voce">1.500,00</td><td class="n">-</td><td class="n">1.500,00</td><td class="n">8.203,86</td><td class="eles">6.703,86</td></tr>
+    </tbody>
+  </table>
+  <caption>Nenhum mês fecha negativo. Participação: R$ 80.506,62 em 21 parcelas. Carro: R$ 10.000 em 15 parcelas, de setembro/26 a novembro/27. Mãe do Maicon: R$ 12.767,85 em 16 parcelas.</caption>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="rot">Participação</div>
+      <div class="val">R$ 80.506,62</div>
+      <div class="obs">21 parcelas, quitada mai/28</div>
+    </div>
+    <div class="card">
+      <div class="rot">Carro</div>
+      <div class="val">R$ 22.000,00</div>
+      <div class="obs">Quitado nov/27</div>
+    </div>
+    <div class="card">
+      <div class="rot">Mãe do Maicon</div>
+      <div class="val">R$ 15.767,85</div>
+      <div class="obs">Quitada dez/27</div>
+    </div>
+  </div>
+
+  <div class="nota">
+    <span class="t">Agosto é mês de transição</span>
+    Em agosto eu ainda sou sócio e faço a retirada normal do mês. Além dela recebo apenas os R$ 12.000 do carro, que saem do cofrinho. <strong>O cronograma começa de fato em setembro.</strong>
+  </div>
+
+  <h3>O teto que eu me impus</h3>
+  <p>De setembro a janeiro eu recebo no máximo <strong>R$ 4.200 por mês</strong>, que é menos do que os R$ 4.399,66 que retiro hoje. A empresa não sente diferença nenhuma no caixa. De fevereiro em diante subo para R$ 5.500, e o que passa dos R$ 4.200 vem <strong>só da folga dos cartões que terminaram</strong>, dinheiro que hoje não existe na conta de ninguém.</p>
+</section>
+
+<section class="quebra">
+  <h2><span class="n">05</span> O que Maicon e Douglas ganham</h2>
+
+  <h3>Durante os 21 meses</h3>
+  <p>Nenhum dos dois tira um real a menos. A retirada não muda, o acordo dos R$ 6.000 do Maicon não é tocado, e por cima disso entra a sobra de cada mês.</p>
+
+  <div class="rolagem">
+  <table>
+    <thead><tr><th>Sócio</th><th class="n">Retirada hoje</th><th class="n">Média a mais no plano</th><th class="n">Passa a receber</th><th class="n">Diferença</th></tr></thead>
+    <tbody>
+      <tr><td>Douglas, 45%</td><td class="n">R$ 4.688,74</td><td class="n">R$ 799,38</td><td class="voce">R$ 5.488,12</td><td class="n">mais 17,0%</td></tr>
+      <tr><td>Maicon, 55%</td><td class="n">R$ 6.000,00</td><td class="n">R$ 977,02</td><td class="voce">R$ 6.977,02</td><td class="n">mais 16,3%</td></tr>
+      <tr class="total"><td>Os dois juntos</td><td class="n">R$ 10.688,74</td><td class="n">R$ 1.776,40</td><td class="n">R$ 12.465,14</td><td class="n">R$ 37.304,49 no total</td></tr>
+    </tbody>
+  </table>
+  <caption>A sobra de cada mês é dividida na proporção das quotas novas, 55% e 45%. E ela é crescente: R$ 94,67 em setembro, R$ 1.435,01 em novembro, R$ 1.806,86 de março/27 em diante, R$ 2.653,86 depois que a mãe do Maicon é quitada.</caption>
+  </div>
+
+  <h3>Depois de junho de 2028, a empresa inteira é de vocês dois</h3>
+
+  <div class="rolagem">
+  <table>
+    <thead><tr><th>Sócio</th><th class="n">Hoje</th><th class="n">Depois</th><th class="n">Diferença</th></tr></thead>
+    <tbody>
+      <tr><td>Douglas, 45%</td><td class="n">R$ 4.688,74</td><td class="voce">R$ 7.826,67</td><td class="n">mais 66,9%</td></tr>
+      <tr><td>Maicon, 55%</td><td class="n">R$ 6.000,00</td><td class="voce">R$ 9.565,93</td><td class="n">mais 59,4%</td></tr>
+    </tbody>
+  </table>
+  <caption>Lucro de R$ 18.892,60 com a folga dos cartões, menos R$ 1.500 da gestão, dividido na proporção das quotas: 55% para o Maicon e 45% para o Douglas.</caption>
+  </div>
+
+  <div class="destaque">
+    Vocês pagam R$ 80.506,62 pela minha parte e passam a ganhar R$ 6.703,86 a mais por mês. <strong>O dinheiro volta em 12 meses.</strong> E o ganho não começa em 2028: começa em setembro, no primeiro mês.
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">06</span> As obrigações que entram junto</h2>
+
+  <h3>A mãe do Maicon</h3>
+  <p>Ela emprestou <strong>R$ 15.000 para a empresa</strong> em março de 2026 e até hoje não recebeu nada. Esta proposta resolve isso junto, sem empurrar para depois e corrigindo o valor dela.</p>
+
+  <table>
+    <tr><td>Valor emprestado em março/26</td><td class="n">R$ 15.000,00</td></tr>
+    <tr><td>Correção de 10,5% ao ano, seis meses</td><td class="n">R$ 767,85</td></tr>
+    <tr class="total"><td>Total a devolver</td><td class="n">R$ 15.767,85</td></tr>
+  </table>
+
+  <p><strong>R$ 3.000 na mão agora em agosto</strong>, do cofrinho. Depois R$ 400 em setembro e outubro, R$ 700 até janeiro, R$ 897 de fevereiro a novembro de 2027, e R$ 897,85 fechando em dezembro. <strong>Quitada em dezembro de 2027, cinco meses antes de mim.</strong></p>
+
+  <div class="nota">
+    <span class="t">Premissa a confirmar com ela</span>
+    A taxa de 10,5% ao ano foi o critério que eu usei, mas ainda não foi combinada com ela. É preciso conversar e acertar antes de assinar. Se ela quiser outra taxa, o número muda e o cronograma se ajusta.
+  </div>
+
+  <h3>O que o Maicon deve à empresa</h3>
+  <p>Isso não se mistura com retirada e precisa ficar registrado, porque é dinheiro da empresa.</p>
+
+  <table>
+    <tr><td>Saldo acumulado negativo em 2026, retiradas acima da parte devida</td><td class="n">R$ 3.391,48</td></tr>
+    <tr><td>Empréstimo tomado da empresa e não devolvido</td><td class="n">R$ 1.500,00</td></tr>
+    <tr class="total"><td>Total em aberto</td><td class="n">R$ 4.891,48</td></tr>
+  </table>
+
+  <p>Minha posição: <strong>não quero cobrar isso.</strong> Fica registrado e se resolve naturalmente na distribuição descrita no item 08, sem cobrança e sem constrangimento. Mas precisa estar escrito.</p>
+</section>
+
+<section class="quebra">
+  <h2><span class="n">07</span> O caixa aguenta? O teste</h2>
+
+  <p>Refiz o plano inteiro supondo que <strong>todo mês viesse igual a junho de 2026</strong>, o pior mês do ano, com lucro de R$ 13.781,83, R$ 1.124,94 abaixo da média.</p>
+
+  <div class="rolagem">
+  <table>
+    <thead><tr><th>Período</th><th class="n">Caixa livre no cenário ruim</th><th class="n">Saída do plano</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>Setembro/26</td><td class="n">3.269,73</td><td class="n">4.300,00</td><td>faltariam R$ 1.030,27</td></tr>
+      <tr><td>Outubro/26</td><td class="n">3.598,51</td><td class="n">4.600,00</td><td>faltariam R$ 1.001,49</td></tr>
+      <tr><td>Novembro/26</td><td class="n">5.210,07</td><td class="n">4.900,00</td><td>sobra R$ 310,07</td></tr>
+      <tr><td>Dez/26 e jan/27</td><td class="n">5.317,22</td><td class="n">4.900,00</td><td>sobra R$ 417,22</td></tr>
+      <tr><td>Fevereiro/27</td><td class="n">6.558,67</td><td class="n">6.397,00</td><td>sobra R$ 161,67</td></tr>
+      <tr class="marca"><td>Março/27 em diante</td><td class="n">7.078,92</td><td class="n">6.397,00</td><td><strong>sobra R$ 681,92</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>Mesmo no pior mês da história recente repetido todos os meses, o plano só aperta em setembro e outubro.</strong> O rombo somado nesses dois meses seria R$ 2.031,76, contra R$ 8.844,00 que ficam no cofrinho. Cobre mais de quatro vezes.</p>
+
+  <h3>A ordem de absorção, se um mês vier fraco</h3>
+  <ol>
+    <li><strong>Primeiro encolhe a sobra de vocês</strong>, porque ela é o que resta e não um valor fixo. De março/27 em diante são R$ 1.806,86 de colchão, mais do que a distância entre a média e o pior mês.</li>
+    <li><strong>O cofrinho é o último recurso</strong>, e a reserva de R$ 1.280 por mês continua entrando durante todo o plano, sem ser tocada.</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="n">08</span> Como ficam as quotas e a distribuição</h2>
+
+  <p>Esta parte é opinião minha e eu quero ouvir vocês dois. Vocês nunca foram iguais: antes de eu entrar era Maicon 51% e Douglas 49%, e cada um abriu mão de uma fatia para eu entrar com 30%.</p>
+  <p>Minha proposta é o <strong>Maicon com 55% e o Douglas com 45%</strong>, mantendo o Maicon como sócio majoritário. Cada um paga a parte proporcional ao que recebe:</p>
+
+  <div class="rolagem">
+  <table>
+    <thead><tr><th>Sócio</th><th class="n">Hoje</th><th class="n">Recebe</th><th class="n">Fica com</th><th class="n">Paga da minha parte</th></tr></thead>
+    <tbody>
+      <tr><td>Maicon Correia</td><td class="n">37%</td><td class="n">18 pontos</td><td class="voce">55%</td><td class="n">R$ 48.303,97</td></tr>
+      <tr><td>Douglas</td><td class="n">33%</td><td class="n">12 pontos</td><td class="voce">45%</td><td class="n">R$ 32.202,65</td></tr>
+      <tr><td>Raul Mockel</td><td class="n">30%</td><td class="n">sai</td><td class="n">0%</td><td class="n">-</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>O pagamento sai do fluxo da empresa, ou seja, do lucro que passaria a ser de cada um. Na prática cada um paga com a própria parte.</p>
+
+  <h3>A regra de distribuição que eu deixo</h3>
+  <p>Isso não é condição de venda. É o que eu faria se ficasse, e é o que eu recomendo como gestor financeiro daqui em diante.</p>
+
+  <ol>
+    <li>Paga primeiro o custo da operação e as obrigações fixas.</li>
+    <li>O Maicon leva os R$ 6.000 dele. <strong>Esse acordo não se mexe.</strong></li>
+    <li>O que sobrar vai para o Douglas, até ele emparelhar com o Maicon.</li>
+    <li>Enquanto o Douglas estiver atrás, <strong>o excedente não aumenta o Maicon.</strong></li>
+    <li>O saldo em aberto do Maicon é abatido nesse mesmo movimento, sem cobrança.</li>
+    <li>Quando os dois estiverem iguais, divide igual daí para frente.</li>
+  </ol>
+
+  <div class="destaque">
+    Isso corrige a diferença histórica <strong>sem tirar um real do Maicon</strong>, usando só o dinheiro novo que aparece quando eu saio e as dívidas terminam. Ninguém precisa perder para o outro ganhar.
+  </div>
+</section>
+
+<section class="quebra">
+  <h2><span class="n">09</span> A gestão financeira, e o que acontece se não quiserem</h2>
+
+  <div class="duas">
+    <div class="bloco a">
+      <h4>Plano A, o que está proposto aqui</h4>
+      <p>Eu continuo cuidando do financeiro: fechamento mensal conferido contra sistema e extrato. Um encontro por semana.</p>
+      <table class="mini">
+        <tr><td>Participação</td><td class="n">R$ 80.506,62</td></tr>
+        <tr><td>Gestão, set/26 a jan/27</td><td class="n">R$ 500/mês</td></tr>
+        <tr><td>Gestão, fev/27 a mai/28</td><td class="n">R$ 1.000/mês</td></tr>
+        <tr class="total"><td>Gestão, jun/28 em diante</td><td class="n">R$ 1.500/mês</td></tr>
+      </table>
+    </div>
+    <div class="bloco b">
+      <h4>Plano B, se não quiserem a gestão</h4>
+      <p>Sem problema nenhum e sem ressentimento. O espaço que a gestão ocupa no caixa vira preço da participação. <strong>O custo mensal para a empresa fica idêntico</strong>, muda só o destino do dinheiro.</p>
+      <table class="mini">
+        <tr><td>Participação</td><td class="n">R$ 99.006,62</td></tr>
+        <tr><td>Prazo</td><td class="n">21 meses</td></tr>
+        <tr><td>Gestão</td><td class="n">nenhuma</td></tr>
+        <tr class="total"><td>Custo mensal para a empresa</td><td class="n">o mesmo</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p>É escolha de vocês. A única coisa que não existe é ter a gestão sem ela estar na conta.</p>
+</section>
+
+<section class="quebra">
+  <h2><span class="n">10</span> O que precisa estar no papel</h2>
+
+  <p>Isso não é desconfiança de ninguém. É o que protege os três, inclusive vocês, de confusão futura.</p>
+
+  <ul class="protecao">
+    <li class="critico"><strong>Alteração contratual registrada na Junta Comercial.</strong> Sem o registro eu continuo respondendo pelas dívidas da empresa mesmo depois de sair. Este é o ponto mais importante do documento inteiro.</li>
+    <li class="critico"><strong>Retirada do meu nome</strong> de aval, fiança, conta bancária, cartão, contrato de aluguel e cadastro de fornecedor, com prazo e comprovação.</li>
+    <li><strong>Confissão de dívida</strong> do valor da participação e do carro, com aval pessoal do Maicon e do Douglas.</li>
+    <li><strong>Parcelas com data fixa de vencimento.</strong> Nunca quando sobrar.</li>
+    <li><strong>Se a empresa for vendida ou receber aporte</strong> antes da quitação, o saldo vence à vista.</li>
+    <li><strong>Transição de 30 a 45 dias</strong>, com lista escrita do que eu faço hoje, passagem de sistemas, contatos, senhas e fornecedores.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">11</span> Observações para constar</h2>
+
+  <div class="autos">
+    <span class="t">Folga disponível não utilizada nesta proposta</span>
+    Esta proposta foi construída sem tocar em nenhuma despesa da operação. Permanecem intactos <strong>R$ 1.280,00 por mês</strong> de aporte à reserva da empresa e <strong>R$ 1.795,44 por mês</strong> do conjunto moto e entrega, somando financiamento, vale, aluguel e combustível. Nenhum desses valores foi usado para compor o pagamento. Ficam registrados como margem já existente na operação, à disposição da empresa caso ela precise.
+  </div>
+
+  <div class="autos">
+    <span class="t">Reserva</span>
+    O cofrinho do Mercado Pago mostra hoje R$ 25.008,60, mas dentro desse valor estão R$ 2.444,60 que foram retirados para pagar o aluguel e precisam voltar. O saldo real é <strong>R$ 22.564,00</strong>. No fim de agosto entra o aporte padrão de R$ 1.280,00, fechando o mês em <strong>R$ 23.844,00</strong>. Saem R$ 12.000 do carro e R$ 3.000 da mãe do Maicon, restando <strong>R$ 8.844,00</strong>. Só com o aporte mensal a reserva volta ao patamar de R$ 12.000 em novembro de 2026 e cresce daí em diante. <strong>A reserva não é zerada e o aporte mensal a ela não é interrompido em nenhum momento.</strong>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">12</span> Fechamento</h2>
+
+  <div class="destaque">
+    <strong>As duas coisas que sustentam esta proposta:</strong> nos cinco primeiros meses eu não custo à empresa mais do que já custo hoje. E ninguém tem a retirada reduzida em nenhum momento, do começo ao fim. Quem paga a minha saída é o dinheiro que eu deixo de retirar mais as dívidas de cartão que estão terminando.
+  </div>
+
+  <div class="frase">
+    Entrei em outubro de 2024 numa empresa que vendia até 18 mil e não sobrava nada. Entreguei o que a gente combinou. Chegou o meu momento de apontar minha energia para outro lugar, e eu vim de cara limpa, com a conta inteira aberta e com um plano que <strong>não tira um real de nenhum de vocês e já melhora os dois desde o primeiro mês.</strong> Quero sair do jeito certo e continuar sendo o cara com quem vocês podem contar.
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="rot">Minha participação</div>
+      <div class="val">R$ 80.506,62</div>
+      <div class="obs">21 parcelas sem juros</div>
+    </div>
+    <div class="card">
+      <div class="rot">Carro que a empresa deve</div>
+      <div class="val">R$ 22.000,00</div>
+      <div class="obs">Sem correção, quitado nov/27</div>
+    </div>
+    <div class="card">
+      <div class="rot">Mãe do Maicon</div>
+      <div class="val">R$ 15.767,85</div>
+      <div class="obs">Corrigida, quitada dez/27</div>
+    </div>
+    <div class="card forte">
+      <div class="rot">Retirada de vocês dois</div>
+      <div class="val">Só sobe</div>
+      <div class="obs">Do primeiro ao último mês</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Base dos números:</strong> planilha de controle da empresa, sistema Nex e extratos bancários, janeiro a julho de 2026, conferidos no fechamento de julho aprovado em 03/08/2026. Quadro de dívidas de cartão conferido parcela por parcela contra a planilha de despesas fixas de julho de 2026. Levantamento do período anterior a partir das planilhas mensais de controle da própria empresa.</p>
+  <p style="margin-top:10px"><strong>Premissas ainda não confirmadas:</strong> taxa de 10,5% ao ano sobre o empréstimo da mãe do Maicon, a combinar diretamente com ela. Projeção de lucro futuro baseada na média apurada de 2026 mais a folga já contratada das dívidas de cartão, sem contar nenhum crescimento de faturamento.</p>
+  <p style="margin-top:16px;font-size:12px">Documento preparado em 03 de agosto de 2026. Service One, São José dos Pinhais, Paraná.</p>
+</footer>
+
+</div>
+</body>
+</html>
