@@ -1,0 +1,227 @@
+<meta charset="utf-8">
+<title>Bull Invest · Cronograma de Aulas — Anderson</title>
+<style>
+  :root{
+    --gold:#e7b84f; --gold2:#f6d78a; --ink:#0c0d10; --ink2:#15171c;
+    --line:#2a2d35; --txt:#f4f1ea; --mut:#a7abb5;
+    --blue:#7fa8e8; --green:#6fd08c; --purp:#c79be8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:radial-gradient(1100px 640px at 78% -8%, #1c1e26 0%, var(--ink) 58%);
+    color:var(--txt); font-family:"Segoe UI",system-ui,-apple-system,sans-serif;
+    line-height:1.5; padding:48px 22px 80px;
+  }
+  .wrap{max-width:1000px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+  .brand .mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(145deg,var(--gold),#a9791f);display:flex;align-items:center;justify-content:center;font-weight:800;color:#1a1206;font-size:21px}
+  .brand b{letter-spacing:.5px;font-size:15px;display:block}
+  .brand span{color:var(--mut);font-size:12px}
+  h1{font-size:clamp(28px,4.6vw,46px);font-weight:800;letter-spacing:-.6px;line-height:1.05}
+  h1 em{color:var(--gold2);font-style:normal}
+  .sub{color:var(--mut);font-size:clamp(15px,1.8vw,18px);margin-top:14px;max-width:64ch}
+  /* pilares */
+  .pil{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0 10px}
+  @media(max-width:760px){.pil{grid-template-columns:1fr 1fr}}
+  .pcard{background:linear-gradient(180deg,var(--ink2),#101217);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:14px;padding:16px 18px}
+  .pcard.b{border-top-color:var(--blue)} .pcard.g{border-top-color:var(--green)} .pcard.p{border-top-color:var(--purp)}
+  .pcard h3{font-size:15px;margin-bottom:4px}
+  .pcard small{color:var(--mut);font-size:12.5px;line-height:1.35;display:block}
+  /* progresso */
+  .prog{display:flex;align-items:center;gap:16px;margin:26px 0 6px}
+  .bar{flex:1;height:12px;background:#1b1d24;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;width:16.6%;background:linear-gradient(90deg,var(--gold2),var(--gold))}
+  .prog b{font-size:15px;color:var(--gold2);white-space:nowrap}
+  /* timeline */
+  .tl{margin-top:30px;position:relative}
+  .row{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .num{flex-shrink:0;width:46px;height:46px;border-radius:12px;background:var(--ink2);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+  .num small{font-size:9px;color:var(--mut);font-weight:600;letter-spacing:.5px}
+  .done .num{background:linear-gradient(145deg,var(--green),#3f9c5c);color:#08210f;border-color:transparent}
+  .body{flex:1;min-width:0}
+  .head{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+  .head h4{font-size:clamp(16px,2vw,20px);font-weight:800}
+  .badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;letter-spacing:.4px;text-transform:uppercase}
+  .bt{background:rgba(231,184,79,.14);border:1px solid rgba(231,184,79,.4);color:var(--gold2)}
+  .bc{background:rgba(199,155,232,.14);border:1px solid rgba(199,155,232,.4);color:var(--purp)}
+  .pill{font-size:11px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:3px 10px}
+  .pill.gold{color:var(--gold2)} .pill.blue{color:var(--blue)} .pill.green{color:var(--green)} .pill.purp{color:var(--purp)}
+  .obj{color:var(--txt);font-size:15px;margin-top:8px}
+  .task{color:var(--mut);font-size:14px;margin-top:5px}
+  .task b{color:var(--gold2);font-weight:700}
+  .lnk{display:inline-block;margin-top:8px;font-size:13px;color:var(--green);text-decoration:none;border-bottom:1px dashed rgba(111,208,140,.5)}
+  .st{font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px}
+  .st.ok{background:rgba(111,208,140,.14);border:1px solid rgba(111,208,140,.4);color:var(--green)}
+  .st.next{background:rgba(231,184,79,.14);border:1px solid rgba(231,184,79,.4);color:var(--gold2)}
+  .foot{color:var(--mut);font-size:13px;margin-top:34px;text-align:center;border-top:1px solid var(--line);padding-top:20px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;color:var(--mut);font-size:12.5px}
+  .legend span{display:flex;align-items:center;gap:6px}
+  .dotc{width:10px;height:10px;border-radius:3px;display:inline-block}
+</style>
+
+<div class="wrap">
+  <div class="brand">
+    <div class="mark">B</div>
+    <div><b>BULL INVEST</b><span>Gestão Pessoal · Cronograma de Aulas — Anderson</span></div>
+  </div>
+
+  <h1>Uma aula por encontro,<br><em>ao longo dos 6 meses.</em></h1>
+  <p class="sub">Cada encontro da consultoria entrega uma aula. Elas alternam a parte técnica (organizar o dinheiro) com a parte de cabeça (mentalidade e hábitos), pra mudança acontecer de dentro pra fora. Todas amarradas aos 4 pilares da Gestão Pessoal.</p>
+
+  <div class="pil">
+    <div class="pcard"><h3>1 · Planejamento</h3><small>Organizar, metas e orçamento</small></div>
+    <div class="pcard b"><h3>2 · Educação Financeira</h3><small>Entender dívida, juros e caixa</small></div>
+    <div class="pcard g"><h3>3 · Poupança & Investimento</h3><small>Reserva e dinheiro trabalhando</small></div>
+    <div class="pcard p"><h3>4 · Desenvolvimento Pessoal</h3><small>Mentalidade, hábitos, equilíbrio</small></div>
+  </div>
+
+  <div class="prog">
+    <b>2 de 12 aulas</b>
+    <div class="bar"><i></i></div>
+    <b>Ritmo quinzenal</b>
+  </div>
+  <div class="legend">
+    <span><i class="dotc" style="background:var(--gold)"></i> Planejamento</span>
+    <span><i class="dotc" style="background:var(--blue)"></i> Educação Financeira</span>
+    <span><i class="dotc" style="background:var(--green)"></i> Poupança & Investimento</span>
+    <span><i class="dotc" style="background:var(--purp)"></i> Desenvolvimento Pessoal</span>
+  </div>
+
+  <div class="tl">
+
+    <!-- 1 FEITA -->
+    <div class="row done">
+      <div class="num">01</div>
+      <div class="body">
+        <div class="head"><h4>O Ciclo do Dinheiro</h4><span class="badge bt">Técnica</span><span class="pill blue">Educação Financeira</span><span class="st ok">✓ Feita</span></div>
+        <p class="obj">Por que falta dinheiro mesmo vendendo bem: capital de giro e o ciclo do dinheiro.</p>
+        <p class="task"><b>Tarefa:</b> descobrir os 3 prazos reais dele e escolher 1 alavanca pra encurtar o ciclo.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-ciclo-do-dinheiro/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 2 FEITA -->
+    <div class="row done">
+      <div class="num">02</div>
+      <div class="body">
+        <div class="head"><h4>O Próximo Nível é Você</h4><span class="badge bc">Coach</span><span class="pill purp">Desenvolvimento Pessoal</span><span class="st ok">✓ Feita</span></div>
+        <p class="obj">Mentalidade: sair do modo caçador pro modo construtor. Identidade de dono de patrimônio.</p>
+        <p class="task"><b>Tarefa:</b> escrever o próprio porquê e dominar 1 hábito na semana.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-o-proximo-nivel/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 3 PRÓXIMA -->
+    <div class="row">
+      <div class="num">03</div>
+      <div class="body">
+        <div class="head"><h4>Pessoa Física × Empresa</h4><span class="badge bt">Técnica</span><span class="pill gold">Planejamento</span><span class="st next">Próxima</span></div>
+        <p class="obj">Separar a vida da operação e definir o pró-labore — o salário do dono.</p>
+        <p class="task"><b>Tarefa:</b> definir um valor de pró-labore e abrir uma conta só pra empresa.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-pessoa-fisica-empresa/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="row">
+      <div class="num">04</div>
+      <div class="body">
+        <div class="head"><h4>Orçamento que Cabe na Sua Vida</h4><span class="badge bt">Técnica</span><span class="pill gold">Planejamento</span></div>
+        <p class="obj">Dar destino ao dinheiro antes de gastar: orçamento pessoal e da empresa.</p>
+        <p class="task"><b>Tarefa:</b> montar o orçamento pessoal e definir teto por categoria.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-orcamento/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="row">
+      <div class="num">05</div>
+      <div class="body">
+        <div class="head"><h4>Disciplina Vence Talento</h4><span class="badge bc">Coach</span><span class="pill purp">Desenvolvimento Pessoal</span></div>
+        <p class="obj">Como criar rotina e vencer a autossabotagem. O hábito que constrói o novo você.</p>
+        <p class="task"><b>Tarefa:</b> montar 1 ritual diário de 5 minutos com o dinheiro.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-disciplina-vence-talento/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="row">
+      <div class="num">06</div>
+      <div class="body">
+        <div class="head"><h4>Margem de Verdade</h4><span class="badge bt">Técnica</span><span class="pill blue">Educação Financeira</span></div>
+        <p class="obj">Quanto cada venda realmente deixa: custo real, markup x margem, precificar pra lucrar.</p>
+        <p class="task"><b>Tarefa:</b> calcular a margem real de 3 produtos da última viagem.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-margem-de-verdade/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="row">
+      <div class="num">07</div>
+      <div class="body">
+        <div class="head"><h4>Fora do Aperto: Dívida e Juros</h4><span class="badge bt">Técnica</span><span class="pill blue">Educação Financeira</span></div>
+        <p class="obj">Dívida boa x dívida ruim, o poder dos juros e como sair do sufoco com método.</p>
+        <p class="task"><b>Tarefa:</b> listar todas as dívidas com juros e montar a ordem de quitação.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-divida-e-juros/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="row">
+      <div class="num">08</div>
+      <div class="body">
+        <div class="head"><h4>A Reserva Que Te Dá Poder</h4><span class="badge bt">Técnica</span><span class="pill green">Poupança & Investimento</span></div>
+        <p class="obj">Construir a reserva da empresa (giro) e a reserva pessoal de emergência.</p>
+        <p class="task"><b>Tarefa:</b> definir o valor mensal de cada reserva e começar já.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-reserva-que-da-poder/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="row">
+      <div class="num">09</div>
+      <div class="body">
+        <div class="head"><h4>Fazer o Dinheiro Trabalhar</h4><span class="badge bt">Técnica</span><span class="pill green">Poupança & Investimento</span></div>
+        <p class="obj">Perfil de risco e os primeiros passos em investimento, sem susto e sem complicação.</p>
+        <p class="task"><b>Tarefa:</b> dar o primeiro aporte na reserva investida.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-dinheiro-trabalhar/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="row">
+      <div class="num">10</div>
+      <div class="body">
+        <div class="head"><h4>Dinheiro, Família e Saúde</h4><span class="badge bc">Coach</span><span class="pill purp">Desenvolvimento Pessoal</span></div>
+        <p class="obj">Equilíbrio: de nada adianta caixa cheio com a vida em volta desregulada.</p>
+        <p class="task"><b>Tarefa:</b> escolher 1 área da vida (fora dinheiro) pra cuidar melhor no mês.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-dinheiro-familia-saude/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="row">
+      <div class="num">11</div>
+      <div class="body">
+        <div class="head"><h4>Menos Risco, Mais Previsibilidade</h4><span class="badge bt">Técnica</span><span class="pill gold">Planejamento</span></div>
+        <p class="obj">Reduzir a dependência de poucos clientes e construir faturamento com recorrência.</p>
+        <p class="task"><b>Tarefa:</b> mapear a carteira de clientes e definir meta de novos compradores.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-menos-risco-previsibilidade/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="row">
+      <div class="num">12</div>
+      <div class="body">
+        <div class="head"><h4>O Dono Que Você Virou</h4><span class="badge bc">Coach</span><span class="pill purp">Desenvolvimento Pessoal</span></div>
+        <p class="obj">Fechamento dos 6 meses: revisar a evolução, celebrar e definir os próximos passos.</p>
+        <p class="task"><b>Tarefa:</b> escrever a visão dos próximos 6 meses e o plano da fase 2.</p>
+        <a class="lnk" href="https://raulmockel-wq.github.io/bull-relatorios/aula-o-dono-que-voce-virou/" target="_blank">abrir aula ›</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">Cronograma vivo · vamos ajustando conforme o Anderson evolui. Ritmo e temas são sugestão, adaptáveis a cada encontro.</div>
+</div>
