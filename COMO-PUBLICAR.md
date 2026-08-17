@@ -1,4 +1,19 @@
-# Bull Relatórios — pasta online dos clientes
+# ⭐ PADRÃO NOVO (17/08/2026): publicar no domínio da Bull, área por cliente
+
+A partir de agora o material de cliente vai para o **domínio da Bull**, com uma **área fixa por cliente**:
+`https://painel.bullinvest.com.br/<cliente>/` (ex.: `/bigodon/`, `/salomao/`, `/anderson/`).
+
+- Arquivos ficam no VPS Bull (2.25.179.122) em `/var/www/clientes/<cliente>/`, servidos pelo nginx `painel-bull` (bloco `location /<cliente>/`, `noindex`, sem auth pro cliente abrir).
+- Fonte versionada em `bull-site/<cliente>/` (neste repo). Cada material é um subcaminho: `/<cliente>/<material>/`.
+- A raiz `/<cliente>/` é a "Área do Cliente" (índice premium com cards linkando os materiais).
+- **Backup em 3 camadas, sempre:** (1) cérebro/local `bull-site/`, (2) GitHub (este repo), (3) Google Drive `Meu Drive/Bull Invest/site-clientes-bull/`. O VPS é o ao vivo.
+- Passo a passo: montar `bull-site/<cliente>/` → `rsync` pro VPS → inserir `location /<cliente>/` no nginx `painel-bull` → `nginx -t && reload` → commit/push → rsync pro Drive.
+
+Meta futura: `<cliente>.bullinvest.com.br` (subdomínio próprio) via wildcard DNS na HostGator, pra o Steve publicar sozinho. Falta só o acesso da HostGator.
+
+---
+
+# Bull Relatórios — pasta online dos clientes (GitHub Pages, modelo antigo)
 
 Repositório **público** que hospeda os relatórios dos clientes da Bull Invest via GitHub Pages.
 Os links são **não listados** (noindex + robots Disallow) — só quem recebe o link direto acessa.
