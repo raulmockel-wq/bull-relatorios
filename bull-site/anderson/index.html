@@ -12,22 +12,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 .capa h1{font-size:clamp(32px,6vw,52px);font-weight:800;letter-spacing:-1px;line-height:1.04;background:linear-gradient(180deg,#fff,#c7d6ee);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .capa .sub{color:var(--azul-claro);font-size:clamp(15px,2.4vw,19px);margin-top:12px;font-weight:600}
 .capa .frase{max-width:600px;margin:18px auto 0;color:var(--cinza);font-size:15px}
-section{padding:44px 0 10px}
-.kicker{color:var(--azul);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;text-align:center}
-h2{font-size:clamp(22px,3.6vw,30px);font-weight:800;letter-spacing:-.5px;margin-bottom:24px;color:#fff;text-align:center}
-.grid{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
-.card{display:flex;flex-direction:column;background:linear-gradient(180deg,var(--grafite),var(--grafite2));border:1px solid var(--linha);border-radius:16px;padding:24px 24px 22px;text-decoration:none;transition:border-color .2s,transform .2s}
+.mes{margin-top:40px}
+.mes-tit{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.mes-tit .m{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--azul);font-weight:800;white-space:nowrap}
+.mes-tit .ln{flex:1;height:1px;background:linear-gradient(90deg,var(--linha),transparent)}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+.card{display:flex;flex-direction:column;background:linear-gradient(180deg,var(--grafite),var(--grafite2));border:1px solid var(--linha);border-radius:16px;padding:22px 22px 20px;text-decoration:none;transition:border-color .2s,transform .2s}
 .card:hover{border-color:var(--azul);transform:translateY(-2px)}
-.card .ic{width:44px;height:44px;border-radius:11px;background:rgba(61,123,214,.16);border:1px solid var(--linha);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
-.card h3{color:#fff;font-size:18px;margin-bottom:7px}
-.card p{color:var(--cinza);font-size:14px;flex:1}
-.card .meta{color:var(--azul-claro);font-size:12.5px;font-weight:600;margin-top:14px;letter-spacing:.3px;display:flex;align-items:center;gap:7px}
-.destaque{grid-column:1/-1;border-color:var(--azul)}
-footer{padding:48px 24px 64px;text-align:center}
+.card .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.card .ic{width:42px;height:42px;border-radius:11px;background:rgba(61,123,214,.16);border:1px solid var(--linha);display:flex;align-items:center;justify-content:center;font-size:21px}
+.card .data{font-size:12px;font-weight:700;color:var(--azul-claro);background:rgba(61,123,214,.10);border:1px solid var(--linha);border-radius:20px;padding:4px 11px}
+.card h3{color:#fff;font-size:17px;margin-bottom:6px}
+.card p{color:var(--cinza);font-size:13.5px;flex:1}
+.card .abrir{color:var(--azul-claro);font-size:12.5px;font-weight:600;margin-top:13px;letter-spacing:.3px}
+footer{padding:48px 24px 64px;text-align:center;margin-top:24px}
 footer .bull-lock{opacity:.7;margin-bottom:12px}
 footer p{color:var(--cinza);font-size:13px;margin-top:4px}
 .intnote{color:#5f6f88;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:12px}
-@media(max-width:520px){.wrap{padding:0 16px}.capa{padding:48px 18px 38px}.card{padding:20px}}
+@media(max-width:520px){.wrap{padding:0 16px}.capa{padding:48px 18px 38px}.card{padding:18px}}
 </style></head><body>
 
 <header class="capa">
@@ -35,52 +37,53 @@ footer p{color:var(--cinza);font-size:13px;margin-top:4px}
   <span class="selo">Consultoria Bull Invest</span>
   <h1>Área do Anderson</h1>
   <div class="sub">Guh Imports</div>
-  <p class="frase">Aqui ficam, num só lugar, os materiais da nossa consultoria. Pode acessar quando quiser.</p>
+  <p class="frase">Todos os materiais da nossa consultoria, organizados por mês. Acesse quando quiser.</p>
 </header>
 
 <div class="wrap">
-<section>
-<div class="kicker">Seus materiais</div>
-<h2>O que já construímos juntos</h2>
-<div class="grid">
 
-  <a class="card destaque" href="auditoria/">
-    <div class="ic">🔎</div>
-    <h3>Auditoria Financeira</h3>
-    <p>O raio-x completo das contas de janeiro a maio de 2026: para onde o dinheiro foi e o que ele revela.</p>
-    <div class="meta">Abrir material →</div>
-  </a>
+  <div class="mes">
+    <div class="mes-tit"><span class="m">Julho 2026</span><span class="ln"></span></div>
+    <div class="grid">
+      <a class="card" href="fechamento-julho/">
+        <div class="top"><div class="ic">📊</div><div class="data">31/07/2026</div></div>
+        <h3>Fechamento de Julho</h3>
+        <p>O painel do mês da Guh Imports com os números fechados e a leitura do resultado.</p>
+        <div class="abrir">Abrir material →</div>
+      </a>
+      <a class="card" href="aulas/">
+        <div class="top"><div class="ic">📚</div><div class="data">31/07/2026</div></div>
+        <h3>Cronograma de Aulas</h3>
+        <p>A trilha de encontros da consultoria, tema a tema, pra acompanhar a evolução.</p>
+        <div class="abrir">Abrir material →</div>
+      </a>
+      <a class="card" href="plano/">
+        <div class="top"><div class="ic">🎯</div><div class="data">07/07/2026</div></div>
+        <h3>Plano de Ação</h3>
+        <p>Os passos definidos a partir da auditoria, o caminho pra colocar a casa em ordem.</p>
+        <div class="abrir">Abrir material →</div>
+      </a>
+    </div>
+  </div>
 
-  <a class="card" href="plano/">
-    <div class="ic">🎯</div>
-    <h3>Plano de Ação</h3>
-    <p>Os passos definidos a partir da auditoria, o caminho para colocar a casa em ordem.</p>
-    <div class="meta">Abrir material →</div>
-  </a>
+  <div class="mes">
+    <div class="mes-tit"><span class="m">Junho 2026</span><span class="ln"></span></div>
+    <div class="grid">
+      <a class="card" href="auditoria/">
+        <div class="top"><div class="ic">🔎</div><div class="data">19/06/2026</div></div>
+        <h3>Auditoria Financeira</h3>
+        <p>O raio-x completo das contas de janeiro a maio: pra onde o dinheiro foi e o que revela.</p>
+        <div class="abrir">Abrir material →</div>
+      </a>
+      <a class="card" href="roteiro/">
+        <div class="top"><div class="ic">🧭</div><div class="data">19/06/2026</div></div>
+        <h3>Roteiro do 1º Encontro</h3>
+        <p>O ponto de partida da nossa jornada, o mapa da primeira conversa.</p>
+        <div class="abrir">Abrir material →</div>
+      </a>
+    </div>
+  </div>
 
-  <a class="card" href="fechamento-julho/">
-    <div class="ic">📊</div>
-    <h3>Fechamento de Julho 2026</h3>
-    <p>O painel do mês da Guh Imports com os números fechados e a leitura do resultado.</p>
-    <div class="meta">Abrir material →</div>
-  </a>
-
-  <a class="card" href="aulas/">
-    <div class="ic">📚</div>
-    <h3>Cronograma de Aulas</h3>
-    <p>A trilha de encontros da consultoria, tema a tema, para acompanhar a evolução.</p>
-    <div class="meta">Abrir material →</div>
-  </a>
-
-  <a class="card" href="roteiro/">
-    <div class="ic">🧭</div>
-    <h3>Roteiro do 1º Encontro</h3>
-    <p>O ponto de partida da nossa jornada, o mapa da primeira conversa.</p>
-    <div class="meta">Abrir material →</div>
-  </a>
-
-</div>
-</section>
 </div>
 
 <footer>
