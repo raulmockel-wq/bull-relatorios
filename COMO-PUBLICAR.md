@@ -19,6 +19,7 @@ Os links são **não listados** (noindex + robots Disallow) — só quem recebe 
 | Bigodon (Victor) · Proposta Clube Pai & Filho | `bigodon-clube-pai-filho-d09f3c` | https://raulmockel-wq.github.io/bull-relatorios/bigodon-clube-pai-filho-d09f3c/ |
 | Nicolas (filho do Alyson) · Treinamento Mercado Financeiro | `nicolas-2b7b70` | https://raulmockel-wq.github.io/bull-relatorios/nicolas-2b7b70/ |
 | Treinamento · O Ciclo do Dinheiro | `aula-ciclo-do-dinheiro` | https://raulmockel-wq.github.io/bull-relatorios/aula-ciclo-do-dinheiro/ |
+| Victor Prado (Bigodon) · Resumo da Mentoria 17/08/2026 | `bigodon-mentoria-17ago-5812cf` | https://raulmockel-wq.github.io/bull-relatorios/bigodon-mentoria-17ago-5812cf/ |
 
 > Dashboard avulso do Victor: https://raulmockel-wq.github.io/bull-relatorios/victor-a6d5c4/dashboard.html
 
