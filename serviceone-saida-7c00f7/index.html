@@ -89,13 +89,21 @@
     .duas{grid-template-columns:1fr;gap:20px}
   }
   @media print{
+    @page{size:A4;margin:13mm 11mm}
     body{background:#fff;font-size:10.5pt}
     .folha{box-shadow:none;max-width:none}
     .capa{padding:0 0 24px}
-    section{padding:22px 0 0;break-inside:avoid}
+    section{padding:22px 0 0}
     footer{padding:18px 0 0}
-    h2{break-after:avoid}
+    h2,h3{break-after:avoid}
+    p,li{break-inside:avoid}
     table{break-inside:avoid;font-size:9.5pt}
+    .duas,.bloco,.cards,.card,.frase,.destaque,.nota,.autos{break-inside:avoid}
+    .rolagem{overflow:visible}
+    .rolagem table{font-size:8.4px}
+    .rolagem th{font-size:8.4px;white-space:normal;padding:4px 5px}
+    .rolagem td{font-size:8.4px;padding:4px 5px}
+    .dica-rolar{display:none!important}
     .frase,.card.forte{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .destaque,.nota,.autos,tr.marca td,tr.total td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .quebra{break-before:page}
