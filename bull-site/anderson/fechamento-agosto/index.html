@@ -211,22 +211,28 @@ footer{text-align:center;margin-top:50px;padding-top:26px;border-top:1px solid v
 
 <div class="eyebrow">Achados da auditoria (planilha contra extrato)</div>
 <div class="sub" style="margin-bottom:6px">Conferi lançamento por lançamento os 126 movimentos da conta Stone da Guh Imports contra a planilha. A conta fecha: saldo inicial R$ 50,45, saldo final R$ 955,42, sem uma quebra sequer na cadeia. O que não bateu está aqui.</div>
-<div class="find"><span class="ar">⚠</span><div>A soma automática da planilha <b>está errada</b>. A fórmula do subtotal das despesas da Guh só vai até a linha 81 e o mês tem 113 lançamentos. Ela mostra <b>R$ 77.341,50</b> quando o correto é <b>R$ 96.058,12</b>. Faltam <b>R$ 18.716,62</b> na conta que a planilha apresenta. É a correção mais urgente.</div></div>
+<div class="find"><span class="ar">⚠</span><div>A soma automática das despesas da Guh <b>estava errada</b>: a fórmula ia só até a linha 81 e o mês tem 113 lançamentos, escondendo <b>R$ 18.716,62</b>. <b>Já foi corrigida.</b> O total certo do mês é <b>R$ 96.058,12</b>, que é o usado neste fechamento.</div></div>
+<div class="find"><span class="ar">⚠</span><div>Com a fórmula arrumada sobrou uma diferença de <b>R$ 4.092,84</b> entre a coluna do vencimento e a do pagamento. Ela tem duas causas e nenhuma é dinheiro sumido:<br>
+<b>· R$ 3.747,84</b> são cinco valores digitados com o "R$" junto (linhas 81, 82, 84, 85 e 86: R$ 655,96, R$ 1.245,00, R$ 242,00, R$ 1.299,22 e R$ 305,66). Digitado assim vira texto e a planilha não soma. Basta apagar o "R$" e deixar só o número.<br>
+<b>· R$ 345,00</b> são a linha 29, um vale do Anderson lançado como R$ 100,00 no vencimento e R$ 445,00 no pagamento.<br>
+O mesmo erro de digitação aparece nas despesas pessoais, nas linhas 170 e 171 (R$ 41,00 e R$ 116,80).</div></div>
 <div class="find"><span class="ar">⚠</span><div>Os <b>R$ 15.500,00 da Receita Federal</b> estão lançados como pagamento, mas <b>não existe saída desse valor em nenhum extrato</b>. Está certo registrar a perda, só que ela não é pagamento: é mercadoria perdida. Misturar as duas coisas distorce o caixa do mês.</div></div>
 <div class="find"><span class="ar">⚠</span><div><b>R$ 5.037,95 saíram da conta da empresa e não estão na planilha:</b> GBL Serviços de Tecnologia R$ 1.655,00 (29/08), West Place Comércio R$ 1.983,00 (14/08), Althas Exchange R$ 1.033,00 (04/08) e duas faturas do cartão Stone, R$ 317,95 (26/08) e R$ 49,00 (20/08).</div></div>
 <div class="find"><span class="ar">⚠</span><div>A planilha registra <b>"J.A Informática · R$ 636,00"</b> no dia 14, mas no extrato o dinheiro saiu no dia <b>10</b> para <b>Ludimila Andressa Alves</b>.</div></div>
 <div class="find"><span class="ar">⚠</span><div>O lançamento <b>"Gato viagem entrega · R$ 125,96"</b> foi na verdade <b>R$ 25,96</b> no Auto Posto Roseira. R$ 100,00 a mais na planilha.</div></div>
 <div class="find"><span class="ar">⚠</span><div>Diferenças de digitação em centavos: Mega Serviços R$ 6.203,60 no banco contra R$ 6.203,00 na planilha, maquininha R$ 415,85 contra R$ 415,00 e Ludimila R$ 532,50 contra R$ 532,00.</div></div>
-<div class="find"><span class="ar">⚠</span><div>Entraram <b>R$ 250,00 da Bull Invest em 18/08</b> que não estão lançados como entrada, e saíram <b>R$ 1.297,00 da empresa para o Anderson em 31/08</b> (o vale que pagou a mensalidade) sem aparecer como vale na planilha.</div></div>
-<div class="find"><span class="ar">✓</span><div>Fora esses pontos, <b>a planilha bate com o banco</b>. Dos 85 movimentos com terceiros, 74 tiveram par exato na planilha, no valor exato. Os outros 41 movimentos da conta são transferências entre a conta da empresa e a conta pessoal dele, puro giro. Para um controle feito à mão, no meio de viagem, é um resultado muito bom.</div></div>
+<div class="find"><span class="ar">⚠</span><div>A entrada de <b>R$ 250,00 da Bull Invest em 18/08</b> está lançada como <b>"Venda Micro Lapela"</b>. O valor está certo, o que ficou faltando é o nome de quem pagou.</div></div>
+<div class="find"><span class="ar">⚠</span><div>Saíram <b>R$ 1.297,00 da empresa para a conta pessoal dele em 31/08</b>, o dinheiro que pagou a mensalidade da Bull, sem aparecer como vale na planilha. É a única retirada do mês que ficou sem lançamento.</div></div>
+<div class="find"><span class="ar">⚠</span><div><b>Metade da operação de agosto não passou pela conta da Stone.</b> Em 18/08 saíram <b>R$ 9.964,73</b> da Stone para a <b>outra conta da própria empresa, o PicPay da Guh Imports</b>, e foi de lá que saíram <b>16 das 19 compras de nota, R$ 12.878,97</b>, entre 18 e 21/08. Nenhuma delas aparece no extrato da Stone nem no do Nubank. Sem o extrato desse PicPay, agosto não fecha por completo. Em 26/08 R$ 5.947,54 voltaram para a Stone e a partir de 27/08 as compras voltaram a sair dela.</div></div>
+<div class="find"><span class="ar">✓</span><div>Fora esses pontos, <b>a planilha bate com o banco</b>. Dos 85 movimentos com terceiros, 74 bateram no valor exato com a planilha. Os outros 41 movimentos da conta são transferências entre a conta da empresa e a conta pessoal dele, puro giro. Para um controle feito à mão, no meio de viagem, é um resultado muito bom.</div></div>
 
 <div class="eyebrow">O que falta para fechar agosto por completo</div>
-<div class="sub" style="margin-bottom:6px">Este fechamento foi feito com <b>duas contas</b>: a Stone, da Guh Imports, e o Nubank pessoal. Em julho foram cinco. Faltam:</div>
+<div class="sub" style="margin-bottom:6px">Este fechamento foi feito com <b>duas contas</b>: a Stone, da Guh Imports, e o Nubank pessoal. Em julho foram cinco. Os números que estão aqui vêm da planilha do Anderson, conferida contra essas duas. Faltam:</div>
 <table>
   <tr><th>Conta</th><th>Por que faz falta</th></tr>
   <tr><td>Caixa (conta e cartão)</td><td>é de onde saíram os R$ 4.000,00 de limite Pix, o empréstimo de R$ 2.000,00 e a fatura de R$ 2.223,45. Sem ela não dá para cravar o tamanho real da dívida.</td></tr>
   <tr><td>Santander (cartão)</td><td>a fatura subiu R$ 547,65 e o limite foi usado para comprar mercadoria.</td></tr>
-  <tr><td>PicPay (conta da Guh Imports)</td><td>o extrato do Nubank mostra dinheiro da empresa entrando pelo PicPay em 20/08. Essa conta não foi enviada.</td></tr>
+  <tr><td><b>PicPay da Guh Imports</b> (conta 138115407-7)<br><span style="color:var(--amber);font-size:12px">a mais importante das três</span></td><td>é a segunda conta da empresa. Recebeu R$ 9.964,73 da Stone em 18/08 e pagou de lá R$ 12.878,97 em compra de nota. Sem esse extrato, um terço da operação do mês fica sem comprovação bancária.</td></tr>
 </table>
 
 <details>
