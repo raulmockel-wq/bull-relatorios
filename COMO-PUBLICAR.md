@@ -1,7 +1,13 @@
 # ⭐ PADRÃO NOVO (17/08/2026): publicar no domínio da Bull, área por cliente
 
 A partir de agora o material de cliente vai para o **domínio da Bull**, com uma **área fixa por cliente**:
-`https://painel.bullinvest.com.br/<cliente>/` (ex.: `/bigodon/`, `/salomao/`, `/anderson/`).
+`https://painel.bullinvest.com.br/<cliente>/` (ex.: `/bigodon/`, `/salomao/`, `/anderson/`, `/serviceone/`).
+
+> **17/09/2026, area `/serviceone/`:** nao e cliente de consultoria, e o **painel de gestao da Service One**,
+> que o Raul passou a administrar. Mesma mecanica das areas de cliente, mas com a identidade da Service One
+> (logo branca + verde) e a assinatura "Raul Mockel · Gestao da operacao · Bull Invest" no rodape.
+> Primeiro material: `/serviceone/quinzena-set-1/` (acompanhamento da 1a quinzena de setembro).
+> Acompanhamento de quinzena entra no bloco do mes com a data do dia 15.
 
 - Arquivos ficam no VPS Bull (2.25.179.122) em `/var/www/clientes/<cliente>/`, servidos pelo nginx `painel-bull` (bloco `location /<cliente>/`, `noindex`, sem auth pro cliente abrir).
 - Fonte versionada em `bull-site/<cliente>/` (neste repo). Cada material é um subcaminho: `/<cliente>/<material>/`.
