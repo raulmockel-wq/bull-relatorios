@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel de Gestão · Service One</title><style>
+:root{--preto:#0a0c10;--grafite:#151922;--grafite2:#11141b;--verde:#6ea044;--verde-claro:#9ccb74;
+--creme:#eef2f8;--cinza:#93a0b4;--linha:rgba(156,203,116,.20)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+background:var(--preto);color:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+.capa{background:radial-gradient(1200px 600px at 50% -10%,rgba(110,160,68,.16),transparent 60%),
+linear-gradient(180deg,#0a0c10 0%,#12151d 100%);text-align:center;padding:60px 24px 44px}
+.marca{display:inline-block;margin-bottom:26px}
+.marca img{height:46px;width:auto;display:block}
+.selo{display:inline-block;border:1px solid var(--verde);color:var(--verde-claro);font-size:12px;
+letter-spacing:3px;text-transform:uppercase;padding:8px 18px;border-radius:30px;margin-bottom:20px}
+.capa h1{font-size:clamp(30px,6vw,50px);font-weight:800;letter-spacing:-1px;line-height:1.04;
+background:linear-gradient(180deg,#fff,#cfe0c2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.capa .sub{color:var(--verde-claro);font-size:clamp(15px,2.4vw,19px);margin-top:12px;font-weight:600}
+.capa .frase{max-width:620px;margin:18px auto 0;color:var(--cinza);font-size:15px}
+.mes{margin-top:40px}
+.mes-tit{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.mes-tit .m{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--verde);font-weight:800;white-space:nowrap}
+.mes-tit .ln{flex:1;height:1px;background:linear-gradient(90deg,var(--linha),transparent)}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+.card{display:flex;flex-direction:column;background:linear-gradient(180deg,var(--grafite),var(--grafite2));
+border:1px solid var(--linha);border-radius:16px;padding:22px 22px 20px;text-decoration:none;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--verde);transform:translateY(-2px)}
+.card .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.card .ic{width:42px;height:42px;border-radius:11px;background:rgba(110,160,68,.16);border:1px solid var(--linha);
+display:flex;align-items:center;justify-content:center;font-size:21px}
+.card .data{font-size:12px;font-weight:700;color:var(--verde-claro);background:rgba(110,160,68,.10);
+border:1px solid var(--linha);border-radius:20px;padding:4px 11px}
+.card h3{color:#fff;font-size:17px;margin-bottom:6px}
+.card p{color:var(--cinza);font-size:13.5px;flex:1}
+.card .abrir{color:var(--verde-claro);font-size:12.5px;font-weight:600;margin-top:13px;letter-spacing:.3px}
+.vazio{border:1px dashed var(--linha);border-radius:16px;padding:22px;color:#5f6f88;font-size:13.5px;
+display:flex;align-items:center;gap:12px}
+.vazio span{font-size:19px;opacity:.6}
+footer{padding:48px 24px 64px;text-align:center;margin-top:40px;border-top:1px solid rgba(255,255,255,.05)}
+footer .bull{display:inline-flex;flex-direction:column;align-items:center;gap:9px;opacity:.75;margin-bottom:14px}
+footer .bull img.bi{height:34px;width:auto}footer .bull img.bw{height:13px;width:auto}
+footer .gestor{color:#fff;font-size:14px;font-weight:700;letter-spacing:.2px}
+footer p{color:var(--cinza);font-size:13px;margin-top:4px}
+.intnote{color:#4d5a6d;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:14px}
+@media(max-width:520px){.wrap{padding:0 16px}.capa{padding:48px 18px 38px}.card{padding:18px}}
+</style></head><body>
+
+<header class="capa">
+  <div class="marca"><img src="assets/service-one-branca.png" alt="Service One"></div>
+  <span class="selo">Painel de Gestão</span>
+  <h1>Service One</h1>
+  <div class="sub">Assistência técnica em nível de componente</div>
+  <p class="frase">Os acompanhamentos, fechamentos e materiais da operação, organizados por mês. O link é fixo, sempre que sair coisa nova aparece aqui.</p>
+</header>
+
+<div class="wrap">
+
+  <div class="mes">
+    <div class="mes-tit"><span class="m">Setembro 2026</span><span class="ln"></span></div>
+    <div class="grid">
+      <a class="card" href="quinzena-set-1/">
+        <div class="top"><div class="ic">📈</div><div class="data">15/09/2026</div></div>
+        <h3>Acompanhamento da 1ª quinzena</h3>
+        <p>Agosto contra setembro, dias 01 a 15. Movimento, o que entrou, o que saiu e o que ficou parado na loja.</p>
+        <div class="abrir">Abrir material →</div>
+      </a>
+      <div class="vazio"><span>＋</span><div>O fechamento de setembro entra aqui quando o mês virar.</div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="bull"><img class="bi" src="assets/bull-icone-branco.png" alt=""><img class="bw" src="assets/bull-wordmark-branco.png" alt="Bull Invest"></div>
+  <div class="gestor">Raul Mockel</div>
+  <p>Gestão da operação · Bull Invest</p>
+  <p class="intnote">Material interno · não divulgar</p>
+</footer>
+
+</body></html>
