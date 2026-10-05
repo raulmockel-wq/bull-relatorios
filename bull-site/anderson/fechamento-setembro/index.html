@@ -157,7 +157,7 @@ footer{text-align:center;margin-top:50px;padding-top:26px;border-top:1px solid v
 <div class="alert" style="margin-top:14px">
   <b>Ele devolveu R$ 5.000,00 e pegou R$ 5.710,67 de novo.</b> A dívida não diminuiu, subiu R$ 710,67. O extrato da Caixa mostra o padrão com clareza: o cheque especial é usado e devolvido quase toda semana (pegou nos dias 03, 11, 18 e 25, devolveu nos dias 01, 09, 13, 23 e 30). No dia 30 ele devolveu R$ 1.000,00 e, no mesmo dia, a conta voltou para <b>-R$ 877,67</b> pagando mercadoria. Esse giro custou <b>R$ 54,94 de juros e IOF</b> só em 02/09, e o cartão na maquininha custou mais <b>R$ 65,16</b> (8,89%) para liberar R$ 667,84.
 </div>
-<div class="sub" style="margin-top:8px">O pedaço que o banco comprova é o cheque especial da Caixa (de -R$ 1.000,00 em 31/08 para -R$ 877,67 em 30/09) e o cartão Santander. O resto da dívida que veio de agosto está em cartões e num empréstimo da Caixa que não aparecem nos extratos enviados.</div>
+<div class="sub" style="margin-top:8px">O pedaço que o banco comprova é o cheque especial da Caixa (de -R$ 1.000,00 em 31/08 para -R$ 877,67 em 30/09) e o cartão Santander. O resto da dívida que veio de agosto (limites de cartão passados na maquininha e os R$ 2.000,00 que entraram da Caixa em 15/08) está em contas e faturas que não vieram nos extratos, então é calculado pela régua da planilha, não comprovado.</div>
 
 <div class="eyebrow">Como ele ganha, e quanto ganhou nas notas medidas</div>
 <div class="big" style="background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px">
@@ -276,14 +276,14 @@ footer{text-align:center;margin-top:50px;padding-top:26px;border-top:1px solid v
 <div class="find"><span class="ar">⚠</span><div>Três Pix da empresa para a esposa entraram como despesa da Guh: R$ 605,00 (09/09, passador), R$ 415,00 (24/09, gasto de viagem) e R$ 400,00 (29/09, "devolução parte nota"). Podem estar certos, mas precisam de confirmação para não serem retirada lançada como custo.</div></div>
 <div class="find"><span class="ar">⚠</span><div>Datas com o mês ou o ano errado: condomínio e Magalu com data de agosto (foram pagos em 22/09) e cinco entradas de 24/09 com o ano de 2023 (R$ 4.394,00). A soma pega, mas qualquer filtro por data perde esses valores.</div></div>
 <div class="find"><span class="ar">⚠</span><div>Cinco entradas estão com o nome de quem comprou, mas o dinheiro veio de outra pessoa (por exemplo "Dirlene" pago por Mailon Barbosa da Cruz e "Startec" pago por Patrick de Lima Marins). O valor está certo; o ponto é saber quem é cliente de quem.</div></div>
-<div class="find"><span class="ar">✓</span><div>Fora esses pontos, <b>a planilha bate com o banco</b>. De 237 lançamentos, 201 bateram no valor exato e mais 15 bateram somados (por exemplo, um Pix de R$ 10.091,00 para a West Place que é exatamente a soma de sete notas). Todas as compras de mercadoria da Guh têm saída comprovada. É um controle muito melhor que o de agosto.</div></div>
+<div class="find"><span class="ar">✓</span><div>Fora esses pontos, <b>a planilha bate com o banco</b>. De 237 lançamentos, 201 bateram no valor exato e mais 15 bateram somados (por exemplo, um Pix de R$ 10.091,00 para a West Place que é exatamente a soma de sete notas). Todas as compras de mercadoria têm saída no banco; a única exceção é a nota de R$ 1.810,14 (29/09), que foi para a outra conta Caixa dele e não para o fornecedor. É um controle muito melhor que o de agosto.</div></div>
 
 <div class="eyebrow">O que precisamos que o Anderson explique ou envie</div>
 <div class="sub" style="margin-bottom:6px">Cada item com a data, o valor e a conta onde aparece, para achar rápido no aplicativo do banco.</div>
 <table>
   <tr><th>Data</th><th class="vl">Valor</th><th>Onde aparece</th><th>Na planilha</th><th>O que precisamos saber</th></tr>
   <tr class="trow"><td colspan="5">1. A outra conta na Caixa</td></tr>
-  <tr><td class="dt">Outra conta na Caixa</td><td class="vl">—</td><td>—</td><td>Além da conta da casa</td><td>Que conta é essa? Poupança, Caixa Tem ou outra conta corrente? Mandar o extrato de setembro dela.</td></tr>
+  <tr><td class="dt">Outra conta na Caixa</td><td class="vl">·</td><td>·</td><td>Além da conta da casa</td><td>Que conta é essa? Poupança, Caixa Tem ou outra conta corrente? Mandar o extrato de setembro dela.</td></tr>
   <tr><td class="dt">01/09</td><td class="vl">+ R$ 3.200,00</td><td>Stone (veio da outra conta Caixa)</td><td>Entrada sem lançamento</td><td>De onde veio: limite, empréstimo ou dinheiro de cliente?</td></tr>
   <tr><td class="dt">24/09</td><td class="vl">+ R$ 2.900,00</td><td>Stone (veio da outra conta Caixa)</td><td>Lançado como “Conexão Cred, pagou em dinheiro, dep. na PF”</td><td>Confirmar que é dinheiro da Conexão depositado nessa conta.</td></tr>
   <tr><td class="dt">29/09</td><td class="vl">− R$ 1.810,14</td><td>Stone (foi para a outra conta Caixa)</td><td>Lançado como nota “conexão cred celulares” (15%)</td><td>A nota foi paga ao fornecedor? De qual conta e em que dia?</td></tr>
@@ -323,7 +323,7 @@ footer{text-align:center;margin-top:50px;padding-top:26px;border-top:1px solid v
 <tr><td class="dt">29/09</td><td>PAULO HENRIQUE SANTOS DINIZ COSTA</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 600,00</td></tr>
 <tr><td class="dt">29/09</td><td>MNTS DISTRIBUIDORA LTDA</td><td><span class="pill p-custo">mercadoria/nota</span></td><td class="vl neg">− 835,00</td></tr>
 <tr><td class="dt">29/09</td><td>CONEXAO CRED LTDA</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 2.500,00</td></tr>
-<tr><td class="dt">29/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-custo">mercadoria/nota</span></td><td class="vl neg">− 1.810,14</td></tr>
+<tr><td class="dt">29/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-conf">a confirmar (foi para a outra conta Caixa)</span></td><td class="vl neg">− 1.810,14</td></tr>
 <tr><td class="dt">29/09</td><td>SM DISTRIBUIDORA E COMERCIO LTDA</td><td><span class="pill p-custo">mercadoria/nota</span></td><td class="vl neg">− 3.259,50</td></tr>
 <tr><td class="dt">29/09</td><td>CONEXAO CRED LTDA</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 1.311,11</td></tr>
 <tr><td class="dt">29/09</td><td>LUDIMILA ANDRESSA ALVES</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 250,00</td></tr>
@@ -350,7 +350,7 @@ footer{text-align:center;margin-top:50px;padding-top:26px;border-top:1px solid v
 <tr><td class="dt">24/09</td><td>MAILON BARBOSA DA CRUZ 08632121901</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 750,00</td></tr>
 <tr><td class="dt">24/09</td><td>IZABELLY BISSULE BARBOZA</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 164,00</td></tr>
 <tr><td class="dt">24/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-giro">retirada do Anderson</span></td><td class="vl neg">− 79,31</td></tr>
-<tr><td class="dt">24/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 2.900,00</td></tr>
+<tr><td class="dt">24/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-venda">venda cliente (veio da outra conta Caixa)</span></td><td class="vl pos">+ 2.900,00</td></tr>
 <tr><td class="dt">24/09</td><td>ROSIANE PASQUALIM PINTO</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 480,00</td></tr>
 <tr><td class="dt">24/09</td><td>DIRLENE PALMEIRA MACIEL</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 100,00</td></tr>
 <tr><td class="dt">23/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-giro">retirada do Anderson</span></td><td class="vl neg">− 67,00</td></tr>
@@ -435,7 +435,7 @@ footer{text-align:center;margin-top:50px;padding-top:26px;border-top:1px solid v
 <tr><td class="dt">02/09</td><td>Anderson (conta pessoal, Nubank)</td><td><span class="pill p-giro">retirada do Anderson</span></td><td class="vl neg">− 980,00</td></tr>
 <tr><td class="dt">01/09</td><td>Anderson (conta pessoal, Nubank)</td><td><span class="pill p-giro">retirada do Anderson</span></td><td class="vl neg">− 1.300,00</td></tr>
 <tr><td class="dt">01/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-wash">devolução de limite</span></td><td class="vl neg">− 1.054,94</td></tr>
-<tr><td class="dt">01/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-conf">a confirmar (2ª conta Caixa)</span></td><td class="vl pos">+ 3.200,00</td></tr>
+<tr><td class="dt">01/09</td><td>Anderson (conta pessoal, Caixa)</td><td><span class="pill p-conf">a confirmar (outra conta Caixa)</span></td><td class="vl pos">+ 3.200,00</td></tr>
 <tr><td class="dt">01/09</td><td>VICTORIA JENNIFER VILLALBA</td><td><span class="pill p-conf">a confirmar</span></td><td class="vl pos">+ 180,00</td></tr>
 <tr><td class="dt">01/09</td><td>CONEXAO CRED LTDA</td><td><span class="pill p-venda">venda cliente</span></td><td class="vl pos">+ 4.200,00</td></tr>
   </table>
