@@ -49,6 +49,7 @@ footer{padding:48px 24px 64px;text-align:center;margin-top:36px}
 footer .bull-lock{opacity:.7;margin-bottom:12px}
 footer p{color:var(--cinza);font-size:13px;margin-top:4px}
 .intnote{color:#5f6f88;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:12px}
+.atualizado{color:#5f6f88;font-size:11.5px;letter-spacing:.3px;margin-top:16px;min-height:14px}
 @media(max-width:520px){.wrap{padding:0 16px}.capa{padding:48px 18px 38px}.hero{padding:18px}th,td{padding:11px 12px}}
 </style></head><body>
 
@@ -59,6 +60,7 @@ footer p{color:var(--cinza);font-size:13px;margin-top:4px}
   <div class="sub">Guh Imports · Anderson</div>
   <p class="frase">O acompanhamento dos seus investimentos, aporte por aporte. Cada valor guardado aqui vira patrimônio. Esta página cresce junto com você.</p>
   <a class="voltar" href="../">← Voltar para a área</a>
+  <p class="atualizado" id="atualizado"></p>
 </header>
 
 <div class="wrap">
@@ -101,7 +103,7 @@ footer p{color:var(--cinza);font-size:13px;margin-top:4px}
   <div class="sec">
     <div class="sec-tit"><span class="m">Cada aporte</span><span class="ln"></span></div>
     <table>
-      <thead><tr><th>Data</th><th>Observação</th><th style="text-align:right">Valor</th><th style="text-align:right">Acumulado</th></tr></thead>
+      <thead><tr><th>Data</th><th>Banco</th><th style="text-align:right">Valor</th><th style="text-align:right">Acumulado</th></tr></thead>
       <tbody id="tbody"></tbody>
     </table>
   </div>
@@ -115,24 +117,34 @@ footer p{color:var(--cinza);font-size:13px;margin-top:4px}
 </footer>
 
 <script>
-/* Para adicionar um novo aporte, basta incluir uma linha abaixo.
-   data no formato AAAA-MM-DD. */
-const APORTES = [
-  { data: "2026-10-06", valor: 114.61, obs: "Primeiro investimento da vida dele" },
-];
+/* Esta página é alimentada sozinha pela planilha de fechamento do Anderson.
+   O servidor lê a planilha de tempos em tempos e grava o dados.json aqui do lado;
+   a página só mostra. Para incluir um aporte novo, basta lançar na planilha
+   (bloco "Investimentos" da aba do mês). Ninguém precisa editar este arquivo. */
 
-const brl = v => "R$ " + v.toLocaleString("pt-BR", {minimumFractionDigits:2, maximumFractionDigits:2});
+const brl = v => "R$ " + Number(v).toLocaleString("pt-BR", {minimumFractionDigits:2, maximumFractionDigits:2});
 const dataBR = s => { const [a,m,d]=s.split("-"); return d+"/"+m+"/"+a; };
 
-(function(){
-  const dados = [...APORTES].sort((x,y)=> x.data.localeCompare(y.data));
+function estadoVazio(msg){
+  document.getElementById("h-total").textContent = "R$ 0,00";
+  document.getElementById("h-qtd").textContent = "0";
+  document.getElementById("h-inicio").textContent = ", ";
+  document.getElementById("marco").style.display = "none";
+  document.getElementById("chart-note").textContent = msg;
+  document.getElementById("atualizado").textContent = "";
+}
+
+function render(payload){
+  const dados = [...(payload.aportes||[])].sort((x,y)=> x.data.localeCompare(y.data));
+  const qtd = dados.length;
+  if(!qtd){ estadoVazio("Assim que o primeiro aporte entrar na planilha, ele aparece aqui."); return; }
+
   let acc=0; dados.forEach(d=> d.acc = (acc += d.valor));
   const total = acc;
-  const qtd = dados.length;
 
   document.getElementById("h-total").textContent = brl(total);
   document.getElementById("h-qtd").textContent = qtd;
-  document.getElementById("h-inicio").textContent = qtd ? dataBR(dados[0].data) : ", ";
+  document.getElementById("h-inicio").textContent = dataBR(dados[0].data);
 
   // marco do primeiro aporte
   const primeiro = dados[0];
@@ -140,15 +152,25 @@ const dataBR = s => { const [a,m,d]=s.split("-"); return d+"/"+m+"/"+a; };
     "Em " + dataBR(primeiro.data) + ", o primeiro aporte: " + brl(primeiro.valor) +
     ". O começo de um patrimônio. Parabéns pelo passo, Anderson.";
 
-  // tabela
+  // atualizado em (horário do Brasil, já formatado no servidor)
+  if(payload.atualizado_label){
+    document.getElementById("atualizado").textContent = "Direto da sua planilha · atualizado em " + payload.atualizado_label;
+  }
+
+  // tabela (mais recente em cima)
   const tb = document.getElementById("tbody");
+  tb.innerHTML = "";
   [...dados].reverse().forEach(d=>{
     const tr=document.createElement("tr");
-    tr.innerHTML = "<td>"+dataBR(d.data)+"</td><td class='obsrow'>"+(d.obs||"")+
+    tr.innerHTML = "<td>"+dataBR(d.data)+"</td><td class='obsrow'>"+(d.banco||"")+
       "</td><td class='v'>"+brl(d.valor)+"</td><td class='acc'>"+brl(d.acc)+"</td>";
     tb.appendChild(tr);
   });
 
+  desenharGrafico(dados, total, qtd);
+}
+
+function desenharGrafico(dados, total, qtd){
   // gráfico de área do acumulado
   const svg=document.getElementById("chart");
   const W=720,H=300,pad={l:64,r:20,t:20,b:40};
@@ -196,15 +218,23 @@ const dataBR = s => { const [a,m,d]=s.split("-"); return d+"/"+m+"/"+a; };
   // pontos + rótulo
   dados.forEach((d,i)=>{
     svg.appendChild(mk("circle",{cx:pts[i][0],cy:pts[i][1],r:5,fill:"#0b0d12",stroke:"#43c59e","stroke-width":2.5}));
-    const lab=mk("text",{x:pts[i][0],y:pts[i][1]-12,fill:"#eef2f8","font-size":12,"font-weight":700,"text-anchor":"middle"});
+    // alinha o rótulo pra não cortar nas bordas (primeiro à esquerda, último à direita)
+    const anc = (qtd>1 && i===0) ? "start" : (qtd>1 && i===qtd-1) ? "end" : "middle";
+    const lab=mk("text",{x:pts[i][0],y:pts[i][1]-12,fill:"#eef2f8","font-size":12,"font-weight":700,"text-anchor":anc});
     lab.textContent=brl(d.acc); svg.appendChild(lab);
-    const dt=mk("text",{x:pts[i][0],y:H-14,fill:"#93a0b4","font-size":11,"text-anchor":"middle"});
+    const dt=mk("text",{x:pts[i][0],y:H-14,fill:"#93a0b4","font-size":11,"text-anchor":anc});
     dt.textContent=dataBR(d.data).slice(0,5); svg.appendChild(dt);
   });
 
   document.getElementById("chart-note").textContent = qtd===1
     ? "O gráfico vai ganhar forma conforme você for investindo. Este é o ponto de partida."
     : "Linha do total investido a cada aporte.";
-})();
+}
+
+// busca os dados gerados a partir da planilha (mesma pasta)
+fetch("dados.json", {cache:"no-store"})
+  .then(r => { if(!r.ok) throw new Error("http "+r.status); return r.json(); })
+  .then(render)
+  .catch(() => estadoVazio("Não consegui atualizar os dados agora. Tente recarregar daqui a pouco."));
 </script>
 </body></html>
